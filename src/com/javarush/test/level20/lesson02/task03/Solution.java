@@ -31,6 +31,7 @@ public class Solution
     public void save(OutputStream outputStream) throws Exception
     {
         PrintWriter pw = new PrintWriter(outputStream);
+        pw.print(this + ":");
 
     }
 
