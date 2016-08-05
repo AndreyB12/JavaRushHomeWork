@@ -7,13 +7,15 @@ import java.io.*;
 Метод load должен инициализировать объект включая статические поля данными из файла
 Метод main реализован только для вас и не участвует в тестировании
 */
-public class Solution {
-    public static void main(String[] args) {
+public class Solution
+{
+    public static void main(String[] args)
+    {
         //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
-        try {
-//hjgjg
-            File your_file_name = File.createTempFile("your_file_name", null);
+        try
+        {
+            String your_file_name = "e:\\test_task04.txt";
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
@@ -34,26 +36,40 @@ public class Solution {
             outputStream.close();
             inputStream.close();
 
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             //e.printStackTrace();
             System.out.println("Oops, something wrong with my file");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             //e.printStackTrace();
             System.out.println("Oops, something wrong with save/load method");
         }
     }
 
-    public static class ClassWithStatic {
+    public static class ClassWithStatic
+    {
         public static String staticString = "it's test static string";
         public int i;
         public int j;
 
-        public void save(OutputStream outputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+        public void save(OutputStream outputStream) throws Exception
+        {
+            PrintWriter pw = new PrintWriter(outputStream);
+            pw.print(this + "|" + staticString + "|" + i + "|" + j);
+            pw.flush();
         }
 
-        public void load(InputStream inputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+        public void load(InputStream inputStream) throws Exception
+        {
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            String[] line = br.readLine().split("\\|");
+            this.staticString = line[1];
+            this.i = Integer.valueOf(line[2]);
+            this.j = Integer.valueOf(line[3]);
+
         }
     }
 }
