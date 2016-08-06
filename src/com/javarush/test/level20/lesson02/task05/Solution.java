@@ -8,12 +8,15 @@ import java.io.*;
 Метод load должен инициализировать объект данными из файла
 Метод main реализован только для вас и не участвует в тестировании
 */
-public class Solution {
-    public static void main(String[] args) {
+public class Solution
+{
+    public static void main(java.lang.String[] args)
+    {
         //you can find your_file_name.tmp in your TMP directory or fix outputStream/inputStream according to your real file location
         //вы можете найти your_file_name.tmp в папке TMP или исправьте outputStream/inputStream в соответствии с путем к вашему реальному файлу
-        try {
-            File your_file_name = File.createTempFile("your_file_name", null);
+        try
+        {
+            java.lang.String your_file_name = "e:\\test_task05.txt";
             OutputStream outputStream = new FileOutputStream(your_file_name);
             InputStream inputStream = new FileInputStream(your_file_name);
 
@@ -29,44 +32,71 @@ public class Solution {
 
 
             loadedObject.load(inputStream);
-            //check here that the object variable equals to loadedObject - проверьте тут, что object и loadedObject равны
+            loadedObject.string1.print();
+            loadedObject.string2.print();
 
             outputStream.close();
             inputStream.close();
 
-        } catch (IOException e) {
+        }
+        catch (IOException e)
+        {
             //e.printStackTrace();
             System.out.println("Oops, something wrong with my file");
-        } catch (Exception e) {
+        }
+        catch (Exception e)
+        {
             //e.printStackTrace();
             System.out.println("Oops, something wrong with save/load method");
         }
     }
 
 
-    public static class Object {
+    public static class Object
+    {
         public String string1;
         public String string2;
 
-        public void save(OutputStream outputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+        public void save(OutputStream outputStream) throws Exception
+        {
+            PrintWriter pw = new PrintWriter(outputStream);
+            if (string1 != null) pw.println(string1.number);
+            else pw.println();
+            if (string2 != null) pw.println(string2.number);
+            else pw.println();
+            pw.flush();
         }
 
-        public void load(InputStream inputStream) throws Exception {
-            //implement this method - реализуйте этот метод
+        public void load(InputStream inputStream) throws Exception
+        {
+            BufferedReader br = new BufferedReader(new InputStreamReader(inputStream));
+            int cntStrs = countStrings;
+            int str1 = Integer.valueOf(br.readLine());
+            int str2 = Integer.valueOf(br.readLine());
+            br.close();
+
+            countStrings = str1 - 1;
+            this.string1 = new String();
+            countStrings = str2 - 1;
+            this.string2 = new String();
+            countStrings=cntStrs;
+
         }
     }
 
     public static int countStrings;
 
-    public static class String {
+    public static class String
+    {
         private final int number;
 
-        public String() {
+        public String()
+        {
             number = ++countStrings;
         }
 
-        public void print() {
+        public void print()
+        {
             System.out.println("string #" + number);
         }
     }
