@@ -9,33 +9,19 @@ import java.io.Serializable;
 Десериализуйте объект в методе getOriginalObject предварительно определив, какого именно типа там объект.
 Реализуйте интерфейс Serializable где необходимо.
 */
-public class Solution
+public class Solution implements Serializable
 {
-    public A getOriginalObject(ObjectInputStream objectStream)
+
+    public A getOriginalObject(ObjectInputStream objectStream) throws ClassNotFoundException, IOException
     {
-        try
-        {
-            Object obj = objectStream.readObject();
-            if(obj instanceof B) return (B) obj;
-            if(obj instanceof A) return (A) obj;
-            return null;
-        }
-        catch (IOException e)
-        {
-            e.printStackTrace();
-            return null;
-        }
-        catch (ClassNotFoundException e)
-        {
-            e.printStackTrace();
-            return null;
-        }
-
-
+            A a = (A)objectStream.readObject();
+            if(a instanceof B) return (B) a;
+            return a;
     }
 
     public class A implements Serializable
     {
+
     }
 
     public class B extends A
