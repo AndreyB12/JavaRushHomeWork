@@ -37,7 +37,7 @@ public class Solution
     {
         String firstName;
         String lastName;
-        String fullName;
+        transient String fullName;
         transient final String greetingString;
         String country;
         Sex sex;
@@ -55,9 +55,16 @@ public class Solution
             this.outputStream = System.out;
             this.logger = Logger.getLogger(String.valueOf(Person.class));
         }
+
+        private void readObject(ObjectInputStream ois) throws IOException, ClassNotFoundException {
+            ois.defaultReadObject();
+            this.fullName = String.format("%s, %s", lastName, firstName);
+            this.outputStream = System.out;
+            this.logger = Logger.getLogger(String.valueOf(Person.class));
+        }
     }
 
-    enum Sex implements Serializable
+    enum Sex
     {
         MALE,
         FEMALE
