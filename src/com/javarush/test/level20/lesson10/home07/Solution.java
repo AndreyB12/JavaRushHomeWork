@@ -16,11 +16,30 @@ import java.io.*;
 */
 public class Solution implements Serializable, AutoCloseable
 {
-    private FileOutputStream stream;
+    public static void main(String...args) throws IOException, ClassNotFoundException
+    {
+        Solution solution = new Solution("level20lesson10home07.txt");
+        solution.writeObject("test string1");
+
+        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream("level20lesson10home07.dat"));
+        oos.writeObject(solution);
+        oos.close();
+        ObjectInputStream ois = new ObjectInputStream(new FileInputStream("level20lesson10home07.dat"));
+        Solution loadedSolution = (Solution) ois.readObject();
+        loadedSolution.writeObject("second test string");
+
+        ois.close();
+
+    }
+
+
+    transient private FileOutputStream stream;
+    private String outputFileName;
 
     public Solution(String fileName) throws FileNotFoundException
     {
         this.stream = new FileOutputStream(fileName);
+        this.outputFileName = fileName;
     }
 
     public void writeObject(String string) throws IOException
@@ -33,13 +52,13 @@ public class Solution implements Serializable, AutoCloseable
     private void writeObject(ObjectOutputStream out) throws IOException
     {
         out.defaultWriteObject();
-        out.close();
     }
 
     private void readObject(ObjectInputStream in) throws IOException, ClassNotFoundException
     {
         in.defaultReadObject();
-        in.close();
+        this.stream = new FileOutputStream(this.outputFileName,true);
+
     }
 
     @Override
