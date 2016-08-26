@@ -15,10 +15,10 @@ public class Solution
     public static void main(String[] args)
     {
         byte[][] a = new byte[][]{
-                {1, 0, 1, 1},
-                {1, 0, 1, 1},
+                {1, 1, 0, 1},
+                {1, 1, 0, 0},
                 {0, 0, 0, 0},
-                {0, 1, 0, 1},
+                {1, 1, 0, 1},
         };
         int count = getRectangleCount(a);
         System.out.println("count = " + count + ". Должно быть 2");
