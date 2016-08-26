@@ -19,13 +19,6 @@ public class Solution
 {
     public static void main(String... args)
     {
-
-        int m = 3;
-        int s = 370;
-        int summ = 0;
-        int d = 10;
-
-
         int[] rslt = getNumbers(200000000);
 
         for (int i = 0; i < rslt.length; i++)
@@ -58,7 +51,7 @@ public class Solution
     {
         int m = String.valueOf(n).length();
         int s = n;
-        int summ=0;
+        int summ = 0;
         for (int i = 0; i < m; i++)
         {
             int s1 = 1;
