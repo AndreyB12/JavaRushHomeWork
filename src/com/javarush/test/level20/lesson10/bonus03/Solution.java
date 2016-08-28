@@ -25,7 +25,7 @@ public class Solution
                 {'p', 'o', 'e', 'e', 'j', 'j', 's'}
         };
 
-        for (Word word : detectAllWords(crossword, "fderl"))
+        for (Word word : detectAllWords(crossword, "er"))
         {
             System.out.println(word);
         }
@@ -38,18 +38,20 @@ public class Solution
 
         for (int k = 0; k < words.length; k++)
         {
-            for (int i = 0; i < crossword[0].length; i++)
+            for (int j = 0; j < crossword.length; j++)
             {
-                for (int j = 0; j < crossword.length; j++)
+                for (int i = 0; i < crossword[0].length; i++)
                 {
-                    Word word = new Word(words[k]);
                     if (words[k].toLowerCase().toCharArray()[0] == crossword[j][i])
                     {
-                        word.setStartPoint(i, j);
-                        if (checkWord(crossword, i, j, words[k].toLowerCase(), word, 1, 0))
-                        {
-                            list.add(word);
-                        }
+                        checkWord(crossword, i, j, 1, 0, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, 1, 1, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, 0, 1, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, -1, 1, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, -1, 0, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, -1, -1, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, 0, -1, words[k].toLowerCase(), list);
+                        checkWord(crossword, i, j, 1, -1, words[k].toLowerCase(), list);
                     }
                 }
             }
@@ -57,68 +59,35 @@ public class Solution
         return list;
     }
 
-    private static boolean checkWord(int[][] crossword, int i, int j, String wrd, Word word, int s, int d)
+    private static void checkWord(int[][] crossword, int strtX, int strtY, int dx, int dy, String word, List<Word> list)
     {
-        int x = 0, y = 0;
-        if (s == wrd.length())
+        boolean finded = true;
+        int i;
+        for (i = 1; i < word.length(); i++)
         {
-            word.setEndPoint(i, j);
-            return true;
-        }
-        switch (d)
-        {
-            case 0:
-                for (int k = 1; k <= 8; k++)
-                {
-                    if (checkWord(crossword, i, j, wrd, word, s, k)) return true;
-                }
-                break;
-            case 1:
-                y++;
-                break;
-            case 2:
-                x++;
-                y++;
-                break;
-            case 3:
-                x++;
-                break;
-            case 4:
-                x++;
-                y--;
-                break;
-            case 5:
-                y--;
-                break;
-            case 6:
-                x--;
-                y--;
-                break;
-            case 7:
-                x--;
-                break;
-            case 8:
-                x--;
-                y++;
-                break;
-        }
-        try
-        {
-            if (wrd.toCharArray()[s] == crossword[j + y][i + x])
+            try
             {
-                if (checkWord(crossword, i + x, j + y, wrd, word, s + 1, d))
+                if (crossword[strtY + dy * i][strtX + dx * i] != word.toCharArray()[i])
                 {
-                    return true;
+                    finded = false;
+                    break;
                 }
+
+
+            }
+            catch (ArrayIndexOutOfBoundsException e)
+            {
+                finded = false;
             }
         }
-        catch (ArrayIndexOutOfBoundsException e)
+        if (finded)
         {
-            return false;
+            Word wrd = new Word(word);
+            wrd.setStartPoint(strtX, strtY);
+            wrd.setEndPoint(strtX + dx * (i - 1), strtY + dy * (i - 1));
+            list.add(wrd);
         }
-        return false;
     }
-
 
     public static class Word
     {
