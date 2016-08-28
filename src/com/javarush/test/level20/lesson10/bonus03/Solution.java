@@ -72,8 +72,6 @@ public class Solution
                     finded = false;
                     break;
                 }
-
-
             }
             catch (ArrayIndexOutOfBoundsException e)
             {
