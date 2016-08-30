@@ -2,6 +2,7 @@ package com.javarush.test.level20.lesson10.bonus04;
 
 import java.io.Serializable;
 import java.util.AbstractList;
+import java.util.LinkedList;
 import java.util.List;
 
 /* Свой список
@@ -57,6 +58,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     public static void main(String[] args)
     {
         List<String> list = new Solution();
+        List<String> lst = new LinkedList<>();
         for (int i = 1; i < 16; i++)
         {
             list.add(String.valueOf(i));
