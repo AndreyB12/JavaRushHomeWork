@@ -53,8 +53,10 @@ import java.util.List;
 Должно быть наследование AbstractList<String>, List<String>, Cloneable, Serializable
 Метод main в тестировании не участвует
 */
-public class Solution extends AbstractList<String> implements List<String>, Cloneable, Serializable
+public class Solution<E> extends AbstractList<String> implements List<String>, Cloneable, Serializable
 {
+    transient int size = 0;
+
     public static void main(String[] args)
     {
         List<String> list = new Solution();
@@ -70,12 +72,21 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 
     public String getParent(String value)
     {
-        //have to be implemented
-        return null;
+
+        return getNode(value).parent.item.toString();
     }
 
     @Override
     public String get(int index)
+    {
+        throw new UnsupportedOperationException();
+    }
+
+    public String get(String value)
+    {
+        return null;
+    }
+    public Node getNode(String value)
     {
         return null;
     }
@@ -83,6 +94,14 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
     @Override
     public int size()
     {
-        return 0;
+        return size;
     }
+
+    private class Node<E>
+    {
+        E item;
+        Node<E>[] next= new Node[2];
+        Node<E> parent;
+    }
+
 }
