@@ -24,10 +24,22 @@ public class Solution
 
     public static byte[] getNetAddress(byte[] ip, byte[] mask)
     {
-        return new byte[4];
+        byte[] netAddress = {0,0,0,0};
+        for (int i = 0; i < ip.length; i++)
+        {
+            netAddress[i]= (byte)(ip[i] & mask[i]);
+        }
+        return netAddress;
     }
 
     public static void print(byte[] bytes)
     {
+        for (int i = 0; i < bytes.length; i++)
+        {
+            String s1 = String.format("%8s", Integer.toBinaryString(bytes[i] & 0xFF)).replace(' ', '0');
+            System.out.print(s1);
+            if(i<bytes.length-1) System.out.print(" ");
+        }
+        System.out.println();
     }
 }

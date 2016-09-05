@@ -55,7 +55,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
 {
     ArrayList<Node> list = new ArrayList<>();
 
-    public static void main(String[] args) throws CloneNotSupportedException, IOException, ClassNotFoundException, IOException
+    public static void main(String[] args) throws CloneNotSupportedException, ClassNotFoundException, IOException
     {
         List<String> listTree = new Solution();
         System.out.println("Check isEmpty: " + listTree.isEmpty() + " Size: " + listTree.size());
