@@ -2,10 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task02/Solution.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level20/lesson10/bonus04/Solution.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task01/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task01/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,21 +76,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task01/Solution.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="355">
-              <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task02/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+            <state relative-caret-position="68">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -1163,7 +1150,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473068990829</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Home work">
+      <created>1473106825974</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1473106825974</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2040,8 +2034,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson02/task02/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+        <state relative-caret-position="68">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
