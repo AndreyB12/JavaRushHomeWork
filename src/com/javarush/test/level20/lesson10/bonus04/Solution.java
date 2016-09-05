@@ -367,7 +367,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         return copy;
     }
 
-    @Override
+    /*@Override
     public String toString()
     {
         StringBuilder sb = new StringBuilder();
@@ -379,7 +379,7 @@ public class Solution extends AbstractList<String> implements List<String>, Clon
         }
         sb.append(']');
         return sb.toString();
-    }
+    }*/
 
     @Override
     public Iterator<String> iterator()
