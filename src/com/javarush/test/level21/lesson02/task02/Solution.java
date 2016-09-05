@@ -7,23 +7,37 @@ import java.lang.reflect.Modifier;
 Реализовать логику метода isAllModifiersContainSpecificModifier, который проверяет,
 содержит ли переданный параметр allModifiers значение конкретного модификатора specificModifier
 */
-public class Solution {
-    public static void main(String[] args) {
+public class Solution
+{
+    public static void main(String[] args)
+    {
         int modifiersOfThisClass = Solution.class.getModifiers();
         System.out.println(isAllModifiersContainSpecificModifier(modifiersOfThisClass, Modifier.PUBLIC));   //true
         System.out.println(isAllModifiersContainSpecificModifier(modifiersOfThisClass, Modifier.STATIC));   //false
-
         int modifiersOfMethod = getMainMethod().getModifiers();
         System.out.println(isAllModifiersContainSpecificModifier(modifiersOfMethod, Modifier.STATIC));      //true
+        System.out.println(isAllModifiersContainSpecificModifier(modifiersOfMethod, Modifier.PRIVATE));      //false
     }
 
-    public static boolean isAllModifiersContainSpecificModifier(int allModifiers, int specificModifier) {
-        return false;
+    public static boolean isAllModifiersContainSpecificModifier(int allModifiers, int specificModifier)
+    {
+
+       /* int i = 0;
+        int mod = specificModifier;
+        while (mod != 1)
+        {
+            mod = mod >> 1;
+            i++;
+        }
+        return (allModifiers & specificModifier) >> i == 1;*/
+        return (allModifiers & specificModifier) == specificModifier;
     }
 
-    private static Method getMainMethod() {
+    private static Method getMainMethod()
+    {
         Method[] methods = Solution.class.getDeclaredMethods();
-        for (Method method : methods) {
+        for (Method method : methods)
+        {
             if (method.getName().equalsIgnoreCase("main")) return method;
         }
 
