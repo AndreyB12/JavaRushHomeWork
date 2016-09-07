@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Horse.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -81,17 +81,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="42" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="42" />
+            <state relative-caret-position="323">
+              <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Horse.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Horse.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Horse.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="85">
@@ -104,8 +104,8 @@
       <file leaf-file-name="Hippodrome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+            <state relative-caret-position="153">
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -144,8 +144,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home07/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home08/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home09/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/home10/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level19/lesson10/bonus01/Solution.java" />
@@ -195,6 +193,8 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson10/task01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson10/task02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson10/task03/Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" />
       </list>
     </option>
   </component>
@@ -851,13 +851,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00017" summary="Home work">
-      <created>1470483911589</created>
-      <option name="number" value="00017" />
-      <option name="presentableId" value="LOCAL-00017" />
-      <option name="project" value="LOCAL" />
-      <updated>1470483911589</updated>
-    </task>
     <task id="LOCAL-00018" summary="Home work">
       <created>1470484691608</created>
       <option name="number" value="00018" />
@@ -1194,7 +1187,14 @@
       <option name="project" value="LOCAL" />
       <updated>1473270237705</updated>
     </task>
-    <option name="localTasksCounter" value="66" />
+    <task id="LOCAL-00066" summary="Home work">
+      <created>1473276295795</created>
+      <option name="number" value="00066" />
+      <option name="presentableId" value="LOCAL-00066" />
+      <option name="project" value="LOCAL" />
+      <updated>1473276295795</updated>
+    </task>
+    <option name="localTasksCounter" value="67" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2047,9 +2047,9 @@
         <state relative-caret-position="374">
           <caret line="67" column="5" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#531#532#0" expanded="true" />
-            <element signature="e#575#576#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#531#532#0" expanded="false" />
+            <element signature="e#575#576#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2075,26 +2075,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Horse.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="5" column="23" selection-start-line="5" selection-start-column="23" selection-end-line="5" selection-end-column="23" />
+          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="42" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Horse.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
+        <state relative-caret-position="323">
+          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
           <folding />
         </state>
       </provider>
