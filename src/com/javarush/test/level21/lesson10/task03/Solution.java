@@ -1,6 +1,9 @@
 package com.javarush.test.level21.lesson10.task03;
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.nio.charset.Charset;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -14,14 +17,17 @@ import java.util.List;
 UtilizatorUtil не менять.
 Стек трейс не выводить.
 */
-public class Solution {
+public class Solution
+{
     private Utilizator utilizator;
 
-    public void setUtilizator(Utilizator utilizator) {
+    public void setUtilizator(Utilizator utilizator)
+    {
         this.utilizator = utilizator;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         List<String> strings = new ArrayList<>();
 
         Solution solution = new Solution();
@@ -30,61 +36,83 @@ public class Solution {
         Solution solution2 = new Solution();
         solution2.setUtilizator(new SpecificUtilizator());
 
-        strings.addAll(solution.readFileContent("FakeFileName.txt"));
+        strings.addAll(solution.readFileContent("interview.txt"));
         strings.addAll(solution2.readFileContent("FakeFileName2.txt"));
         System.out.println("Count of strings is " + strings.size());
     }
 
-    public List<String> readFileContent(String path) {
+    public List<String> readFileContent(String path)
+    {
         List<String> strings = new ArrayList<>();
         Charset charset = Charset.forName("UTF-8");
         Path filePath = Paths.get(path);
-        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(path)))) {
+        try (BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(new FileInputStream(path))))
+        {
             String sCurrentLine;
-            while ((sCurrentLine = bufferedReader.readLine()) != null) {
+            while ((sCurrentLine = bufferedReader.readLine()) != null)
+            {
                 strings.add(sCurrentLine);
             }
-        } catch (IOException ignored) {
+        }
+        catch (IOException ignored)
+        {
 
-        } finally {
+        }
+        finally
+        {
             utilizator.dispose();
         }
         return strings;
     }
 
     @Override
-    protected void finalize() throws Throwable {
+    protected void finalize() throws Throwable
+    {
         super.finalize();
         System.out.println("inside finalize - before throwing");
         utilizator.dispose();   //исключения игнорируются в finalize
         System.out.println("inside finalize - after throwing");
     }
 
-    public static class Utilizator {
+    public static class Utilizator
+    {
         protected final UtilizatorUtil util = new UtilizatorUtil();
 
-        public void dispose() {
+        public void dispose()
+        {
             //Utilization IS successful
             util.doNothing();
         }
     }
 
-    public static class SpecificUtilizator extends Utilizator {
+    public static class SpecificUtilizator extends Utilizator
+    {
         @Override
-        public void dispose() {
-            util.throwException();
+        public void dispose()
+        {
+            try
+            {
+                util.throwException();
+            }
+            catch (Exception e)
+            {
+            }
         }
     }
 
-    public static class UtilizatorUtil {
-        public void doNothing() {
+    public static class UtilizatorUtil
+    {
+        public void doNothing()
+        {
         }
 
-        public void throwException() {
+        public void throwException()
+        {
             throw new RuntimeException("It`s impossible to dispose resources!");
         }
 
-        public void sout(String message) {
+        public void sout(String message)
+        {
             System.out.println(message);
         }
     }
