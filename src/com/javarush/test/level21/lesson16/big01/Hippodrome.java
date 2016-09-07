@@ -25,13 +25,24 @@ public class Hippodrome
 
     public void run() throws InterruptedException
     {
-        for (int i = 0; i <100 ; i++)
+        for (int i = 0; i < 100; i++)
         {
             move();
             print();
             Thread.sleep(200);
         }
     }
-    public void move(){}
-    public void print(){}
+
+    public void move()
+    {
+        for (Horse horse : game.getHorses())
+        {
+            horse.move();
+            horse.print();
+        }
+    }
+
+    public void print()
+    {
+    }
 }
