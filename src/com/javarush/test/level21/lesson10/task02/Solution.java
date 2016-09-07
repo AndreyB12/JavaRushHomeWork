@@ -12,25 +12,28 @@ import java.util.List;
 Отрефакторите метод getUsers в соответствии с java7 try-with-resources.
 Допускаются только текстовые коментарии.
 */
-public class Solution {
+public class Solution
+{
     private Connection connection;
 
-    public Solution(Connection connection) {
+    public Solution(Connection connection)
+    {
         this.connection = connection;
     }
 
-    public List<User> getUsers() {
+    public List<User> getUsers()
+    {
         String query = "select ID, DISPLAYED_NAME, LEVEL, LESSON from USER";
 
         List<User> result = new LinkedList();
 
-        Statement stmt = null;
-        ResultSet rs = null;
 
-        try {
-            stmt = connection.createStatement();
-            rs = stmt.executeQuery(query);
-            while (rs.next()) {
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(query))
+        {
+
+            while (rs.next())
+            {
                 int id = rs.getInt("ID");
                 String name = rs.getString("DISPLAYED_NAME");
                 int level = rs.getInt("LEVEL");
@@ -38,35 +41,41 @@ public class Solution {
 
                 result.add(new User(id, name, level, lesson));
             }
-        } catch (SQLException e) {
+        }
+        catch (SQLException e)
+        {
             e.printStackTrace();
             result = null;
-        } finally {
-            if(stmt != null) {
-                try {
-                    stmt.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
-            if(rs != null) {
-                try {
-                    rs.close();
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
-            }
         }
+
         return result;
     }
 
-    public static class User {
+    @Override
+    protected void finalize() throws Throwable
+    {
+        if (this.connection != null)
+        {
+            try
+            {
+                this.connection.close();
+            }
+            catch (Exception e)
+            {
+
+            }
+        }
+    }
+
+    public static class User
+    {
         private int id;
         private String name;
         private int level;
         private int lesson;
 
-        public User(int id, String name, int level, int lesson) {
+        public User(int id, String name, int level, int lesson)
+        {
             this.id = id;
             this.name = name;
             this.level = level;
@@ -74,7 +83,8 @@ public class Solution {
         }
 
         @Override
-        public String toString() {
+        public String toString()
+        {
             return "User{" +
                     "id=" + id +
                     ", name='" + name + '\'' +
