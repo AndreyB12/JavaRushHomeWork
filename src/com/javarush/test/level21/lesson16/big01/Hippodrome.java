@@ -7,7 +7,7 @@ import java.util.ArrayList;
  */
 public class Hippodrome
 {
-    private ArrayList<Horse> horses = null;
+    private ArrayList<Horse> horses = new ArrayList<>();
 
     public ArrayList<Horse> getHorses()
     {
@@ -16,6 +16,10 @@ public class Hippodrome
 
     public static void main(String...args)
     {
+        Hippodrome game = new Hippodrome();
+        game.getHorses().add(new Horse("Blacky",3,0));
+        game.getHorses().add(new Horse("Rudy",3,0));
+        game.getHorses().add(new Horse("Flower",3,0));
 
     }
 }
