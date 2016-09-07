@@ -8,11 +8,11 @@ package com.javarush.test.level21.lesson08.task03;
 */
 public class Solution
 {
-    public static void main(String...args) throws CloneNotSupportedException
+    public static void main(String... args) throws CloneNotSupportedException
     {
-        A a =new A(1,0);
-        B b = new B(1,2,"B");
-        C c = new C(3,6,"C");
+        A a = new A(1, 0);
+        B b = new B(1, 2, "B");
+        C c = new C(3, 6, "C");
         A a1 = a.clone();
         System.out.println(a);
         System.out.println(a1);
@@ -26,6 +26,7 @@ public class Solution
         System.out.println(c);
         System.out.println(c1);
     }
+
     public static class A implements Cloneable
     {
         private int i;
@@ -86,7 +87,7 @@ public class Solution
         @Override
         public C clone() throws CloneNotSupportedException
         {
-            return new C(getI(),getJ(),getName());
+            return new C(getI(), getJ(), getName());
         }
     }
 }
