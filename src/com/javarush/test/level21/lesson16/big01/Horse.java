@@ -45,6 +45,20 @@ public class Horse
     {
         return distance;
     }
-    public void move(){}
-    public void print(){}
+
+    public void move()
+    {
+        distance += speed * Math.random();
+    }
+
+    public void print()
+    {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i <(int)distance ; i++)
+        {
+            sb.append('.');
+        }
+        sb.append(this.name);
+        System.out.println(sb.toString());
+    }
 }
