@@ -45,6 +45,8 @@ public class Solution
 
     public String getPartOfString(String string, String threadName)
     {
-        return null;
+        int s = string.indexOf('\t');
+        int e = string.lastIndexOf('\t', s + 1);
+        return string.substring(s + 1, e);
     }
 }
