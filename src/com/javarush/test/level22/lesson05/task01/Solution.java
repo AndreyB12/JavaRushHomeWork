@@ -13,20 +13,30 @@ public class Solution
 {
     public static void main(String... args) throws TooShortStringException
     {
-        System.out.println(getPartOfString("JavaRush - лучший сервис обучения Java."));
-        System.out.println(getPartOfString("asfsdf sdfsdf sdf"));
-        System.out.println(getPartOfString("sdfsdf"));
+        System.out.println(getPartOfString("JavaRush - лучший сервис обучения."));
     }
 
     public static String getPartOfString(String string) throws TooShortStringException
     {
-        if (string == null) throw new TooShortStringException();
+        try
+        {
+            int s = string.indexOf(' ');
+            int e = string.indexOf(' ', s + 1);
+            e = string.indexOf(' ', e + 1);
+            e = string.indexOf(' ', e + 1);
+            e++;
+            while (Character.isAlphabetic(string.charAt(e)))
+            {
+                e++;
+                if (e == string.length()) break;
+            }
+            return string.substring(s + 1, e);
+        }
+        catch (Exception e)
+        {
+            throw new TooShortStringException();
+        }
 
-        String result = "";
-        int s = string.indexOf(' ');
-        if (s < 0) throw new TooShortStringException();
-
-        return result;
     }
 
     public static class TooShortStringException extends Exception
