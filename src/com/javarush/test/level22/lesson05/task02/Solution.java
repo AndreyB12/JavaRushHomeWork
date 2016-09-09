@@ -13,7 +13,7 @@ public class Solution
         {
             int s = string.indexOf('\t');
             int e = string.indexOf('\t', s + 1);
-            return string.substring(s+1, e);
+            return string.substring(s + 1, e);
         }
         catch (Exception e)
         {
@@ -29,7 +29,7 @@ public class Solution
     {
         System.out.println(getPartOfString("tab0\ttab\ttab1\t"));       //tab
         System.out.println(getPartOfString("\t\t"));                    //
-       // System.out.println(getPartOfString("123\t123"));                //Exception
+        // System.out.println(getPartOfString("123\t123"));                //Exception
         System.out.println(getPartOfString(null));                      //Exception
     }
 }
