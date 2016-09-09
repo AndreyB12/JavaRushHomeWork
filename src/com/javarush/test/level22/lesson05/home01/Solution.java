@@ -45,8 +45,25 @@ public class Solution
 
     public String getPartOfString(String string, String threadName)
     {
-        int s = string.indexOf('\t');
-        int e = string.lastIndexOf('\t', s);
-        return string.substring(s + 1, e);
+        try
+        {
+            int s = string.indexOf('\t');
+            int e = string.lastIndexOf('\t');
+            return string.substring(s + 1, e);
+        }
+        catch (Throwable e)
+        {
+            if (Thread.currentThread().getName().equals(FIRST_THREAD_NAME))
+            {
+                throw new TooShortStringFirstThreadException(e);
+            } else if (Thread.currentThread().getName().equals(SECOND_THREAD_NAME))
+            {
+                throw new TooShortStringSecondThreadException(e);
+            } else
+            {
+                throw new RuntimeException(e);
+            }
+
+        }
     }
 }
