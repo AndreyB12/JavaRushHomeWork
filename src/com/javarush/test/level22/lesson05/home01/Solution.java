@@ -11,8 +11,10 @@ a) 1# : TooShortStringFirstThreadException : java.lang.StringIndexOutOfBoundsExc
 б) java.lang.StringIndexOutOfBoundsException: String index out of range: -1 : TooShortStringSecondThreadException : 2#
 в) RuntimeException : java.lang.StringIndexOutOfBoundsException: String index out of range: -1 : 3#
 */
-public class Solution {
-    public static void main(String[] args) {
+public class Solution
+{
+    public static void main(String[] args)
+    {
         new Solution();
     }
 
@@ -23,11 +25,13 @@ public class Solution {
     private Thread thread2;
     private Thread thread3;
 
-    public Solution() {
+    public Solution()
+    {
         initThreads();
     }
 
-    protected void initThreads() {
+    protected void initThreads()
+    {
         this.thread1 = new Thread(new Task(this, "A\tB\tC\tD\tE\tF\tG\tH\tI"), FIRST_THREAD_NAME);
         this.thread2 = new Thread(new Task(this, "J\tK\tL\tM\tN\tO\tP\tQ\tR\tS\tT\tU\tV\tW\tX\tY\tZ"), SECOND_THREAD_NAME);
         this.thread3 = new Thread(new Task(this, "\t\t"), "3#");
@@ -39,7 +43,8 @@ public class Solution {
         this.thread3.start();
     }
 
-    public String getPartOfString(String string, String threadName) {
+    public String getPartOfString(String string, String threadName)
+    {
         return null;
     }
 }
