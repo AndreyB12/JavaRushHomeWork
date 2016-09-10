@@ -47,6 +47,10 @@ public class Solution
 
     public static StringBuilder getLine(String... words)
     {
-        return null;
+        StringBuilder result = new StringBuilder();
+
+
+
+        return result;
     }
 }
