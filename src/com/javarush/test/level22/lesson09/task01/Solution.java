@@ -3,7 +3,6 @@ package com.javarush.test.level22.lesson09.task01;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -29,11 +28,11 @@ public class Solution
         try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
              BufferedReader fr = new BufferedReader(new FileReader(reader.readLine())))
         {
-            List<String> firsts = new ArrayList<>();
+            List<String> firsts = new LinkedList<>();
             StringBuilder sb = new StringBuilder();
             while (fr.ready())
             {
-                sb.append(fr.readLine().toLowerCase());
+                sb.append(fr.readLine());
                 sb.append(" ");
             }
             String[] words = sb.toString().split(" ");
@@ -41,10 +40,10 @@ public class Solution
             for (int i = 0; i < words.length; i++)
             {
                 String first = words[i];
-                for (int j = i; j < words.length; j++)
+                for (int j = i + 1; j < words.length; j++)
                 {
                     String second = words[j];
-                    if (!first.equals("") && first.equals(new StringBuilder(second).reverse().toString()))
+                    if (!first.equals("") && first.equalsIgnoreCase(new StringBuilder(second).reverse().toString()))
                     {
                         if (!firsts.contains((first.compareTo(second) < 0) ? first : second))
                         {
@@ -53,6 +52,7 @@ public class Solution
                             pair.second = (first.compareTo(second) < 0) ? second : first;
                             firsts.add((first.compareTo(second) < 0) ? first : second);
                             result.add(pair);
+                            break;
                         }
                     }
                 }
