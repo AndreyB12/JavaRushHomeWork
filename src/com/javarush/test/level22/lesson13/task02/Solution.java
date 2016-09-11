@@ -1,9 +1,9 @@
 package com.javarush.test.level22.lesson13.task02;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
+import java.nio.charset.Charset;
 
 /* Смена кодировки
 В метод main первым параметром приходит имя файла, тело которого в кодировке Windows-1251.
@@ -18,9 +18,19 @@ public class Solution
         String fileW1251 = args[0];
         String fileUTF8 = args[1];
 
-        try (BufferedReader fr = new BufferedReader(new FileReader(fileW1251));
-             FileWriter fw = new FileWriter(fileUTF8))
+        try (FileInputStream fr = new FileInputStream(fileW1251);
+             FileOutputStream fw = new FileOutputStream(fileUTF8))
         {
+            Charset w1251 = Charset.forName("windows-1251");
+            Charset utf8 = Charset.forName("UTF8");
+            byte[] buffer = new byte[fr.available()];
+
+            fr.read(buffer);
+            {
+                String string = new String(buffer, utf8);
+                buffer = string.getBytes(w1251);
+                fw.write(buffer);
+            }
 
         }
         catch (Exception e)
