@@ -10,5 +10,9 @@ public class Solution {
     static String win1251TestString = "РќР°СЂСѓС€РµРЅРёРµ РєРѕРґРёСЂРѕРІРєРё РєРѕРЅСЃРѕР»Рё?"; //only for your testing
 
     public static void main(String[] args) throws IOException {
+        String fileW1251 = args[0];
+        String fileUTF8 = args[1];
+
+
     }
 }
