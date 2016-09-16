@@ -1,7 +1,6 @@
 package com.javarush.test.level22.lesson18.big01;
 
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Класс Field описывает "поле клеток" игры Тетрис
@@ -50,7 +49,7 @@ public class Field
     }
 
     /**
-     * Метод устанавливает переданное значение(value) в ячейку матрицы с координатами (x,y)
+     *  Метод устанавливает переданное значение(value) в ячейку матрицы с координатами (x,y)
      */
     public void setValue(int x, int y, int value)
     {
@@ -121,30 +120,31 @@ public class Field
      */
     public void removeFullLines()
     {
-        List<int[]> rows = new ArrayList<>();
-        for (int i = 0; i < height; i++)
+        //Создаем список для хранения линий
+        ArrayList<int[]> lines = new ArrayList<int[]>();
+
+        //Копируем все непустые линии в список.
+        for (int i = 0; i <height; i++)
         {
-            int sum = 0;
+            //подсчитываем количество единиц в строке - просто суммируем все ее значения
+            int count = 0;
             for (int j = 0; j < width; j++)
             {
-                sum += (matrix[i][j] == 0) ? 0 : 1;
+                count += matrix[i][j];
             }
-            if (sum < width) rows.add(matrix[i]);
+
+            //Если сумма строки не равно ее ширине - добавляем в список
+            if (count != width)
+                lines.add(matrix[i]);
         }
 
-        for (int i = 0; i < height - rows.size(); i++)
-        {
-            rows.add (0, new int[width]);
-        }
-
-        for (int i = 0; i < rows.size(); i++)
-        {
-            matrix[i] = rows.get(i);
-        }
-        //Например так:
-        //Создаем список для хранения линий
-        //Копируем все непустые линии в список.
         //Добавляем недостающие строки в начало списка.
+        while (lines.size()<height)
+        {
+            lines.add(0,new int[width]);
+        }
+
         //Преобразуем список обратно в матрицу
+        matrix = lines.toArray(new int[height][width]);
     }
 }
