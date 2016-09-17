@@ -9,12 +9,18 @@ public class Test17
 {
     public static void main(String[] args)
     {
-        Solution.main(new String[] {"-i","0"});
-        Solution.main(new String[] {"-c","Andrii","м","12/06/1983","Alexa","ж","12/06/1983"});
-        Solution.main(new String[] {"-i","2","3"});
-        Solution.main(new String[] {"-d","0","1"});
-        Solution.main(new String[] {"-i","0"});
-        Solution.main(new String[] {"-u","0","Alexander","м","13/01/1980"});
-        Solution.main(new String[] {"-i","0","1","2"});
+        SubTest subtest = new SubTest();
+        subtest.subtest();
+    }
+    static void test()
+    {
+        System.out.println("test");
+    }
+    static public class SubTest
+    {
+         void subtest()
+        {
+            test();
+        }
     }
 }
