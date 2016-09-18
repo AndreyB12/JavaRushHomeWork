@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeDirection.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeDirection.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeSection.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeSection.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
@@ -82,11 +81,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="646">
-              <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+            <state relative-caret-position="850">
+              <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -128,16 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Snake.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Room.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Room.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -158,6 +147,29 @@
                 <element signature="e#274#275#0" expanded="true" />
                 <element signature="e#303#304#0" expanded="true" />
                 <element signature="e#327#328#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Snake.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="539">
+              <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+              <folding>
+                <element signature="e#289#290#0" expanded="true" />
+                <element signature="e#320#321#0" expanded="true" />
+                <element signature="e#356#357#0" expanded="true" />
+                <element signature="e#386#387#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+                <element signature="e#466#467#0" expanded="true" />
+                <element signature="e#528#529#0" expanded="true" />
+                <element signature="e#570#571#0" expanded="true" />
+                <element signature="e#751#752#0" expanded="true" />
+                <element signature="e#796#797#0" expanded="true" />
+                <element signature="e#825#826#0" expanded="true" />
+                <element signature="e#870#871#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -196,7 +208,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Условие задачи.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level21/lesson16/big01/Hippodrome.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson05/task02/Solution.java" />
@@ -243,10 +254,11 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson08/home01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson08/task02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Room.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Mouse.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeDirection.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/SnakeSection.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java" />
       </list>
     </option>
   </component>
@@ -922,13 +934,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00072" summary="Home work">
-      <created>1473279785302</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1473279785302</updated>
-    </task>
     <task id="LOCAL-00073" summary="Home work">
       <created>1473449478160</created>
       <option name="number" value="00073" />
@@ -1265,7 +1270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474211000435</updated>
     </task>
-    <option name="localTasksCounter" value="121" />
+    <task id="LOCAL-00121" summary="Home work">
+      <created>1474211107006</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1474211107006</updated>
+    </task>
+    <option name="localTasksCounter" value="122" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2157,14 +2169,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -2218,9 +2222,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="38" column="9" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="850">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="31" selection-end-line="50" selection-end-column="31" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level23/lesson13/big01/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="539">
+          <caret line="52" column="8" selection-start-line="52" selection-start-column="8" selection-end-line="52" selection-end-column="8" />
+          <folding>
+            <element signature="e#289#290#0" expanded="true" />
+            <element signature="e#320#321#0" expanded="true" />
+            <element signature="e#356#357#0" expanded="true" />
+            <element signature="e#386#387#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+            <element signature="e#466#467#0" expanded="true" />
+            <element signature="e#528#529#0" expanded="true" />
+            <element signature="e#570#571#0" expanded="true" />
+            <element signature="e#751#752#0" expanded="true" />
+            <element signature="e#796#797#0" expanded="true" />
+            <element signature="e#825#826#0" expanded="true" />
+            <element signature="e#870#871#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
