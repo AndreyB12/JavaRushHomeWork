@@ -8,28 +8,58 @@ package com.javarush.test.level24.lesson04.home02;
 4. Свои строки создавать нельзя.
 5. Классы Action, FirstClass, SecondClass менять нельзя.
 */
-public class Solution implements Action {
+public class Solution implements Action
+{
     public static int countActionObjects;
 
     private int param;
 
-    private Action solutionAction = new Action() {
+    private Action solutionAction = new Action()
+    {
         //!!!!! Changes can be here
         //!!!!! Изменения могут быть тут
 
-        public void someAction() {
+        public void someAction()
+        {
             //!!!!! All changes have to be here
             //!!!!! Все изменения должны быть только тут
+            if (Solution.this.param > 0)
+            {
+                while (param > 0)
+                {
+                    System.out.println(param--);
+                }
+                new FirstClass()
+                {
+                    @Override
+                    public Action getDependantAction()
+                    {
+                        return null;
+                    }
+                }.someAction();
+            }
+            if (param <= 0) new SecondClass()
+            {
+                @Override
+                public void someAction()
+                {
+                    System.out.print(sb);
+                    System.out.println(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM + param);
+                }
+            }.someAction();
+
         }
     };
 
 
-    public Solution(int param) {
+    public Solution(int param)
+    {
         this.param = param;
     }
 
     @Override
-    public void someAction() {
+    public void someAction()
+    {
         solutionAction.someAction();
     }
 
@@ -47,7 +77,8 @@ public class Solution implements Action {
      * Specific action for anonymous SecondClass, param = -1
      * Count of created Action objects is 3
      */
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Solution solution = new Solution(5);
         solution.someAction();
         System.out.println("Count of created Action objects is " + countActionObjects);
