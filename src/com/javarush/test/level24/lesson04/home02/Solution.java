@@ -24,21 +24,25 @@ public class Solution implements Action
             //!!!!! All changes have to be here
             //!!!!! Все изменения должны быть только тут
 
-            if (param > 0)
+            if (param > 0) new FirstClass()
             {
-                while (param > 0)
+                @Override
+                public void someAction()
                 {
-                    System.out.println(param--);
-                }
-                new FirstClass()
-                {
-                    @Override
-                    public Action getDependantAction()
+                    while (param > 0)
                     {
-                        return null;
+                        System.out.println(param--);
                     }
-                }.someAction();
-            }
+                    super.someAction();
+                }
+
+                @Override
+                public Action getDependantAction()
+                {
+                    return null;
+                }
+            }.someAction();
+
             new SecondClass()
             {
                 @Override
@@ -47,7 +51,9 @@ public class Solution implements Action
                     System.out.print(sb.toString());
                     System.out.println(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM + param);
                 }
-            }.someAction();
+            }.
+
+                    someAction();
         }
     };
 
