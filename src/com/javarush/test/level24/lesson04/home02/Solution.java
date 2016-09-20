@@ -43,7 +43,7 @@ public class Solution implements Action
                 @Override
                 public void someAction()
                 {
-                    System.out.print(sb);
+                    System.out.print(sb.toString());
                     System.out.println(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM + param);
                 }
             }.someAction();
