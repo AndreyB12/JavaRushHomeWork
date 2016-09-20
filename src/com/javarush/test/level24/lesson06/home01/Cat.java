@@ -4,10 +4,12 @@ package com.javarush.test.level24.lesson06.home01;
 В работе вам иногда будет нужно закастить класс к какому-нибудь интерфейсу (тут Sayable),
 который не реализован в текущем классе
  */
-public class Cat implements Pet {
+public class Cat implements Pet
+{
     private String name;
 
-    public Cat(String name) {
+    public Cat(String name)
+    {
         this.name = name;
     }
 
@@ -25,10 +27,38 @@ public class Cat implements Pet {
      * Мыша пищит.
      * Томас говорит мяу!
      * <p/>
+     *
      * @param i количество букв 'я' в слове мяу
      * @return экземпляр класса CatPet
      */
-    public Sayable toSayable(final int i) {
-        return null;
+    public Sayable toSayable(final int i)
+    {
+        class CatPet implements Sayable
+        {
+            int i;
+
+            public CatPet(int i)
+            {
+                this.i = i;
+            }
+
+            @Override
+            public String say()
+            {
+                StringBuilder sb = new StringBuilder();
+                if (i <= 0) sb.append(name).append(" спит.");
+                else
+                {
+                    sb.append(name).append(" говорит м");
+                    for (int j = 0; j < i; j++)
+                    {
+                        sb.append("я");
+                    }
+                    sb.append("у!");
+                }
+                return sb.toString();
+            }
+        }
+        return new CatPet(i);
     }
 }
