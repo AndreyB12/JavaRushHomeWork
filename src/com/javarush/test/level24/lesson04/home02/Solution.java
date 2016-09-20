@@ -23,8 +23,7 @@ public class Solution implements Action
         {
             //!!!!! All changes have to be here
             //!!!!! Все изменения должны быть только тут
-            if (Solution.this.param > 0)
-            {
+
                 while (param > 0)
                 {
                     System.out.println(param--);
@@ -37,8 +36,8 @@ public class Solution implements Action
                         return null;
                     }
                 }.someAction();
-            }
-            if (param <= 0) new SecondClass()
+
+             new SecondClass()
             {
                 @Override
                 public void someAction()
@@ -47,7 +46,6 @@ public class Solution implements Action
                     System.out.println(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM + param);
                 }
             }.someAction();
-
         }
     };
 
