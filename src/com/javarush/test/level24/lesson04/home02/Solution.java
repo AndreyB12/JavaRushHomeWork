@@ -24,6 +24,8 @@ public class Solution implements Action
             //!!!!! All changes have to be here
             //!!!!! Все изменения должны быть только тут
 
+            if (param > 0)
+            {
                 while (param > 0)
                 {
                     System.out.println(param--);
@@ -36,8 +38,8 @@ public class Solution implements Action
                         return null;
                     }
                 }.someAction();
-
-             new SecondClass()
+            }
+            new SecondClass()
             {
                 @Override
                 public void someAction()
