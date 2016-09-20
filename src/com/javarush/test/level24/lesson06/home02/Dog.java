@@ -1,14 +1,18 @@
 package com.javarush.test.level24.lesson06.home02;
 
+import java.util.Date;
+
 /*
 В работе вам иногда будет нужно закастить класс к какому-нибудь другому классу, не интерфейсу :)))
 Класс DogPet использует 2 класса - SuperDog и Dog, разберись с getName в классе DogPet
 Так намного лучше, чем Copy+Paste!
  */
-public class Dog implements Pet {
+public class Dog implements Pet
+{
     private String name;
 
-    public Dog(String name) {
+    public Dog(String name)
+    {
         this.name = name;
     }
 
@@ -32,16 +36,41 @@ public class Dog implements Pet {
      * Для форматирования даты используйте formatter из класса SuperDog.
      * <p/>
      * <b>Пример вывода:</b>
-     *  *** Барбос ***  лает гааааав! 13-ноя-2013 Ср
-     *  *** Тузик ***  лает гаав! 13-ноя-2013 Ср
-     *  *** Бобик ***  лает гааав! 13-ноя-2013 Ср
+     * *** Барбос ***  лает гааааав! 13-ноя-2013 Ср
+     * *** Тузик ***  лает гаав! 13-ноя-2013 Ср
+     * *** Бобик ***  лает гааав! 13-ноя-2013 Ср
      * Мыша пищит.
-     *  *** Шарик ***  спит.
+     * *** Шарик ***  спит.
      *
      * @param i количество букв 'а' в слове гав
      * @return экземпляр класса DogPet
      */
-    public Sayable toSayable(final int i) {
-       return null;
+    public Sayable toSayable(final int i)
+    {
+        class DogPet extends SuperDog implements Sayable
+        {
+            public String getName()
+            {
+                return name;
+            }
+            @Override
+            public String say()
+            {
+                StringBuilder sb = new StringBuilder();
+                sb.append(super.getSuperQuotes()).append(getName()).append(super.getSuperQuotes());
+                if (i <= 0) sb.append(" спит.");
+                else
+                {
+                    sb.append(" лает г");
+                    for (int j = 0; j < i; j++)
+                    {
+                        sb.append('а');
+                    }
+                    sb.append("в! ").append(super.formatter.format(new Date()));
+                }
+                return sb.toString();
+            }
+        }
+        return new DogPet();
     }
 }
