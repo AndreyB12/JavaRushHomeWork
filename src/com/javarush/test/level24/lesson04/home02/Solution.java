@@ -48,12 +48,12 @@ public class Solution implements Action
                 @Override
                 public void someAction()
                 {
-                    System.out.print(sb.toString());
-                    System.out.println(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM + param);
+                    super.someAction();
+                    sb = new StringBuilder(SPECIFIC_ACTION_FOR_ANONYMOUS_SECOND_CLASS_PARAM);
+                    sb.append(param);
+                    super.someAction();
                 }
-            }.
-
-                    someAction();
+            }.someAction();
         }
     };
 
