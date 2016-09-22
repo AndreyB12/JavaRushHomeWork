@@ -11,7 +11,7 @@ public class Arcanoid
     Ball ball;
     Stand stand;
     ArrayList<Brick> bricks;
-
+    public static Arcanoid game;
     public Ball getBall()
     {
         return ball;
@@ -70,4 +70,10 @@ public class Arcanoid
 
     public static void main(String...args)
     {}
+
+    public void run()
+    {
+
+    }
+    public void move(){}
 }
