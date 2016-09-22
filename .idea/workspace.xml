@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -85,8 +83,8 @@
             <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="170">
-                    <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+                  <state relative-caret-position="510">
+                    <caret line="30" column="40" selection-start-line="30" selection-start-column="40" selection-end-line="30" selection-end-column="40" />
                     <folding />
                   </state>
                 </provider>
@@ -103,11 +101,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Stand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
+            <state relative-caret-position="272">
+              <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
               <folding>
                 <element signature="e#192#193#0" expanded="true" />
                 <element signature="e#227#228#0" expanded="true" />
@@ -142,10 +150,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
+            <state relative-caret-position="153">
               <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <marker date="1474571508453" expanded="true" signature="51:58" ph="/**...*/" />
@@ -154,13 +162,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="238">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Arcanoid.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="493">
+              <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
               <folding>
-                <element signature="method#Canvas#0;class#Canvas#0" expanded="false" />
+                <element signature="method#Arcanoid#0;class#Arcanoid#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -246,10 +264,10 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
       </list>
     </option>
   </component>
@@ -925,13 +943,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00112" summary="Home work">
-      <created>1474112067367</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1474112067367</updated>
-    </task>
     <task id="LOCAL-00113" summary="Home work">
       <created>1474112102127</created>
       <option name="number" value="00113" />
@@ -1268,7 +1279,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474571513371</updated>
     </task>
-    <option name="localTasksCounter" value="161" />
+    <task id="LOCAL-00161" summary="Home work">
+      <created>1474571779955</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1474571779955</updated>
+    </task>
+    <option name="localTasksCounter" value="162" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2153,30 +2171,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+        <state relative-caret-position="272">
+          <caret line="16" column="5" selection-start-line="16" selection-start-column="5" selection-end-line="16" selection-end-column="5" />
           <folding>
-            <element signature="method#Arcanoid#0;class#Arcanoid#0" expanded="false" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="493">
+          <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
           <folding>
-            <element signature="method#Canvas#0;class#Canvas#0" expanded="false" />
+            <element signature="method#Arcanoid#0;class#Arcanoid#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -2192,6 +2203,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
+          <folding>
+            <marker date="1474571508453" expanded="true" signature="51:58" ph="/**...*/" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -2203,24 +2224,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
-          <folding>
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="119">
+          <caret line="7" column="73" selection-start-line="7" selection-start-column="73" selection-end-line="7" selection-end-column="73" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
-          <folding>
-            <marker date="1474571508453" expanded="true" signature="51:58" ph="/**...*/" />
-          </folding>
+        <state relative-caret-position="238">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
         </state>
       </provider>
     </entry>

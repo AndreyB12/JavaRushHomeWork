@@ -5,8 +5,8 @@ package com.javarush.test.level24.lesson14.big01;
  */
 public class Canvas
 {
-    int height,width;
-    char[] matrix;
+    int width, height;
+    char[][] matrix;
 
     public int getHeight()
     {
@@ -18,12 +18,12 @@ public class Canvas
         return width;
     }
 
-    public char[] getMatrix()
+    public char[][] getMatrix()
     {
         return matrix;
     }
 
-    public Canvas(int height, int width)
+    public Canvas(int width, int height)
     {
         this.height = height;
         this.width = width;
