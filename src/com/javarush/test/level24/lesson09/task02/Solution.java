@@ -17,26 +17,30 @@ import java.util.*;
 Fake Apple Inc.   AAPL | 17-11-2025 open 125,64 and last 123,43
 Fake Oracle Corporation   ORCL | 21-08-1989 closed 0,15
 */
-public class Solution {
-    public static void main(String[] args) {
+public class Solution
+{
+    public static void main(String[] args)
+    {
         List<Stock> stocks = getStocks();
         sort(stocks);
         Date actualDate = new Date();
         printStocks(stocks, actualDate);
     }
 
-    public static void printStocks(List<Stock> stocks, Date actualDate) {
+    public static void printStocks(List<Stock> stocks, Date actualDate)
+    {
         SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
 
         double[] filelimits = {0d, actualDate.getTime()};
         String[] filepart = {"closed {4}", "open {2} and last {3}"};
 
         ChoiceFormat fileform = new ChoiceFormat(filelimits, filepart);
-        Format[] testFormats = {null, dateFormat, fileform};
+        Format[] testFormats = {null, null, dateFormat, fileform};
         MessageFormat pattform = new MessageFormat("{0}   {1} | {5} {6}");
         pattform.setFormats(testFormats);
 
-        for (Stock stock : stocks) {
+        for (Stock stock : stocks)
+        {
             String name = ((String) stock.get("name"));
             String symbol = (String) stock.get("symbol");
             double open = !stock.containsKey("open") ? 0 : ((double) stock.get("open"));
@@ -48,16 +52,27 @@ public class Solution {
         }
     }
 
-    public static void sort(List<Stock> list) {
-        Collections.sort(list, new Comparator<Stock>() {
-            public int compare(Stock stock1, Stock stock2) {
-                return 0;
+    public static void sort(List<Stock> list)
+    {
+        Collections.sort(list, new Comparator<Stock>()
+        {
+            public int compare(Stock stock1, Stock stock2)
+            {
+                int i1 = ((String) stock1.get("name")).compareTo((String) stock2.get("name"));
+                SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+                int i2 = sdf.format((Date) stock2.get("date")).compareTo(sdf.format((Date) stock1.get("date")));
+                double i31 = (stock1.containsKey("change")) ? (double) stock1.get("change") : (double) stock1.get("last") - (double) stock1.get("open");
+                double i32 = (stock2.containsKey("change")) ? (double) stock2.get("change") : (double) stock2.get("last") - (double) stock2.get("open");
+                int i3 = ((Double) i32).compareTo((Double) i31);
+                return (i1 == 0) ? (i2 == 0) ? i3 : i2 : i1;
             }
         });
     }
 
-    public static class Stock extends HashMap {
-        public Stock(String name, String symbol, double open, double last) {
+    public static class Stock extends HashMap
+    {
+        public Stock(String name, String symbol, double open, double last)
+        {
             put("name", name);
             put("symbol", symbol);
             put("open", open);
@@ -65,7 +80,8 @@ public class Solution {
             put("date", getRandomDate(2020));
         }
 
-        public Stock(String name, String symbol, double change, Date date) {
+        public Stock(String name, String symbol, double change, Date date)
+        {
             put("name", name);
             put("symbol", symbol);
             put("date", date);
@@ -73,7 +89,8 @@ public class Solution {
         }
     }
 
-    public static List<Stock> getStocks() {
+    public static List<Stock> getStocks()
+    {
         List<Stock> stocks = new ArrayList();
 
         stocks.add(new Stock("Fake Apple Inc.", "AAPL", 125.64, 123.43));
@@ -94,11 +111,13 @@ public class Solution {
         return stocks;
     }
 
-    public static Date getRandomDate() {
+    public static Date getRandomDate()
+    {
         return getRandomDate(1970);
     }
 
-    public static Date getRandomDate(int startYear) {
+    public static Date getRandomDate(int startYear)
+    {
         int year = startYear + (int) (Math.random() * 30);
         int month = (int) (Math.random() * 12);
         int day = (int) (Math.random() * 28);
