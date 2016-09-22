@@ -4,10 +4,9 @@
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -79,49 +78,16 @@
     <breakpoint_rules converted="true" />
   </component>
   <component name="DockManager">
-    <window id="1">
+    <window id="4">
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="Arcanoid.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java">
+            <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="433">
-                    <caret line="53" column="0" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-                    <folding>
-                      <element signature="method#Arcanoid#0;class#Arcanoid#0" expanded="false" />
-                    </folding>
-                  </state>
-                </provider>
-              </entry>
-            </file>
-          </leaf>
-        </state>
-      </content>
-    </window>
-    <window id="2">
-      <content type="file-editors">
-        <state>
-          <leaf>
-            <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="true">
-              <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="1343">
-                    <caret line="79" column="38" selection-start-line="79" selection-start-column="38" selection-end-line="79" selection-end-column="38" />
-                    <folding>
-                      <element signature="e#423#424#0" expanded="true" />
-                      <element signature="e#447#448#0" expanded="true" />
-                      <element signature="e#485#486#0" expanded="true" />
-                      <element signature="e#511#512#0" expanded="true" />
-                      <element signature="e#543#544#0" expanded="true" />
-                      <element signature="e#567#568#0" expanded="true" />
-                      <element signature="e#605#606#0" expanded="true" />
-                      <element signature="e#631#632#0" expanded="true" />
-                      <element signature="e#668#669#0" expanded="true" />
-                      <element signature="e#697#698#0" expanded="true" />
-                      <element signature="e#745#746#0" expanded="true" />
-                      <element signature="e#781#782#0" expanded="true" />
-                    </folding>
+                  <state relative-caret-position="170">
+                    <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
+                    <folding />
                   </state>
                 </provider>
               </entry>
@@ -137,31 +103,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Stand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="306">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#192#193#0" expanded="true" />
                 <element signature="e#227#228#0" expanded="true" />
@@ -186,8 +132,8 @@
       <file leaf-file-name="Ball.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="289">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
               <folding>
                 <element signature="e#190#191#0" expanded="true" />
                 <element signature="e#225#226#0" expanded="true" />
@@ -196,13 +142,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="BaseObject.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="595">
-              <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+            <state relative-caret-position="-255">
+              <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
               <folding>
                 <marker date="1474571508453" expanded="true" signature="51:58" ph="/**...*/" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+              <folding>
+                <element signature="method#Canvas#0;class#Canvas#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -241,7 +199,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson18/big01/Field.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson18/big01/Figure.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level22/lesson18/big01/Tetris.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level23/lesson02/task01/Solution.java" />
@@ -289,9 +246,10 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Arcanoid.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Brick.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java" />
       </list>
     </option>
   </component>
@@ -310,10 +268,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1864" />
-    <option name="height" value="1096" />
+    <option name="x" value="58" />
+    <option name="y" value="333" />
+    <option name="width" value="1525" />
+    <option name="height" value="809" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -967,13 +925,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00111" summary="Home work">
-      <created>1474111079642</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1474111079642</updated>
-    </task>
     <task id="LOCAL-00112" summary="Home work">
       <created>1474112067367</created>
       <option name="number" value="00112" />
@@ -1310,7 +1261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1474571455920</updated>
     </task>
-    <option name="localTasksCounter" value="160" />
+    <task id="LOCAL-00160" summary="Home work">
+      <created>1474571513371</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1474571513371</updated>
+    </task>
+    <option name="localTasksCounter" value="161" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1326,7 +1284,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1864" height="1096" extended-state="6" />
+    <frame x="58" y="333" width="1525" height="809" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1336,12 +1294,12 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.60088694" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987687" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.31483456" sideWeight="0.3991131" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.09846154" sideWeight="0.3991131" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49806094" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.135255" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1665529" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24951394" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24951394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -2205,21 +2163,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+        <state relative-caret-position="170">
+          <caret line="10" column="72" selection-start-line="10" selection-start-column="72" selection-end-line="10" selection-end-column="72" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
-            <element signature="e#192#193#0" expanded="true" />
-            <element signature="e#227#228#0" expanded="true" />
+            <element signature="method#Canvas#0;class#Canvas#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#190#191#0" expanded="true" />
+            <element signature="e#225#226#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2235,32 +2203,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Ball.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Stand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="306">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
-            <element signature="e#190#191#0" expanded="true" />
-            <element signature="e#225#226#0" expanded="true" />
+            <element signature="e#192#193#0" expanded="true" />
+            <element signature="e#227#228#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/BaseObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="53" column="38" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
+        <state relative-caret-position="-255">
+          <caret line="9" column="23" selection-start-line="9" selection-start-column="23" selection-end-line="9" selection-end-column="23" />
           <folding>
             <marker date="1474571508453" expanded="true" signature="51:58" ph="/**...*/" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level24/lesson14/big01/Условие задачи.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>

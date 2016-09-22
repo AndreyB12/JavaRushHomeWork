@@ -11,7 +11,7 @@ public class Brick extends BaseObject
     }
 
     @Override
-    public void draw()
+    public void draw(Canvas canvas)
     {
 
     }
