@@ -15,6 +15,8 @@ public class Solution
     {
         MyThread myThread = new Solution().new MyThread("super secret key");
         myThread.start();
+        myThread = new Solution().new MyThread("super secret key2");
+        myThread.start();
 
     }
 
@@ -44,7 +46,7 @@ public class Solution
                 try
                 {
                     t.sleep(500);
-                    System.out.println(String.format("%s, %s, %s", ((MyThread) t).secretKey, t.getName(), e.getMessage()));
+                    System.out.println(String.format("%s, %s, %s", secretKey, t.getName(), e.getMessage()));
                 }
                 catch (Exception e1)
                 {
