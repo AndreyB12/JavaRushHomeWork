@@ -10,8 +10,18 @@ java.lang.IllegalAccessException: GHI
 java.lang.RuntimeException: DEF
 java.lang.Exception: ABC
 */
-public class Solution implements Thread.UncaughtExceptionHandler {
+public class Solution implements Thread.UncaughtExceptionHandler
+{
     @Override
-    public void uncaughtException(Thread t, Throwable e) {
+    public void uncaughtException(Thread t, Throwable e)
+    {
+        t.interrupt();
+        printStack(e);
+    }
+
+    private void printStack(Throwable e)
+    {
+        if (e.getCause() != null) printStack(e.getCause());
+        System.out.println(e.getClass().getName() + ": " + e.getMessage());
     }
 }
