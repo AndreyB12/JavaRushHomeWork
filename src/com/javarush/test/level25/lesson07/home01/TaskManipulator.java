@@ -20,8 +20,6 @@ public class TaskManipulator implements Runnable, CustomThreadManipulator
         {
 
         }
-
-
     }
 
     @Override
