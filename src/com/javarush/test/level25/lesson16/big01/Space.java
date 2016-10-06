@@ -13,7 +13,7 @@ public class Space
     ArrayList<Ufo> ufos = new ArrayList<>();
     ArrayList<Rocket> rockets = new ArrayList<>();
     ArrayList<Bomb> bombs = new ArrayList<>();
-
+    public static Space game;
     public void setShip(SpaceShip ship)
     {
         this.ship = ship;
