@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/BaseObject.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/BaseObject.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Canvas.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Canvas.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt" />
     </list>
@@ -84,8 +83,8 @@
             <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
               <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state relative-caret-position="646">
-                    <caret line="38" column="26" selection-start-line="38" selection-start-column="26" selection-end-line="38" selection-end-column="26" />
+                  <state relative-caret-position="357">
+                    <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
                     <folding />
                   </state>
                 </provider>
@@ -211,8 +210,8 @@
       <file leaf-file-name="Canvas.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Canvas.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="334">
-              <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+            <state relative-caret-position="368">
+              <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
               <folding>
                 <element signature="e#348#349#0" expanded="true" />
                 <element signature="e#376#377#0" expanded="true" />
@@ -228,8 +227,8 @@
       <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+            <state relative-caret-position="1054">
+              <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -1004,13 +1003,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00150" summary="Home work">
-      <created>1474491965104</created>
-      <option name="number" value="00150" />
-      <option name="presentableId" value="LOCAL-00150" />
-      <option name="project" value="LOCAL" />
-      <updated>1474491965104</updated>
-    </task>
     <task id="LOCAL-00151" summary="Home work">
       <created>1474536093371</created>
       <option name="number" value="00151" />
@@ -1347,7 +1339,14 @@
       <option name="project" value="LOCAL" />
       <updated>1475779040506</updated>
     </task>
-    <option name="localTasksCounter" value="199" />
+    <task id="LOCAL-00199" summary="Update tasks">
+      <created>1475780079246</created>
+      <option name="number" value="00199" />
+      <option name="presentableId" value="LOCAL-00199" />
+      <option name="project" value="LOCAL" />
+      <updated>1475780079246</updated>
+    </task>
+    <option name="localTasksCounter" value="200" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2353,14 +2352,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/BaseObject.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="640">
@@ -2388,10 +2379,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Условие задачи.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="62" column="51" selection-start-line="62" selection-start-column="51" selection-end-line="62" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson16/big01/Canvas.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="334">
-          <caret line="46" column="63" selection-start-line="46" selection-start-column="63" selection-end-line="46" selection-end-column="63" />
+        <state relative-caret-position="368">
+          <caret line="70" column="27" selection-start-line="70" selection-start-column="27" selection-end-line="70" selection-end-column="27" />
           <folding>
             <element signature="e#348#349#0" expanded="true" />
             <element signature="e#376#377#0" expanded="true" />
