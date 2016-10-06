@@ -9,4 +9,16 @@ public class Rocket extends BaseObject
     {
         super(x, y, radius);
     }
+
+    @Override
+    public void draw(Canvas canvas)
+    {
+        canvas.setPoint(x, y, 'R');
+    }
+
+    @Override
+    public void move()
+    {
+        y--;
+    }
 }
