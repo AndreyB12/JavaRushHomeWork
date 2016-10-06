@@ -5,9 +5,9 @@ package com.javarush.test.level25.lesson16.big01;
  */
 public class Rocket extends BaseObject
 {
-    public Rocket(double x, double y, double radius)
+    public Rocket(double x, double y)
     {
-        super(x, y, radius);
+        super(x, y, 1);
     }
 
     @Override
