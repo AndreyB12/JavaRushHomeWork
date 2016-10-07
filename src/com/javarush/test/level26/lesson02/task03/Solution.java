@@ -1,5 +1,8 @@
 package com.javarush.test.level26.lesson02.task03;
 
+import java.util.Comparator;
+import java.util.List;
+
 /* Убежденному убеждать других не трудно.
 В таблице есть колонки, по которым можно сортировать.
 Пользователь имеет возможность настроить под себя список колонок, которые будут сортироваться.
@@ -9,6 +12,30 @@ package com.javarush.test.level26.lesson02.task03;
 Все переданные компараторы сортируют дженерик тип Т
 В конструктор передается как минимум один компаратор
 */
-public class Solution {
+public class Solution
+{
+    public static class CustomizedComparator<T> implements Comparator<T>
+    {
+        List<Comparator<T>> comparators;
+
+        public CustomizedComparator(List<Comparator<T>> comparators)
+        {
+            this.comparators = comparators;
+        }
+
+        @Override
+        public int compare(T o1, T o2)
+        {
+            int result = comparators.get(0).compare(o1, o2);
+            int i = 1;
+            while (result == 0 && i < comparators.size())
+            {
+                result = comparators.get(i).compare(o1, o2);
+                i++;
+            }
+            return result;
+        }
+
+    }
 
 }
