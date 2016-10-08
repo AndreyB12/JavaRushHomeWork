@@ -16,9 +16,9 @@ public class Solution
 {
     public static class CustomizedComparator<T> implements Comparator<T>
     {
-        List<Comparator<T>> comparators;
+        Comparator<T>[] comparators;
 
-        public CustomizedComparator(List<Comparator<T>> comparators)
+        public CustomizedComparator(Comparator<T>...comparators)
         {
             this.comparators = comparators;
         }
@@ -26,11 +26,11 @@ public class Solution
         @Override
         public int compare(T o1, T o2)
         {
-            int result = comparators.get(0).compare(o1, o2);
+            int result = comparators[0].compare(o1, o2);
             int i = 1;
-            while (result == 0 && i < comparators.size())
+            while (result == 0 && i < comparators.length)
             {
-                result = comparators.get(i).compare(o1, o2);
+                result = comparators[i].compare(o1, o2);
                 i++;
             }
             return result;
