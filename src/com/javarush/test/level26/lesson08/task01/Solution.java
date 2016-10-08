@@ -8,4 +8,18 @@ IntegerHolder должен быть для типа int, быть нитебез
 public class Solution {
     public static void main(String[] args) {
     }
+    public static class IntegerHolder
+    {
+        int i;
+
+        public synchronized int get()
+        {
+            return i;
+        }
+
+        public synchronized void set(int i)
+        {
+            this.i = i;
+        }
+    }
 }
