@@ -10,13 +10,17 @@ public class Producer implements Runnable {
     }
 
     public void run() {
-        try {
+        try
+        {
             int i = 0;
-            while (true) {
+            while (true)
+            {
                 queue.put(String.valueOf(i++));
                 Thread.sleep(500);
             }
-        } catch (InterruptedException e) {
+        }
+        catch (InterruptedException e)
+        {
             System.out.println(String.format("[%s] thread was terminated", Thread.currentThread().getName()));
         }
     }

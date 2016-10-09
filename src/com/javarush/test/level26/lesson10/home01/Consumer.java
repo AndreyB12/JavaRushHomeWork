@@ -17,6 +17,14 @@ public class Consumer implements Runnable
     @Override
     public void run()
     {
-
+        try{
+            while (true)
+            {
+                System.out.println(String.valueOf(queue.take()));
+                Thread.sleep(500);
+            }
+        }catch (InterruptedException e){
+            System.out.println(String.format("[%s] thread was terminated", Thread.currentThread().getName()));
+        }
     }
 }
