@@ -25,6 +25,7 @@ public class Producer implements Runnable
             while (true)
             {
                 System.out.println(String.format("Some text for %d", i++));
+             //   map.put(String.valueOf(i),String.valueOf(i));
                 Thread.sleep(500);
             }
         }
