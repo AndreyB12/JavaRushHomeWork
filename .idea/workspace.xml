@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Consumer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Solution.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Producer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
@@ -81,22 +80,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="9" column="31" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="31" />
+            <state relative-caret-position="238">
+              <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Consumer.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Producer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Producer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="442">
+              <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+              <folding>
+                <element signature="e#562#563#0" expanded="true" />
+                <element signature="e#592#593#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Consumer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="85">
+              <caret line="5" column="52" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="52" />
+              <folding>
+                <element signature="e#257#258#0" expanded="true" />
+                <element signature="e#287#288#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,7 +149,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson06/home02/Util.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson06/home03/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson06/home03/Util.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level24/lesson09/task01/Solution.java" />
@@ -185,6 +199,7 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home01/Producer.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home01/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Producer.java" />
       </list>
     </option>
   </component>
@@ -424,7 +439,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="home01" />
+              <option name="myItemId" value="home02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -451,36 +466,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="level26" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaRushHomeWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="JavaRushHomeWork" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="com" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="test" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="level26" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lesson02" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -536,27 +521,7 @@
       <recent name="E:\Private\Documents\Learn\Java\JavaRushHomeWork\src\Res" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (1)">
-    <configuration default="false" name="Space" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.javarush.test.level25.lesson16.big01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level25.lesson16.big01.Space" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaRushHomeWork" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Solution">
     <configuration default="false" name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -625,6 +590,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.javarush.test.level26.lesson10.home01.Solution" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaRushHomeWork" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.javarush.test.level26.lesson10.home02.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level26.lesson10.home02.Solution" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -889,19 +874,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Space" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Solution (3)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Solution (4)" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Solution (2)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Solution (3)" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Solution (4)" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Solution (2)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Solution" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solution (1)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Solution (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Solution (4)" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Solution (3)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Space" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Solution" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Solution (1)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Solution (2)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Solution (4)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Solution (3)" />
       </list>
     </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
@@ -923,13 +908,6 @@
       <option name="presentableId" value="Default" />
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
-    </task>
-    <task id="LOCAL-00177" summary="Update tasks">
-      <created>1474920560939</created>
-      <option name="number" value="00177" />
-      <option name="presentableId" value="LOCAL-00177" />
-      <option name="project" value="LOCAL" />
-      <updated>1474920560939</updated>
     </task>
     <task id="LOCAL-00178" summary="Update tasks">
       <created>1474920782264</created>
@@ -1267,7 +1245,14 @@
       <option name="project" value="LOCAL" />
       <updated>1476043569080</updated>
     </task>
-    <option name="localTasksCounter" value="226" />
+    <task id="LOCAL-00226" summary="Update tasks">
+      <created>1476129547833</created>
+      <option name="number" value="00226" />
+      <option name="presentableId" value="LOCAL-00226" />
+      <option name="project" value="LOCAL" />
+      <updated>1476129547834</updated>
+    </task>
+    <option name="localTasksCounter" value="227" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1922,13 +1907,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson02/task02/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="291">
-          <caret line="36" column="17" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson02/home01/Column.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="801">
@@ -2286,6 +2264,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+          <folding>
+            <element signature="e#217#218#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -2299,18 +2281,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Solution.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Consumer.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="31" />
-          <folding />
+          <caret line="5" column="52" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="52" />
+          <folding>
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#287#288#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Consumer.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Producer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="442">
+          <caret line="26" column="65" selection-start-line="26" selection-start-column="65" selection-end-line="26" selection-end-column="65" />
+          <folding>
+            <element signature="e#562#563#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="46" selection-start-line="18" selection-start-column="46" selection-end-line="18" selection-end-column="46" />
           <folding />
         </state>
       </provider>
