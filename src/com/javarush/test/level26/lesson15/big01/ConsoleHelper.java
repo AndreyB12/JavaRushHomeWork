@@ -28,4 +28,27 @@ public class ConsoleHelper
         }
         return result;
     }
+
+    public static String askCurrencyCode()
+    {
+        writeMessage("Enter currency code (3 letters):");
+        while (true)
+        {
+            String code = readString();
+            if (code.matches("[a-zA-Z]{3}"))
+                return code.toUpperCase();
+            writeMessage("Wrong currency code. Try again!");
+        }
+    }
+    public static String[] getValidTwoDigits(String currencyCode)
+    {
+        writeMessage("Input two positive integers separeted by space (\"200 99\"):");
+        String string;
+        while (true){
+            string = readString();
+            if(string.matches("^\\d+ \\d+$")) return string.split(" ");
+            writeMessage("Wrong input. Try again!");
+        }
+    }
+
 }
