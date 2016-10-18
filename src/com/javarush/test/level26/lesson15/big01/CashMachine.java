@@ -10,9 +10,25 @@ public class CashMachine
     public static void main(String... args)
     {
         Locale.setDefault(Locale.ENGLISH);
-        String code = ConsoleHelper.askCurrencyCode();
-        String[] denoms = ConsoleHelper.getValidTwoDigits(code);
-        CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).addAmount(Integer.valueOf(denoms[0]),Integer.valueOf(denoms[1]));
-        System.out.println(CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).getTotalAmount());
+        Operation operation = null;
+        while (operation != Operation.EXIT)
+        {
+            String code = ConsoleHelper.askCurrencyCode();
+            operation = ConsoleHelper.askOperation();
+            switch (operation)
+            {
+                case INFO:
+                    System.out.println(CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).getTotalAmount());
+                    break;
+                case DEPOSIT:
+                    String[] denoms = ConsoleHelper.getValidTwoDigits(code);
+                    CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).addAmount(Integer.valueOf(denoms[0]), Integer.valueOf(denoms[1]));
+                    break;
+                case WITHDRAW:
+                    break;
+
+            }
+        }
+        System.out.println("By By!");
     }
 }

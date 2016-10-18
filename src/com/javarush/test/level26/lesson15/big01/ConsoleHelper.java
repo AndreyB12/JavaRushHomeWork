@@ -40,15 +40,37 @@ public class ConsoleHelper
             writeMessage("Wrong currency code. Try again!");
         }
     }
+
     public static String[] getValidTwoDigits(String currencyCode)
     {
         writeMessage("Input two positive integers separeted by space (\"200 99\"):");
         String string;
-        while (true){
+        while (true)
+        {
             string = readString();
-            if(string.matches("^\\d+ \\d+$")) return string.split(" ");
+            if (string.matches("^\\d+ \\d+$")) return string.split(" ");
             writeMessage("Wrong input. Try again!");
         }
+    }
+
+    public static Operation askOperation()
+    {
+        Operation operation = null;
+
+        while (true)
+        {
+            System.out.println("Select command (1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT):");
+            try
+            {
+                operation = Operation.getAllowableOperationByOrdinal(Integer.valueOf(readString()));
+                break;
+            }
+            catch (Exception e)
+            {
+             //   System.out.println("Wrong command. Try again!");
+            }
+        }
+        return operation;
     }
 
 }
