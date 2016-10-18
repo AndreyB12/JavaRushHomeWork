@@ -13,5 +13,6 @@ public class CashMachine
         String code = ConsoleHelper.askCurrencyCode();
         String[] denoms = ConsoleHelper.getValidTwoDigits(code);
         CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).addAmount(Integer.valueOf(denoms[0]),Integer.valueOf(denoms[1]));
+        System.out.println(CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).getTotalAmount());
     }
 }
