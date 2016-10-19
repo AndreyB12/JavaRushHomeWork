@@ -67,7 +67,7 @@ public class ConsoleHelper
             }
             catch (Exception e)
             {
-             //   System.out.println("Wrong command. Try again!");
+                System.out.println("Wrong command. Try again!");
             }
         }
         return operation;
