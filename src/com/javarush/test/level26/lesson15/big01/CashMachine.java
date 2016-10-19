@@ -1,5 +1,7 @@
 package com.javarush.test.level26.lesson15.big01;
 
+import com.javarush.test.level26.lesson15.big01.command.CommandExecutor;
+
 import java.util.Locale;
 
 /**
@@ -13,21 +15,9 @@ public class CashMachine
         Operation operation = null;
         while (operation != Operation.EXIT)
         {
-            String code = ConsoleHelper.askCurrencyCode();
-            operation = ConsoleHelper.askOperation();
-            switch (operation)
-            {
-                case INFO:
-                    System.out.println(CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).getTotalAmount());
-                    break;
-                case DEPOSIT:
-                    String[] denoms = ConsoleHelper.getValidTwoDigits(code);
-                    CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).addAmount(Integer.valueOf(denoms[0]), Integer.valueOf(denoms[1]));
-                    break;
-                case WITHDRAW:
-                    break;
 
-            }
+            operation = ConsoleHelper.askOperation();
+            CommandExecutor.execute(operation);
         }
         System.out.println("By By!");
     }
