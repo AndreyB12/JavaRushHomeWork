@@ -10,4 +10,8 @@ class InfoCommand implements Command
     {
 
     }
+
+    InfoCommand()
+    {
+    }
 }

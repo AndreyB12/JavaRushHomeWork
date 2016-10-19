@@ -10,4 +10,8 @@ class DepositCommand implements Command
     {
 
     }
+
+    DepositCommand()
+    {
+    }
 }

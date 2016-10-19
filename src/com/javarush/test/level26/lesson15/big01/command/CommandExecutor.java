@@ -8,11 +8,13 @@ import java.util.Map;
 /**
  * Created by butkoav on 19.10.2016.
  */
-public class CommandExecutor
+public final class CommandExecutor
 {
-    private static Map<Operation, Command> commands = new HashMap<>();
+    private static Map<Operation, Command> commands;
 
+    static
     {
+        commands = new HashMap<>();
         commands.put(Operation.DEPOSIT, new DepositCommand());
         commands.put(Operation.INFO, new InfoCommand());
         commands.put(Operation.WITHDRAW, new WithdrawCommand());
@@ -22,5 +24,9 @@ public class CommandExecutor
     public static final void execute(Operation operation)
     {
         commands.get(operation).execute();
+    }
+
+    private CommandExecutor()
+    {
     }
 }

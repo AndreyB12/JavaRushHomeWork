@@ -10,4 +10,8 @@ class WithdrawCommand implements Command
     {
 
     }
+
+     WithdrawCommand()
+    {
+    }
 }
