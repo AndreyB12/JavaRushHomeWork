@@ -2,6 +2,7 @@ package com.javarush.test.level26.lesson15.big01.command;
 
 import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.CurrencyManipulatorFactory;
+import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationException;
 
 /**
  * Created by butkoav on 19.10.2016.
@@ -9,7 +10,7 @@ import com.javarush.test.level26.lesson15.big01.CurrencyManipulatorFactory;
 class DepositCommand implements Command
 {
     @Override
-    public void execute()
+    public void execute() throws InterruptOperationException
     {
         String code = ConsoleHelper.askCurrencyCode();
         String[] denoms = ConsoleHelper.getValidTwoDigits(code);

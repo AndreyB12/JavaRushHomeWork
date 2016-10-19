@@ -1,5 +1,7 @@
 package com.javarush.test.level26.lesson15.big01;
 
+import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationException;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -16,7 +18,7 @@ public class ConsoleHelper
         System.out.println(message);
     }
 
-    public static String readString()
+    public static String readString() throws InterruptOperationException
     {
         String result = "";
         try
@@ -26,10 +28,12 @@ public class ConsoleHelper
         catch (IOException e)
         {
         }
+        if(result.toLowerCase().equals("exit")) throw new InterruptOperationException();
+
         return result;
     }
 
-    public static String askCurrencyCode()
+    public static String askCurrencyCode() throws InterruptOperationException
     {
         writeMessage("Enter currency code (3 letters):");
         while (true)
@@ -41,7 +45,7 @@ public class ConsoleHelper
         }
     }
 
-    public static String[] getValidTwoDigits(String currencyCode)
+    public static String[] getValidTwoDigits(String currencyCode) throws InterruptOperationException
     {
         writeMessage("Input two positive integers separeted by space (\"200 99\"):");
         String string;
@@ -53,13 +57,13 @@ public class ConsoleHelper
         }
     }
 
-    public static Operation askOperation()
+    public static Operation askOperation() throws InterruptOperationException
     {
         Operation operation = null;
 
         while (true)
         {
-            System.out.println("Select command (1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT):");
+            writeMessage("Select command (1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT):");
             try
             {
                 operation = Operation.getAllowableOperationByOrdinal(Integer.valueOf(readString()));
@@ -67,10 +71,21 @@ public class ConsoleHelper
             }
             catch (Exception e)
             {
-                System.out.println("Wrong command. Try again!");
+                writeMessage("Wrong command. Try again!");
             }
         }
         return operation;
     }
 
+    public static void sayGoodbye()
+    {
+        writeMessage("Arrivederci!");
+    }
+
+    public static boolean askAreYouSure() throws InterruptOperationException
+    {
+        writeMessage("Are you sure? <y,n>");
+        String s = readString();
+        return (s.matches("[yY]")) ? true : false;
+    }
 }

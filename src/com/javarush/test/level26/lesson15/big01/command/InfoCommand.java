@@ -1,7 +1,9 @@
 package com.javarush.test.level26.lesson15.big01.command;
 
+import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.CurrencyManipulator;
 import com.javarush.test.level26.lesson15.big01.CurrencyManipulatorFactory;
+
 
 /**
  * Created by butkoav on 19.10.2016.
@@ -17,10 +19,10 @@ class InfoCommand implements Command
             if (currency.hasMoney())
             {
                 hasMoney = true;
-                System.out.println(String.format("%s - %d", currency.getCurrencyCode(), currency.getTotalAmount()));
+                ConsoleHelper.writeMessage(String.format("%s - %d", currency.getCurrencyCode(), currency.getTotalAmount()));
             }
         }
-        if (!hasMoney) System.out.println("No money available.");
+        if (!hasMoney) ConsoleHelper.writeMessage("No money available.");
     }
 
     InfoCommand()
