@@ -13,12 +13,12 @@ public class CashMachine
     {
         Locale.setDefault(Locale.ENGLISH);
         Operation operation = null;
-        while (operation != Operation.EXIT)
+        do
         {
 
             operation = ConsoleHelper.askOperation();
             CommandExecutor.execute(operation);
         }
-        System.out.println("By By!");
+        while (operation != Operation.EXIT);
     }
 }

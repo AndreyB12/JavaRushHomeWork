@@ -11,10 +11,16 @@ class InfoCommand implements Command
     @Override
     public void execute()
     {
+        boolean hasMoney = false;
         for (CurrencyManipulator currency : CurrencyManipulatorFactory.getAllCurrencyManipulators())
         {
-            System.out.println(String.format("%s - %d",currency.getCurrencyCode(),currency.getTotalAmount()));
+            if (currency.hasMoney())
+            {
+                hasMoney = true;
+                System.out.println(String.format("%s - %d", currency.getCurrencyCode(), currency.getTotalAmount()));
+            }
         }
+        if (!hasMoney) System.out.println("No money available.");
     }
 
     InfoCommand()

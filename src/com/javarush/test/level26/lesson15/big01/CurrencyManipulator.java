@@ -9,11 +9,12 @@ import java.util.Map;
 public class CurrencyManipulator
 {
     String currencyCode;
-    Map<Integer, Integer> denominations = new HashMap<>();
+    Map<Integer, Integer> denominations;
 
     public CurrencyManipulator(String currencyCode)
     {
         this.currencyCode = currencyCode;
+        denominations = new HashMap<>();
     }
 
     public String getCurrencyCode()
@@ -36,5 +37,10 @@ public class CurrencyManipulator
             result += entry.getKey() * entry.getValue();
         }
         return result;
+    }
+
+    public boolean hasMoney()
+    {
+        return (denominations.size() != 0) ? true : false;
     }
 }
