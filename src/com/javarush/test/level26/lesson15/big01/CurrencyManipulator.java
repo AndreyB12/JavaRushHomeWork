@@ -43,4 +43,15 @@ public class CurrencyManipulator
     {
         return (denominations.size() != 0) ? true : false;
     }
+
+    public boolean isAmountAvailable(int expectedAmount)
+    {
+        return (getTotalAmount() >= expectedAmount) ? true : false;
+    }
+
+    public Map<Integer, Integer> withdrawAmount(int expectedAmount)
+    {
+        Map<Integer, Integer> map = new HashMap<>();
+        return map;
+    }
 }
