@@ -1,5 +1,7 @@
 package com.javarush.test.level26.lesson15.big01;
 
+import com.javarush.test.level26.lesson15.big01.exception.NotEnoughMoneyException;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -49,7 +51,7 @@ public class CurrencyManipulator
         return (getTotalAmount() >= expectedAmount) ? true : false;
     }
 
-    public Map<Integer, Integer> withdrawAmount(int expectedAmount)
+    public Map<Integer, Integer> withdrawAmount(int expectedAmount) throws NotEnoughMoneyException
     {
         Map<Integer, Integer> map = new HashMap<>();
         return map;

@@ -23,16 +23,19 @@ class WithdrawCommand implements Command
         {
             try
             {
-                ConsoleHelper.writeMessage("Please enter needed amount:");
+                ConsoleHelper.writeMessage("Please enter expected amount:");
                 int amount = Integer.parseInt(ConsoleHelper.readString());
-                if (!cm.isAmountAvailable(amount)) throw new NotEnoughMoneyException();
+                if (!cm.isAmountAvailable(amount)){
+                    ConsoleHelper.writeMessage("Not enough money!");
+                    continue;
+                }
                 Map<Integer, Integer> cash = cm.withdrawAmount(amount);
                 for (int denom : cash.keySet())
                 {
                     ConsoleHelper.writeMessage(String.format("\t%d - %d", denom, cash.get(denom)));
                 }
                 ConsoleHelper.writeMessage("Transaction successful!");
-
+                break;
             }
             catch (NotEnoughMoneyException e)
             {
