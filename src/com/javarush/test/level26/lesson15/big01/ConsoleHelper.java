@@ -38,7 +38,8 @@ public class ConsoleHelper
         writeMessage("Enter currency code (3 letters):");
         while (true)
         {
-            String code = readString();
+           String code = readString();
+
             if (code.matches("[a-zA-Z]{3}"))
                 return code.toUpperCase();
             writeMessage("Wrong currency code. Try again!");
