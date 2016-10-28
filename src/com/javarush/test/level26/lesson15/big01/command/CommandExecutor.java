@@ -20,6 +20,7 @@ public final class CommandExecutor
         commands.put(Operation.INFO, new InfoCommand());
         commands.put(Operation.WITHDRAW, new WithdrawCommand());
         commands.put(Operation.EXIT, new ExitCommand());
+        commands.put(Operation.LOGIN, new LoginCommand());
     }
 
     public static final void execute(Operation operation) throws InterruptOperationException
