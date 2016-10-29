@@ -13,10 +13,9 @@ public class CashMachine
     public static final String RESOURCE_PATH = "com.javarush.test.level26.lesson15.big01.resources.";
     public static void main(String... args)
     {
-
         try
         {
-            Locale.setDefault(Locale.ENGLISH);
+            Locale.setDefault(new Locale("uk","UA"));
             Operation operation = null;
             CommandExecutor.execute(Operation.LOGIN);
             do
