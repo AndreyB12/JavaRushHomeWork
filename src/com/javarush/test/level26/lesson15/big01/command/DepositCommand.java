@@ -12,13 +12,13 @@ import java.util.ResourceBundle;
  */
 class DepositCommand implements Command
 {
-    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.deposit", Locale.ENGLISH);
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.deposit");
 
     @Override
     public void execute() throws InterruptOperationException
     {
         ConsoleHelper.writeMessage(res.getString("before"));
-        String code = ConsoleHelper.askCurrencyCode(res.getString("invalid.data"));
+        String code = ConsoleHelper.askCurrencyCode();
         String[] denoms = ConsoleHelper.getValidTwoDigits(code);
         CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code).addAmount(Integer.valueOf(denoms[0]), Integer.valueOf(denoms[1]));
         ConsoleHelper.writeMessage(String.format(res.getString("success.format"), Integer.valueOf(denoms[0]) * Integer.valueOf(denoms[1]), code));

@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class ConsoleHelper
 {
-    static ResourceBundle commonRes = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common", Locale.ENGLISH);
+    static ResourceBundle commonRes = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common");
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message)
@@ -36,7 +36,7 @@ public class ConsoleHelper
         return result;
     }
 
-    public static String askCurrencyCode(String errorMessage) throws InterruptOperationException
+    public static String askCurrencyCode() throws InterruptOperationException
     {
         writeMessage(commonRes.getString("choose.currency.code"));
         while (true)
@@ -45,7 +45,7 @@ public class ConsoleHelper
 
             if (code.matches("[a-zA-Z]{3}"))
                 return code.toUpperCase();
-            writeMessage(errorMessage);
+            writeMessage(commonRes.getString("invalid.data"));
         }
     }
 

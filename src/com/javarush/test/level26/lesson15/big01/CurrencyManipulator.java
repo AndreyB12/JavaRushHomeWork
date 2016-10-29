@@ -63,24 +63,32 @@ public class CurrencyManipulator
                 return -o1.compareTo(o2);
             }
         });
+        Integer[] denomsArr = new Integer[denoms.size()];
+        return withdrawAmount(expectedAmount, denoms.toArray(denomsArr));
+    }
 
-        for (int denom : denoms)
+    private Map<Integer, Integer> withdrawAmount(int expectedAmount, Integer[] denoms) throws NotEnoughMoneyException
+    {
+        Map<Integer, Integer> map = new HashMap<>();
+        if (expectedAmount == 0) return map;
+        for (int j = 0; j < denoms.length; j++)
         {
-            int count = expectedAmount / denom;
+            int count = expectedAmount / denoms[j];
             if (count == 0) continue;
             for (int i = count; i > 0; i--)
             {
-                if (i > denominations.get(denom)) continue;
+                if (i > denominations.get(denoms[j])) continue;
                 try
                 {
-                    denominations.put(denom, denominations.get(denom) - i);
-                    map.putAll(withdrawAmount(expectedAmount - i * denom));
-                    map.put(denom, i);
+                    denominations.put(denoms[j], denominations.get(denoms[j]) - i);
+                    if (j < denoms.length)
+                        map.putAll(withdrawAmount(expectedAmount - i * denoms[j], Arrays.copyOfRange(denoms, j + 1, denoms.length)));
+                    map.put(denoms[j], i);
                     return map;
                 }
                 catch (NotEnoughMoneyException e)
                 {
-                    denominations.put(denom, denominations.get(denom) + i);
+                    denominations.put(denoms[j], denominations.get(denoms[j]) + i);
                 }
 
             }

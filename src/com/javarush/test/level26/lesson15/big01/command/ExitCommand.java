@@ -11,7 +11,7 @@ import java.util.ResourceBundle;
  */
 class ExitCommand implements Command
 {
-    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.exit", Locale.ENGLISH);
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.exit");
 
     @Override
     public void execute() throws InterruptOperationException

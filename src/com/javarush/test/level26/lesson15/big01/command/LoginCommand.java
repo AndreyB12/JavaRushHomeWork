@@ -12,7 +12,7 @@ import java.util.ResourceBundle;
 public class LoginCommand implements Command
 {
     private ResourceBundle validCreditCards = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.verifiedCards");
-    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.login", Locale.ENGLISH);
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.login");
 
     @Override
     public void execute() throws InterruptOperationException

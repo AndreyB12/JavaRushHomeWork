@@ -13,21 +13,25 @@ import java.util.*;
  */
 class WithdrawCommand implements Command
 {
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.withdraw");
+
     @Override
     public void execute() throws InterruptOperationException
     {
-        String code = ConsoleHelper.askCurrencyCode("Please specify valid data.");
+        ConsoleHelper.writeMessage(res.getString("before"));
+        String code = ConsoleHelper.askCurrencyCode();
         CurrencyManipulator cm = CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code);
 
         while (true)
         {
             try
             {
-                ConsoleHelper.writeMessage("Please enter expected amount:");
+                ConsoleHelper.writeMessage(res.getString("specify.amount"));
                 int amount = Integer.parseInt(ConsoleHelper.readString());
-
-                if (!cm.isAmountAvailable(amount)){
-                    ConsoleHelper.writeMessage("Not enough money!");
+                if (amount <= 0) throw new Exception();
+                if (!cm.isAmountAvailable(amount))
+                {
+                    ConsoleHelper.writeMessage(res.getString("not.enough.money"));
                     continue;
                 }
                 Map<Integer, Integer> cash = cm.withdrawAmount(amount);
@@ -44,17 +48,16 @@ class WithdrawCommand implements Command
                 {
                     ConsoleHelper.writeMessage(String.format("\t%d - %d", denom, cash.get(denom)));
                 }
-                ConsoleHelper.writeMessage("Transaction successful!");
+                ConsoleHelper.writeMessage(String.format(res.getString("success.format"), amount, code));
                 break;
             }
             catch (NotEnoughMoneyException e)
             {
-                ConsoleHelper.writeMessage(e.getMessage());
+                ConsoleHelper.writeMessage(res.getString("exact.amount.not.available"));
             }
             catch (Exception e)
             {
-                ConsoleHelper.writeMessage(e.getMessage());
-                ConsoleHelper.writeMessage("Please try again!");
+                ConsoleHelper.writeMessage(res.getString("specify.not.empty.amount"));
             }
         }
     }

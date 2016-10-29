@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 class InfoCommand implements Command
 {
-    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.info", Locale.ENGLISH);
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.info");
     @Override
     public void execute()
     {
