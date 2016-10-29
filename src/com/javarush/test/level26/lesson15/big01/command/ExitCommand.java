@@ -16,9 +16,8 @@ class ExitCommand implements Command
     @Override
     public void execute() throws InterruptOperationException
     {
-        ConsoleHelper.writeMessage(res.getString("before"));
         ConsoleHelper.writeMessage(res.getString("exit.question.y.n"));
-        if (res.getString("y").toLowerCase().equals(ConsoleHelper.readString().toLowerCase())) throw new InterruptOperationException();
+        if (res.getString("yes").toLowerCase().equals(ConsoleHelper.readString().toLowerCase())) throw new InterruptOperationException();
     }
 
     ExitCommand()

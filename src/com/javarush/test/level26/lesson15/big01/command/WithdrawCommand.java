@@ -16,7 +16,7 @@ class WithdrawCommand implements Command
     @Override
     public void execute() throws InterruptOperationException
     {
-        String code = ConsoleHelper.askCurrencyCode();
+        String code = ConsoleHelper.askCurrencyCode("Please specify valid data.");
         CurrencyManipulator cm = CurrencyManipulatorFactory.getManipulatorByCurrencyCode(code);
 
         while (true)

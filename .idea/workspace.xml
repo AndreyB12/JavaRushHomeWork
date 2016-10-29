@@ -2,8 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/common_en.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/login_en.properties" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/withdraw_en.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -80,23 +89,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CashMachine.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="319">
-              <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="442">
+              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt">
+      <file leaf-file-name="withdraw_en.properties" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/withdraw_en.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="69" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="69" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login_en.properties" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/login_en.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="22" />
               <folding />
             </state>
           </provider>
@@ -115,47 +132,10 @@
       <file leaf-file-name="LoginCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+            <state relative-caret-position="238">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CommandExecutor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/CommandExecutor.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Operation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Operation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CurrencyManipulator.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CurrencyManipulator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="986">
-              <caret line="74" column="17" selection-start-line="74" selection-start-column="17" selection-end-line="74" selection-end-column="17" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#getTotalAmount#0;class#CurrencyManipulator#0" expanded="false" />
-                <element signature="e#1731#1732#0" expanded="true" />
-                <element signature="e#1787#1788#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -164,12 +144,10 @@
       <file leaf-file-name="WithdrawCommand.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="799">
-              <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
+            <state relative-caret-position="182">
+              <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1504#1505#0" expanded="true" />
-                <element signature="e#1576#1577#0" expanded="true" />
                 <element signature="method#WithdrawCommand#0;class#WithdrawCommand#0" expanded="false" />
               </folding>
             </state>
@@ -179,13 +157,13 @@
       <file leaf-file-name="ConsoleHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
+            <state relative-caret-position="1026">
+              <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#readString#0;class#ConsoleHelper#0" expanded="false" />
-                <element signature="method#getValidTwoDigits#0;class#ConsoleHelper#0" expanded="false" />
-                <element signature="method#askAreYouSure#0;class#ConsoleHelper#0" expanded="false" />
+                <element signature="e#2836#2837#0" expanded="true" />
+                <element signature="e#2896#2897#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -225,9 +203,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson05/task01/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson05/task02/Solution.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson05/home01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson05/home01/LoggingStateThread.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/task01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level25/lesson09/task01/Solution.java" />
@@ -262,19 +237,22 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson10/home02/Producer.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Operations.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/exception/InterruptOperationException.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/Command.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CurrencyManipulatorFactory.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/InfoCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/exception/NotEnoughMoneyException.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CurrencyManipulator.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Operation.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/CommandExecutor.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/InfoCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/deposit_en.properties" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/verifiedCards.properties" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/common_en.properties" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java" />
       </list>
     </option>
@@ -467,6 +445,40 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level26" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="command" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -967,27 +979,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00201" summary="Update tasks">
-      <created>1475780513795</created>
-      <option name="number" value="00201" />
-      <option name="presentableId" value="LOCAL-00201" />
-      <option name="project" value="LOCAL" />
-      <updated>1475780513795</updated>
-    </task>
-    <task id="LOCAL-00202" summary="Update tasks">
-      <created>1475780575833</created>
-      <option name="number" value="00202" />
-      <option name="presentableId" value="LOCAL-00202" />
-      <option name="project" value="LOCAL" />
-      <updated>1475780575833</updated>
-    </task>
-    <task id="LOCAL-00203" summary="Update tasks">
-      <created>1475780602515</created>
-      <option name="number" value="00203" />
-      <option name="presentableId" value="LOCAL-00203" />
-      <option name="project" value="LOCAL" />
-      <updated>1475780602515</updated>
-    </task>
     <task id="LOCAL-00204" summary="Update tasks">
       <created>1475783621005</created>
       <option name="number" value="00204" />
@@ -1310,7 +1301,28 @@
       <option name="project" value="LOCAL" />
       <updated>1477683665744</updated>
     </task>
-    <option name="localTasksCounter" value="250" />
+    <task id="LOCAL-00250" summary="Update tasks">
+      <created>1477744959396</created>
+      <option name="number" value="00250" />
+      <option name="presentableId" value="LOCAL-00250" />
+      <option name="project" value="LOCAL" />
+      <updated>1477744959396</updated>
+    </task>
+    <task id="LOCAL-00251" summary="Update tasks">
+      <created>1477745249824</created>
+      <option name="number" value="00251" />
+      <option name="presentableId" value="LOCAL-00251" />
+      <option name="project" value="LOCAL" />
+      <updated>1477745249824</updated>
+    </task>
+    <task id="LOCAL-00252" summary="Update tasks">
+      <created>1477745476975</created>
+      <option name="number" value="00252" />
+      <option name="presentableId" value="LOCAL-00252" />
+      <option name="project" value="LOCAL" />
+      <updated>1477745476975</updated>
+    </task>
+    <option name="localTasksCounter" value="253" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1954,7 +1966,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java</url>
-          <line>12</line>
+          <line>13</line>
           <properties field="validCreditCards" class="com.javarush.test.level26.lesson15.big01.command.LoginCommand" />
           <option name="timeStamp" value="375" />
         </line-breakpoint>
@@ -1993,48 +2005,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/home01/TaskManipulator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="4" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_77/src.zip!/java/util/concurrent/FutureTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="163" column="19" selection-start-line="163" selection-start-column="19" selection-end-line="163" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/home02/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/home02/SocketTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" column="29" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson07/home02/CancellableTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson11/task01/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="49" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level25/lesson11/task02/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -2281,43 +2251,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/InfoCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="54" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/exception/NotEnoughMoneyException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="56" column="0" selection-start-line="56" selection-start-column="0" selection-end-line="56" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1504#1505#0" expanded="true" />
-            <element signature="e#1576#1577#0" expanded="true" />
-            <element signature="method#WithdrawCommand#0;class#WithdrawCommand#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2334,27 +2271,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="13" column="33" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#readString#0;class#ConsoleHelper#0" expanded="false" />
-            <element signature="method#getValidTwoDigits#0;class#ConsoleHelper#0" expanded="false" />
-            <element signature="method#askAreYouSure#0;class#ConsoleHelper#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="13" column="85" selection-start-line="13" selection-start-column="85" selection-end-line="13" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Operation.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -2363,23 +2279,46 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/info_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="319">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="1" column="28" selection-start-line="1" selection-start-column="28" selection-end-line="1" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/InfoCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="19" column="60" selection-start-line="19" selection-start-column="8" selection-end-line="19" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/deposit_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="39" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/WithdrawCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="16" column="60" selection-start-line="16" selection-start-column="60" selection-end-line="16" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#WithdrawCommand#0;class#WithdrawCommand#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/CommandExecutor.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/exit_en.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="268">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="34">
+          <caret line="2" column="18" selection-start-line="2" selection-start-column="18" selection-end-line="2" selection-end-column="18" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2391,10 +2330,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java">
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/ExitCommand.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
+        <state relative-caret-position="272">
+          <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/CommandExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/DepositCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/CashMachine.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -2403,8 +2368,55 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="69" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="69" />
+        <state relative-caret-position="442">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/common_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="29" selection-start-line="8" selection-start-column="29" selection-end-line="8" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/withdraw_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/ConsoleHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="82" column="13" selection-start-line="82" selection-start-column="13" selection-end-line="82" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#readString#0;class#ConsoleHelper#0" expanded="false" />
+            <element signature="e#2836#2837#0" expanded="true" />
+            <element signature="e#2896#2897#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/command/LoginCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level26/lesson15/big01/resources/login_en.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="22" />
           <folding />
         </state>
       </provider>

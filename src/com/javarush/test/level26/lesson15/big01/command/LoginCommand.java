@@ -3,6 +3,7 @@ package com.javarush.test.level26.lesson15.big01.command;
 import com.javarush.test.level26.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationException;
 
+import java.util.Locale;
 import java.util.ResourceBundle;
 
 /**
@@ -11,41 +12,36 @@ import java.util.ResourceBundle;
 public class LoginCommand implements Command
 {
     private ResourceBundle validCreditCards = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.verifiedCards");
+    private ResourceBundle res = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.login", Locale.ENGLISH);
 
     @Override
     public void execute() throws InterruptOperationException
     {
+        ConsoleHelper.writeMessage(res.getString("before"));
+        String cID;
+        String cPIN;
+        ConsoleHelper.writeMessage(res.getString("specify.data"));
+
         while (true)
         {
-            String cID;
-            String cPIN;
-            ConsoleHelper.writeMessage("Enter card number (12 nums):");
             cID = ConsoleHelper.readString();
-            if (!cID.matches("^[0-9]{12}$"))
-            {
-                ConsoleHelper.writeMessage("Data not valid!");
-                continue;
-            }
-            ConsoleHelper.writeMessage("Enter a pin(4 nums):");
             cPIN = ConsoleHelper.readString();
-            if (!cPIN.matches("^[0-9]{4}$"))
+            if (!cID.matches("^[0-9]{12}$") || !cPIN.matches("^[0-9]{4}$"))
             {
-                ConsoleHelper.writeMessage("Data not valid!");
+                ConsoleHelper.writeMessage(res.getString("try.again.with.details"));
                 continue;
             }
-            if (!validCreditCards.containsKey(cID))
+            if (validCreditCards.containsKey(cID))
             {
-                ConsoleHelper.writeMessage("Wrong CardID");
-                continue;
+                if (validCreditCards.getString(cID).equals(cPIN))
+                {
+                    break;
+                }
             }
-            if (!validCreditCards.getString(cID).equals(cPIN))
-            {
-                ConsoleHelper.writeMessage("Wrong Pin");
-                continue;
-            }
-            ConsoleHelper.writeMessage("Welcome!");
-            break;
+            ConsoleHelper.writeMessage(String.format(res.getString("not.verified.format"), cID));
+            ConsoleHelper.writeMessage(res.getString("try.again.or.exit"));
         }
+        ConsoleHelper.writeMessage(String.format(res.getString("success.format"), cID));
     }
 
     LoginCommand()

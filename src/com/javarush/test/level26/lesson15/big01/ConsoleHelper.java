@@ -5,12 +5,15 @@ import com.javarush.test.level26.lesson15.big01.exception.InterruptOperationExce
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.Locale;
+import java.util.ResourceBundle;
 
 /**
  * Created by butkoav on 11.10.2016.
  */
 public class ConsoleHelper
 {
+    static ResourceBundle commonRes = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common", Locale.ENGLISH);
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message)
@@ -28,33 +31,33 @@ public class ConsoleHelper
         catch (IOException e)
         {
         }
-        if(result.toLowerCase().equals("exit")) throw new InterruptOperationException();
+        if (result.toLowerCase().equals("exit")) throw new InterruptOperationException();
 
         return result;
     }
 
-    public static String askCurrencyCode() throws InterruptOperationException
+    public static String askCurrencyCode(String errorMessage) throws InterruptOperationException
     {
-        writeMessage("Enter currency code (3 letters):");
+        writeMessage(commonRes.getString("choose.currency.code"));
         while (true)
         {
-           String code = readString();
+            String code = readString();
 
             if (code.matches("[a-zA-Z]{3}"))
                 return code.toUpperCase();
-            writeMessage("Wrong currency code. Try again!");
+            writeMessage(errorMessage);
         }
     }
 
-    public static String[] getValidTwoDigits(String currencyCode) throws InterruptOperationException
+    public static String[] getValidTwoDigits(String code) throws InterruptOperationException
     {
-        writeMessage("Input two positive integers separeted by space (\"200 99\"):");
+        writeMessage(String.format(commonRes.getString("choose.denomination.and.count.format"), code));
         String string;
         while (true)
         {
             string = readString();
             if (string.matches("^\\d+ \\d+$")) return string.split(" ");
-            writeMessage("Wrong input. Try again!");
+            writeMessage(commonRes.getString("invalid.data"));
         }
     }
 
@@ -64,15 +67,21 @@ public class ConsoleHelper
 
         while (true)
         {
-            writeMessage("Select command (1 - INFO, 2 - DEPOSIT, 3 - WITHDRAW, 4 - EXIT):");
+            writeMessage(commonRes.getString("choose.operation"));
             try
             {
+                writeMessage(String.format("1 - %s, 2 - %s, 3 - %s, 4 - %s"
+                        , commonRes.getString("operation.INFO")
+                        , commonRes.getString("operation.DEPOSIT")
+                        , commonRes.getString("operation.WITHDRAW")
+                        , commonRes.getString("operation.EXIT")
+                ));
                 operation = Operation.getAllowableOperationByOrdinal(Integer.valueOf(readString()));
                 break;
             }
             catch (Exception e)
             {
-                writeMessage("Wrong command. Try again!");
+                writeMessage(commonRes.getString("invalid.data"));
             }
         }
         return operation;
@@ -80,7 +89,7 @@ public class ConsoleHelper
 
     public static void sayGoodbye()
     {
-        writeMessage("Arrivederci!");
+        writeMessage(commonRes.getString("the.end"));
     }
 
     public static boolean askAreYouSure() throws InterruptOperationException
