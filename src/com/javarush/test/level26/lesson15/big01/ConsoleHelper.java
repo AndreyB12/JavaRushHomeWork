@@ -13,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class ConsoleHelper
 {
-    static ResourceBundle commonRes = ResourceBundle.getBundle("com.javarush.test.level26.lesson15.big01.resources.common");
+    static ResourceBundle commonRes = ResourceBundle.getBundle(CashMachine.RESOURCE_PATH +"common");
     static BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
     public static void writeMessage(String message)
@@ -87,7 +87,7 @@ public class ConsoleHelper
         return operation;
     }
 
-    public static void sayGoodbye()
+    public static void printExitMessage()
     {
         writeMessage(commonRes.getString("the.end"));
     }
