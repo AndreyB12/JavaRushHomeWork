@@ -18,7 +18,13 @@ public class LoginCommand implements Command
     @Override
     public void execute() throws InterruptOperationException
     {
-        ConsoleHelper.writeMessage(res.getString("before"));
+        try{
+            ConsoleHelper.writeMessage(new String(res.getString("before").getBytes("ISO-8859-1"), "utf-8"));
+
+        }catch (Exception e)
+        {
+            ConsoleHelper.writeMessage(res.getString("before"));
+        }
         String cID;
         String cPIN;
         ConsoleHelper.writeMessage(res.getString("specify.data"));
