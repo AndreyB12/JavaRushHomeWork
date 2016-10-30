@@ -5,7 +5,7 @@ package com.javarush.test.level27.lesson15.big01;
  */
 public class Tablet
 {
-    final int number;
+    public final int number;
 
     public Tablet(int number)
     {
