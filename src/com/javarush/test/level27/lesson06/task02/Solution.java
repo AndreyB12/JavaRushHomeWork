@@ -7,52 +7,110 @@ package com.javarush.test.level27.lesson06.task02;
 для разных объектов o1 и o2 isNormalLockOrder(o1, o2) != isNormalLockOrder(o2, o1), для одинаковых объектов одинаковый результат
 Метод main не участвует в тестировании.
 */
-public class Solution {
-    public void someMethodWithSynchronizedBlocks(Object obj1, Object obj2) {
+public class Solution
+{
+    public void someMethodWithSynchronizedBlocks(Object obj1, Object obj2)
+    {
         //следующие 4 строки в тестах имеют другую реализацию
         int lock1 = obj1.hashCode();
         int lock2 = obj2.hashCode();
         Object firstLock = lock1 > lock2 ? obj1 : obj2;
         Object secondLock = lock1 > lock2 ? obj2 : obj1;
 
-        synchronized (firstLock) {
-            try {
+        synchronized (firstLock)
+        {
+            try
+            {
                 Thread.sleep(100);
-            } catch (InterruptedException ignored) {
+            }
+            catch (InterruptedException ignored)
+            {
             }
 
-            synchronized (secondLock) {
+            synchronized (secondLock)
+            {
                 System.out.println(obj1 + " " + obj2);
             }
         }
     }
 
-    public static boolean isNormalLockOrder(final Solution solution, final Object o1, final Object o2) throws Exception {
-        solution.someMethodWithSynchronizedBlocks(o1,o2);
-        return false;
+    public static boolean isNormalLockOrder(final Solution solution, final Object o1, final Object o2) throws Exception
+    {
+        boolean b;
+        synchronized (solution)
+        {
+
+            Thread testThreadO1;
+            testThreadO1 = new Thread()
+            {
+                @Override
+                public void run()
+                {
+                    synchronized (o1)
+                    {
+                        try
+                        {
+                            this.sleep(1000);
+                        }
+                        catch (InterruptedException e)
+                        {
+                        }
+                    }
+                }
+            };
+            testThreadO1.start();
+            Thread.sleep(10);
+            Thread testThread;
+            testThread = new Thread()
+            {
+                @Override
+                public void run()
+                {
+                    solution.someMethodWithSynchronizedBlocks(o1, o2);
+                }
+            };
+            testThread.start();
+            Thread.sleep(10);
+            Thread.State st = testThread.getState();
+            b = st == Thread.State.BLOCKED ? true : false;
+            testThreadO1.join();
+            testThread.join();
+        }
+        return b;
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception
+    {
         final Solution solution = new Solution();
-        final Object o1 = new Object();
-        final Object o2 = new Object();
-
-        new Thread() {
+        final Object obj1 = new Object();
+        final Object obj2 = new Object();
+        new Thread()
+        {
             @Override
-            public void run() {
-                try {
-                    isNormalLockOrder(solution, o1, o2); //expected boolean b
-                } catch (Exception ignored) {
+            public void run()
+            {
+                try
+                {
+
+                    System.out.println(isNormalLockOrder(solution, obj1, obj2)); //expected boolean b);
+                }
+                catch (Exception ignored)
+                {
                 }
             }
         }.start();
 
-        new Thread() {
+        new Thread()
+        {
             @Override
-            public void run() {
-                try {
-                    isNormalLockOrder(solution, o2, o1); //expected boolean !b
-                } catch (Exception ignored) {
+            public void run()
+            {
+                try
+                {
+                    System.out.println(isNormalLockOrder(solution, obj2, obj1)); //expected boolean !b
+                }
+                catch (Exception ignored)
+                {
                 }
             }
         }.start();
