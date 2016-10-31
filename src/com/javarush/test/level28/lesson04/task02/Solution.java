@@ -9,16 +9,20 @@ getRandomIntegerBetweenNumbers должен возвращать случайн�
 getRandomDouble должен возвращать случайный double
 getRandomLongBetween0AndN должен возвращать случайный long между 0 и n
 */
-public class Solution {
-    public static int getRandomIntegerBetweenNumbers(int from, int to) {
-        return 0;
+public class Solution
+{
+    public static int getRandomIntegerBetweenNumbers(int from, int to)
+    {
+        return ThreadLocalRandom.current().nextInt(from, to);
     }
 
-    public static double getRandomDouble() {
-        return 0;
+    public static double getRandomDouble()
+    {
+        return ThreadLocalRandom.current().nextDouble();
     }
 
-    public static long getRandomLongBetween0AndN(long n) {
-        return 0;
+    public static long getRandomLongBetween0AndN(long n)
+    {
+        return ThreadLocalRandom.current().nextLong(n);
     }
 }
