@@ -22,12 +22,16 @@ secondGroup-pool-2-thread-3
 firstGroup-pool-1-thread-2
 secondGroup-pool-2-thread-2
 */
-public class Solution {
+public class Solution
+{
 
-    public static void main(String[] args) {
-        class EmulateThreadFactoryTask implements Runnable {
+    public static void main(String[] args)
+    {
+        class EmulateThreadFactoryTask implements Runnable
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 emulateThreadFactory();
             }
         }
@@ -42,11 +46,14 @@ public class Solution {
         thread2.start();
     }
 
-    private static void emulateThreadFactory() {
+    private static void emulateThreadFactory()
+    {
         AmigoThreadFactory factory = new AmigoThreadFactory();
-        Runnable r = new Runnable() {
+        Runnable r = new Runnable()
+        {
             @Override
-            public void run() {
+            public void run()
+            {
                 System.out.println(Thread.currentThread().getName());
             }
         };
@@ -54,4 +61,28 @@ public class Solution {
         factory.newThread(r).start();
         factory.newThread(r).start();
     }
+
+
+    public static class AmigoThreadFactory implements ThreadFactory
+    {
+        static AtomicInteger factoryCount = new AtomicInteger(0);
+        final AtomicInteger factoryNumber = new AtomicInteger();
+        AtomicInteger threadCount = new AtomicInteger(0);
+        final ThreadGroup threadGroup;
+
+        public AmigoThreadFactory()
+        {
+            this.threadGroup = Thread.currentThread().getThreadGroup();
+            factoryNumber.set(factoryCount.incrementAndGet());
+        }
+
+        @Override
+        public Thread newThread(Runnable r)
+        {
+            String name = String.format("%s-pool-%d-thread-%d", threadGroup.getName(), factoryNumber.intValue(), threadCount.incrementAndGet());
+            return new Thread(threadGroup, r, name);
+
+        }
+    }
+
 }
