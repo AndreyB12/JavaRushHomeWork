@@ -9,17 +9,21 @@ import java.util.concurrent.*;
 Объект Callable должен вычислять сумму всех чисел от 1 до переданного числа i включая его, и возвращать его в виде строки
 Метод main не участвует в тестировании
 */
-public class Solution {
-    public static void main(String[] args) throws InterruptedException, ExecutionException {
+public class Solution
+{
+    public static void main(String[] args) throws InterruptedException, ExecutionException
+    {
         List<Future<String>> futures = new ArrayList<>();
         ExecutorService executor = Executors.newFixedThreadPool(5);
-        for (int i = 1000; i <= 1010; i++) {
+        for (int i = 1000; i <= 1010; i++)
+        {
             futures.add(executor.submit(getTask(i)));
         }
 
         futures.add(executor.submit(getTask(10000000)));
 
-        for(Future<String> future : futures) {
+        for (Future<String> future : futures)
+        {
             System.out.println(future.get());
         }
 
@@ -42,7 +46,21 @@ public class Solution {
 */
     }
 
-    public static Callable<String> getTask(final int i) {
-        return null;
+    public static Callable<String> getTask(final int i)
+    {
+
+        return new Callable<String>()
+        {
+            @Override
+            public String call() throws Exception
+            {
+                long summ = 0;
+                for (int j = 1; j <= i; j++)
+                {
+                    summ += j;
+                }
+                return String.valueOf(summ);
+            }
+        };
     }
 }
