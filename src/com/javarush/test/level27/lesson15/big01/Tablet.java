@@ -2,13 +2,14 @@ package com.javarush.test.level27.lesson15.big01;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Order;
 import java.io.IOException;
+import java.util.Observable;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
  * Created by butkoav on 31.10.2016.
  */
-public class Tablet
+public class Tablet extends Observable
 {
     private final int number;
     private static Logger logger = Logger.getLogger(Tablet.class.getName());
@@ -22,7 +23,10 @@ public class Tablet
     {
         try
         {
-            ConsoleHelper.writeMessage(new Order(this).toString());
+            Order order = new Order(this);
+            ConsoleHelper.writeMessage(order.toString());
+            setChanged();
+            notifyObservers(order);
         }
         catch (IOException e)
         {
