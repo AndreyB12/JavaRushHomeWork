@@ -11,7 +11,7 @@ import java.util.logging.Logger;
 public class Tablet
 {
     private final int number;
-    private static Logger logger = Logger.getLogger("Tablet");
+    private static Logger logger = Logger.getLogger(Tablet.class.getName());
 
     public Tablet(int number)
     {
