@@ -1,7 +1,6 @@
 package com.javarush.test.level27.lesson15.big01;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Dish;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -28,22 +27,21 @@ public class ConsoleHelper
     public static List<Dish> getAllDishesForOrder() throws IOException
     {
         List<Dish> list = new ArrayList<>();
-        String string;
-        do
+        String inputLine;
+        if (Dish.values().length == 0) return list;
+        writeMessage(Dish.allDishesToString());
+        while (!(inputLine = readString()).equalsIgnoreCase("exit"))
         {
-            writeMessage("Make an order:");
-            writeMessage(Dish.allDishesToString());
-            string = readString();
             try
             {
-                list.add(Dish.values()[Integer.parseInt(string) - 1]);
+                list.add(Dish.valueOf(inputLine));
             }
-            catch (Exception e)
+            catch (IllegalArgumentException e)
             {
-                System.out.println(e);
+                writeMessage("Try again!");
             }
         }
-        while (!string.toLowerCase().equals("exit"));
+
         return list;
     }
 }

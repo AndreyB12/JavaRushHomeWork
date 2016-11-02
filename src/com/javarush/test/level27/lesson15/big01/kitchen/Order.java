@@ -2,7 +2,6 @@ package com.javarush.test.level27.lesson15.big01.kitchen;
 
 import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
 import com.javarush.test.level27.lesson15.big01.Tablet;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -24,7 +23,7 @@ public class Order
     @Override
     public String toString()
     {
-        return dishes.size() == 0 ? ""
-                : String.format("Your order: %s of Tablet{number=%d}", dishes, tablet.number);
+       if(dishes.isEmpty()) return "";
+        return String.format("Your order: %s of %s", dishes, tablet).toString();
     }
 }
