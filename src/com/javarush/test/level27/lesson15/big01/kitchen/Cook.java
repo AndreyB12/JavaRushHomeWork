@@ -27,5 +27,7 @@ public class Cook extends Observable implements Observer
     public void update(Observable o, Object order)
     {
         ConsoleHelper.writeMessage("Start cooking - " + order);
+        setChanged();
+        notifyObservers(order);
     }
 }
