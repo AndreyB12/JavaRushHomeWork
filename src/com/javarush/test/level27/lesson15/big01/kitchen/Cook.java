@@ -8,7 +8,7 @@ import java.util.Observer;
 /**
  * Created by butkoav on 03.11.2016.
  */
-public class Cook implements Observer
+public class Cook extends Observable implements Observer
 {
     private final String name;
 
