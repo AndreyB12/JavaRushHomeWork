@@ -32,15 +32,12 @@ public class Tablet extends Observable
             ConsoleHelper.writeMessage(order.toString());
             setChanged();
             notifyObservers(order);
+            new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
         }
         catch (IOException e)
         {
             logger.log(Level.SEVERE, "Console is unavailable.");
             return;
-        }
-        try
-        {
-            new AdvertisementManager(order.getTotalCookingTime()).processVideos();
         }
         catch (NoVideoAvailableException e)
         {

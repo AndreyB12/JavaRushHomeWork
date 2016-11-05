@@ -22,8 +22,23 @@ public class AdvertisementManager
 
     public void processVideos()
     {
-        List<Advertisement> list = new ArrayList<>();
-        list.addAll(storage.list());
+        List<VideoToView> lists = new ArrayList<>();
+        for (Advertisement video : storage.list())
+        {
+            if (video.getDuration() <= timeSeconds
+                    && video.getHits() > 0)
+            {
+                List<Advertisement> chosen = new ArrayList<>();
+                chosen.add(video);
+                getListToView(chosen, timeSeconds - video.getDuration());
+                lists.add(new VideoToView(chosen));
+            }
+
+        }
+        Collections.sort(lists);
+
+        List<Advertisement> list = lists.get(0).list;
+
         if (list.isEmpty()) throw new NoVideoAvailableException();
         Collections.sort(list, new Comparator<Advertisement>()
         {
@@ -50,4 +65,47 @@ public class AdvertisementManager
             }
         }
     }
+
+    private void getListToView(List<Advertisement> chosenVideos, int timeSeconds)
+    {
+
+        for (Advertisement video : storage.list())
+        {
+            if (!chosenVideos.contains(video)
+                    && video.getDuration() <= timeSeconds
+                    && video.getHits() > 0)
+            {
+                chosenVideos.add(video);
+                getListToView(chosenVideos, timeSeconds - video.getDuration());
+                return;
+            }
+        }
+
+    }
+
+    private class VideoToView implements Comparable<VideoToView>
+    {
+        int moneySumm = 0;
+        int duration = 0;
+        List<Advertisement> list = new ArrayList<>();
+
+        VideoToView(List<Advertisement> list)
+        {
+            this.list = list;
+            for (Advertisement video : list)
+            {
+                moneySumm += video.getAmountPerOneDisplaying();
+                duration += video.getDuration();
+            }
+        }
+
+        @Override
+        public int compareTo(VideoToView o)
+        {
+            return Integer.compare(o.moneySumm, this.moneySumm) * 100
+                    + Integer.compare(o.duration, this.duration) * 10
+                    + Integer.compare(this.list.size(), o.list.size());
+        }
+    }
+
 }
