@@ -13,12 +13,26 @@ public class Order
 {
     private List<Dish> dishes;
     private Tablet tablet;
-
+    private int totalCookingTime;
 
     public Order(Tablet tablet) throws IOException
     {
         this.tablet = tablet;
         dishes = ConsoleHelper.getAllDishesForOrder();
+        for (Dish dish : dishes)
+        {
+            totalCookingTime += dish.getDuration();
+        }
+    }
+
+    public int getTotalCookingTime()
+    {
+        return totalCookingTime;
+    }
+
+    public boolean isEmpty()
+    {
+        return dishes.isEmpty();
     }
 
     @Override

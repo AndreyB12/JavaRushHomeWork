@@ -1,6 +1,7 @@
 package com.javarush.test.level27.lesson15.big01;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Dish;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -38,7 +39,7 @@ public class ConsoleHelper
             }
             catch (IllegalArgumentException e)
             {
-                writeMessage("Try again!");
+                writeMessage(inputLine + " is not detected");
             }
         }
 

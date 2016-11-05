@@ -1,6 +1,7 @@
 package com.javarush.test.level27.lesson15.big01;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Order;
+
 import java.io.IOException;
 import java.util.Observable;
 import java.util.logging.Level;
@@ -24,6 +25,7 @@ public class Tablet extends Observable
         try
         {
             Order order = new Order(this);
+            if (order.isEmpty()) return;
             ConsoleHelper.writeMessage(order.toString());
             setChanged();
             notifyObservers(order);
@@ -37,6 +39,6 @@ public class Tablet extends Observable
     @Override
     public String toString()
     {
-        return String.format("Tablet{number=%s}",number);
+        return String.format("Tablet{number=%s}", number);
     }
 }
