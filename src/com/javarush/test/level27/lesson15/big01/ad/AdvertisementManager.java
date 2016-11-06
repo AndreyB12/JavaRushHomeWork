@@ -2,10 +2,7 @@ package com.javarush.test.level27.lesson15.big01.ad;
 
 import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.List;
+import java.util.*;
 
 /**
  * Created by butkoav on 05.11.2016.
@@ -22,25 +19,28 @@ public class AdvertisementManager
 
     public void processVideos()
     {
-        List<VideoToView> lists = new ArrayList<>();
+        List<Advertisement> tmpStorage = new ArrayList<>();
         for (Advertisement video : storage.list())
         {
-            if (video.getDuration() <= timeSeconds
-                    && video.getHits() > 0)
-            {
-                List<Advertisement> chosen = new ArrayList<>();
-                chosen.add(video);
-                getListToView(chosen, timeSeconds - video.getDuration());
-                lists.add(new VideoToView(chosen));
-            }
-
+            if (video.getHits() > 0) tmpStorage.add(video);
         }
-        Collections.sort(lists);
+        Collections.sort(tmpStorage, new Comparator<Advertisement>()
+        {
+            @Override
+            public int compare(Advertisement o1, Advertisement o2)
+            {
+                return Integer.compare(o1.getDuration(),o2.getDuration());
+            }
+        });
 
-        List<Advertisement> list = lists.get(0).list;
 
-        if (list.isEmpty()) throw new NoVideoAvailableException();
-        Collections.sort(list, new Comparator<Advertisement>()
+         List<Advertisement> videoToView = new ArrayList<>();
+        long[][] costMatrix = new long[tmpStorage.size() + 1][timeSeconds + 1];
+        fillCostMatrix(tmpStorage.size() - 1, timeSeconds,tmpStorage,costMatrix);
+        addToResult(tmpStorage.size(), timeSeconds,costMatrix,videoToView,tmpStorage);
+
+        if (videoToView.isEmpty()) throw new NoVideoAvailableException();
+        Collections.sort(videoToView, new Comparator<Advertisement>()
         {
             @Override
             public int compare(Advertisement o1, Advertisement o2)
@@ -50,7 +50,7 @@ public class AdvertisementManager
                 return result;
             }
         });
-        for (Advertisement video : list)
+        for (Advertisement video : videoToView)
         {
             ConsoleHelper.writeMessage(String.format("%s is displaying... %s, %s"
                     , video.getName()
@@ -66,45 +66,39 @@ public class AdvertisementManager
         }
     }
 
-    private void getListToView(List<Advertisement> chosenVideos, int timeSeconds)
+    private long fillCostMatrix(int videoNumb, int timeCapacity, List<Advertisement> tmpStorage,long[][] costMatrix)
     {
+        if (videoNumb < 0 || timeCapacity <= 0) return 0;
+        long withVideo = 0;
 
-        for (Advertisement video : storage.list())
+        if (tmpStorage.get(videoNumb).getDuration() <= timeCapacity)
         {
-            if (!chosenVideos.contains(video)
-                    && video.getDuration() <= timeSeconds
-                    && video.getHits() > 0)
-            {
-                chosenVideos.add(video);
-                getListToView(chosenVideos, timeSeconds - video.getDuration());
-                return;
-            }
-        }
+            withVideo = tmpStorage.get(videoNumb).getAmountPerOneDisplaying()
+                    + fillCostMatrix(videoNumb - 1, timeCapacity - tmpStorage.get(videoNumb).getDuration(),tmpStorage,costMatrix);
 
+        }
+        long withoutVideo = fillCostMatrix(videoNumb - 1, timeCapacity,tmpStorage,costMatrix);
+        if (withVideo > withoutVideo)
+        {
+            costMatrix[videoNumb + 1][timeCapacity] = withVideo;
+            return withVideo;
+        } else
+        {
+
+            costMatrix[videoNumb + 1][timeCapacity] = withoutVideo;
+            return withoutVideo;
+        }
     }
-
-    private class VideoToView implements Comparable<VideoToView>
+    private void addToResult(int numb, int capacity,long[][] costMatrix,List<Advertisement> videoToView,List<Advertisement> tmpStorage)
     {
-        int moneySumm = 0;
-        int duration = 0;
-        List<Advertisement> list = new ArrayList<>();
-
-        VideoToView(List<Advertisement> list)
+        if (numb <= 0 || capacity <= 0) return;
+        if (costMatrix[numb][capacity] == costMatrix[numb - 1][capacity])
         {
-            this.list = list;
-            for (Advertisement video : list)
-            {
-                moneySumm += video.getAmountPerOneDisplaying();
-                duration += video.getDuration();
-            }
-        }
-
-        @Override
-        public int compareTo(VideoToView o)
+            addToResult(numb - 1, capacity, costMatrix,videoToView,tmpStorage);
+        } else
         {
-            return Integer.compare(o.moneySumm, this.moneySumm) * 100
-                    + Integer.compare(o.duration, this.duration) * 10
-                    + Integer.compare(this.list.size(), o.list.size());
+            videoToView.add(tmpStorage.get(numb - 1));
+            addToResult(numb - 1, capacity - tmpStorage.get(numb - 1).getDuration(), costMatrix, videoToView,tmpStorage);
         }
     }
 

@@ -25,6 +25,7 @@ public class Tablet extends Observable
     public void createOrder()
     {
         Order order = null;
+
         try
         {
             order = new Order(this);
@@ -34,14 +35,14 @@ public class Tablet extends Observable
             notifyObservers(order);
             new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
         }
+        catch (NoVideoAvailableException e)
+        {
+            logger.log(Level.INFO, "No video is available for the order " + order);
+        }
         catch (IOException e)
         {
             logger.log(Level.SEVERE, "Console is unavailable.");
             return;
-        }
-        catch (NoVideoAvailableException e)
-        {
-            logger.log(Level.INFO, "No video is available for the order " + order);
         }
 
     }

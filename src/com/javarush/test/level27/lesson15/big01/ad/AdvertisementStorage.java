@@ -15,7 +15,7 @@ class AdvertisementStorage
     {
         Object someContent = new Object();
         videos.add(new Advertisement(someContent, "First Video", 200, 1, 3 * 60)); // 3 min
-        videos.add(new Advertisement(someContent, "Second Video", 400, 1, 15 * 60)); //15 min
+        videos.add(new Advertisement(someContent, "Second Video", 400, 1, 13 * 60)); //15 min
         videos.add(new Advertisement(someContent, "Third Video", 200, 1, 10 * 60));  //10 min
         videos.add(new Advertisement(someContent, "Video #4", 200, 1, 11 * 60));  //11 min
     }

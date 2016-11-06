@@ -19,7 +19,7 @@ public class Advertisement
         this.initialAmount = initialAmount;
         this.hits = hits;
         this.duration = duration;
-        this.amountPerOneDisplaying = this.initialAmount / this.hits;
+        if (hits > 0) this.amountPerOneDisplaying = this.initialAmount / this.hits;
     }
 
     public String getName()
@@ -44,12 +44,8 @@ public class Advertisement
 
     public void revalidate() throws UnsupportedOperationException
     {
-        if (hits > 0)
-        {
-            hits--;
-        } else
-        {
-            throw new UnsupportedOperationException();
-        }
+        if (hits > 0) hits--;
+        else throw new UnsupportedOperationException();
+
     }
 }
