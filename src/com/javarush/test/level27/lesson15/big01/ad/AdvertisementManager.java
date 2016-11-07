@@ -2,7 +2,10 @@ package com.javarush.test.level27.lesson15.big01.ad;
 
 import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
 
 /**
  * Created by butkoav on 05.11.2016.
@@ -19,38 +22,65 @@ public class AdvertisementManager
 
     public void processVideos()
     {
-        List<Advertisement> tmpStorage = new ArrayList<>();
-        for (Advertisement video : storage.list())
+        //class to store acceptable video sets
+        class VideoSet implements Comparable<VideoSet>
         {
-            if (video.getHits() > 0) tmpStorage.add(video);
+            long duration = 0;
+            long price = 0;
+            List<Advertisement> videos;
+
+            public VideoSet(List<Advertisement> videos)
+            {
+                this.videos = videos;
+                for (Advertisement video : this.videos)
+                {
+                    duration += video.getDuration();
+                    price += video.getAmountPerOneDisplaying();
+                }
+            }
+
+            @Override
+            public int compareTo(VideoSet o)
+            {
+                int result = Long.compare(o.price, this.price);
+                result = result == 0 ? Long.compare(o.duration, this.duration) : result;
+                return result == 0 ? Long.compare(this.videos.size(), o.videos.size()) : result;
+            }
+
+            void sortVideos()
+            {
+                Collections.sort(this.videos, new Comparator<Advertisement>()
+                {
+                    @Override
+                    public int compare(Advertisement o1, Advertisement o2)
+                    {
+                        int result = Long.compare(o2.getAmountPerOneDisplaying(), o1.getAmountPerOneDisplaying());
+                        result = result == 0 ? Long.compare(o1.getAmountPerOneDisplaying() / o1.getDuration(), o2.getAmountPerOneDisplaying() / o2.getDuration()) : result;
+                        return result;
+                    }
+                });
+            }
         }
-        Collections.sort(tmpStorage, new Comparator<Advertisement>()
+
+        List<VideoSet> videoSets = new ArrayList<>();
+
+        for (Advertisement adv : storage.list())
         {
-            @Override
-            public int compare(Advertisement o1, Advertisement o2)
+            if (adv.getHits() > 0
+                    && adv.getDuration() <= timeSeconds)
             {
-                return Integer.compare(o1.getDuration(),o2.getDuration());
+                List<Advertisement> list = new ArrayList<>();
+                list.add(adv);
+                videoSets.add(new VideoSet(getList(list, timeSeconds-adv.getDuration())));
             }
-        });
+        }
+        if (videoSets.isEmpty()) throw new NoVideoAvailableException();
+        Collections.sort(videoSets);
+        videoSets.get(0).sortVideos();
 
 
-         List<Advertisement> videoToView = new ArrayList<>();
-        long[][] costMatrix = new long[tmpStorage.size() + 1][timeSeconds + 1];
-        fillCostMatrix(tmpStorage.size() - 1, timeSeconds,tmpStorage,costMatrix);
-        addToResult(tmpStorage.size(), timeSeconds,costMatrix,videoToView,tmpStorage);
 
-        if (videoToView.isEmpty()) throw new NoVideoAvailableException();
-        Collections.sort(videoToView, new Comparator<Advertisement>()
-        {
-            @Override
-            public int compare(Advertisement o1, Advertisement o2)
-            {
-                int result = Long.compare(o2.getAmountPerOneDisplaying(), o1.getAmountPerOneDisplaying()) * 10;
-                result += Long.compare(o1.getAmountPerOneDisplaying() / o1.getDuration(), o2.getAmountPerOneDisplaying() / o2.getDuration());
-                return result;
-            }
-        });
-        for (Advertisement video : videoToView)
+        for (Advertisement video : videoSets.get(0).videos)
         {
             ConsoleHelper.writeMessage(String.format("%s is displaying... %s, %s"
                     , video.getName()
@@ -66,40 +96,22 @@ public class AdvertisementManager
         }
     }
 
-    private long fillCostMatrix(int videoNumb, int timeCapacity, List<Advertisement> tmpStorage,long[][] costMatrix)
+    private List<Advertisement> getList(List<Advertisement> added, int duration)
     {
-        if (videoNumb < 0 || timeCapacity <= 0) return 0;
-        long withVideo = 0;
+        if (duration == 0) return added;
 
-        if (tmpStorage.get(videoNumb).getDuration() <= timeCapacity)
+        for (Advertisement video : storage.list())
         {
-            withVideo = tmpStorage.get(videoNumb).getAmountPerOneDisplaying()
-                    + fillCostMatrix(videoNumb - 1, timeCapacity - tmpStorage.get(videoNumb).getDuration(),tmpStorage,costMatrix);
-
+            if (video.getHits() > 0
+                    && video.getDuration() <= duration
+                    && !added.contains(video))
+            {
+                added.add(video);
+                getList(added, duration - video.getDuration());
+                break;
+            }
         }
-        long withoutVideo = fillCostMatrix(videoNumb - 1, timeCapacity,tmpStorage,costMatrix);
-        if (withVideo > withoutVideo)
-        {
-            costMatrix[videoNumb + 1][timeCapacity] = withVideo;
-            return withVideo;
-        } else
-        {
-
-            costMatrix[videoNumb + 1][timeCapacity] = withoutVideo;
-            return withoutVideo;
-        }
-    }
-    private void addToResult(int numb, int capacity,long[][] costMatrix,List<Advertisement> videoToView,List<Advertisement> tmpStorage)
-    {
-        if (numb <= 0 || capacity <= 0) return;
-        if (costMatrix[numb][capacity] == costMatrix[numb - 1][capacity])
-        {
-            addToResult(numb - 1, capacity, costMatrix,videoToView,tmpStorage);
-        } else
-        {
-            videoToView.add(tmpStorage.get(numb - 1));
-            addToResult(numb - 1, capacity - tmpStorage.get(numb - 1).getDuration(), costMatrix, videoToView,tmpStorage);
-        }
+        return added;
     }
 
 }
