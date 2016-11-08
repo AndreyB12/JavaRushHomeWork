@@ -8,14 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementManager.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Cook.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Cook.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Order.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Order.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/NoAvailableVideoEventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/NoAvailableVideoEventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -1072,13 +1064,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00257" summary="Update tasks">
-      <created>1477756560108</created>
-      <option name="number" value="00257" />
-      <option name="presentableId" value="LOCAL-00257" />
-      <option name="project" value="LOCAL" />
-      <updated>1477756560108</updated>
-    </task>
     <task id="LOCAL-00258" summary="Update tasks">
       <created>1477757816220</created>
       <option name="number" value="00258" />
@@ -1415,7 +1400,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478629798566</updated>
     </task>
-    <option name="localTasksCounter" value="306" />
+    <task id="LOCAL-00306" summary="Update&#10;">
+      <created>1478633209801</created>
+      <option name="number" value="00306" />
+      <option name="presentableId" value="LOCAL-00306" />
+      <option name="project" value="LOCAL" />
+      <updated>1478633209801</updated>
+    </task>
+    <option name="localTasksCounter" value="307" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
