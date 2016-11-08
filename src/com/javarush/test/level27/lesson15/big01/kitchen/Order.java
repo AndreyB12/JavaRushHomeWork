@@ -40,4 +40,9 @@ public class Order
     {
         return dishes.isEmpty() ? "" : String.format("Your order: %s of %s", dishes, tablet);
     }
+
+    public List<Dish> getDishes()
+    {
+        return dishes;
+    }
 }

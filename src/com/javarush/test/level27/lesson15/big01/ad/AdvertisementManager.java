@@ -1,6 +1,8 @@
 package com.javarush.test.level27.lesson15.big01.ad;
 
 import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
+import com.javarush.test.level27.lesson15.big01.statistic.StatisticManager;
+import com.javarush.test.level27.lesson15.big01.statistic.event.VideoSelectedEventDataRow;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -25,7 +27,7 @@ public class AdvertisementManager
         //class to store acceptable video sets
         class VideoSet implements Comparable<VideoSet>
         {
-            long duration = 0;
+            int duration = 0;
             long price = 0;
             List<Advertisement> videos;
 
@@ -78,6 +80,7 @@ public class AdvertisementManager
         Collections.sort(videoSets);
         videoSets.get(0).sortVideos();
 
+        StatisticManager.getInstance().register(new VideoSelectedEventDataRow(videoSets.get(0).videos,videoSets.get(0).price,videoSets.get(0).duration));
 
 
         for (Advertisement video : videoSets.get(0).videos)
