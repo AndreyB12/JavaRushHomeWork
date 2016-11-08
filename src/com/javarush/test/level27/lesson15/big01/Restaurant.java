@@ -11,11 +11,17 @@ public class Restaurant
 {
     public static void main(String... args)
     {
-            Tablet tblt5 = new Tablet(5);
-            Cook cookAndry = new Cook("Andry");
-            Waitor waitor = new Waitor();
-            cookAndry.addObserver(waitor);
-            tblt5.addObserver(cookAndry);
-            tblt5.createOrder();
+        Tablet tblt5 = new Tablet(5);
+        DirectorTablet directorTablet = new DirectorTablet();
+        Cook cookAndry = new Cook("Andry");
+        Waitor waitor = new Waitor();
+        cookAndry.addObserver(waitor);
+        tblt5.addObserver(cookAndry);
+        tblt5.createOrder();
+
+        directorTablet.printAdvertisementProfit();
+        directorTablet.printCookWorkloading();
+        directorTablet.printActiveVideoSet();
+        directorTablet.printArchivedVideoSet();
     }
 }
