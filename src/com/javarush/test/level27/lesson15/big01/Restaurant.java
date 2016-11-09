@@ -19,6 +19,14 @@ public class Restaurant
         tblt5.addObserver(cookAndry);
         tblt5.createOrder();
 
+        Tablet tblt50 = new Tablet(50);
+        Cook cookDonald = new Cook("Donald");
+        Waitor waitor50 = new Waitor();
+        cookDonald.addObserver(waitor50);
+        tblt50.addObserver(cookDonald);
+        tblt50.createOrder();
+
+
         directorTablet.printAdvertisementProfit();
         directorTablet.printCookWorkloading();
         directorTablet.printActiveVideoSet();

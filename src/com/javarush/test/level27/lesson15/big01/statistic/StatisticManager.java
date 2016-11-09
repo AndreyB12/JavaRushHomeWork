@@ -1,11 +1,11 @@
 package com.javarush.test.level27.lesson15.big01.statistic;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Cook;
+import com.javarush.test.level27.lesson15.big01.statistic.event.CookedOrderEventDataRow;
 import com.javarush.test.level27.lesson15.big01.statistic.event.EventDataRow;
 import com.javarush.test.level27.lesson15.big01.statistic.event.EventType;
 import com.javarush.test.level27.lesson15.big01.statistic.event.VideoSelectedEventDataRow;
 
-import java.text.SimpleDateFormat;
 import java.util.*;
 
 /**
@@ -36,23 +36,66 @@ public class StatisticManager
         statisticStorage.put(data);
     }
 
-    public Map<String, Double> getDayAdvProfit()
+    public Map<Date, Double> getDayAdvProfit()
     {
-        Map<String, Double> dayProfit = new TreeMap<>();
-        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-YYYY",Locale.ENGLISH);
-        String day;
+        Map<Date, Double> dayStatistic = new TreeMap<>(Collections.reverseOrder());
+        Date date;
         Double amount;
         for (EventDataRow event_ : statisticStorage.getEvents(EventType.SELECTED_VIDEOS))
         {
             VideoSelectedEventDataRow event = (VideoSelectedEventDataRow) event_;
-            day = format.format(event.getDate());
-            amount =  ((double) event.getAmount()) / 100;
-            if (dayProfit.containsKey(day)) dayProfit.put(day, dayProfit.get(day) + amount);
-            else dayProfit.put(day, amount);
+            date = getMidnight(event.getDate());
+            amount = ((double) event.getAmount()) / 100;
+            if (dayStatistic.containsKey(date)) dayStatistic.put(date, dayStatistic.get(date) + amount);
+            else dayStatistic.put(date, amount);
         }
-        return dayProfit;
+
+        return dayStatistic;
     }
 
+    public Map<Date, Map<String, Integer>> getCookDayStatistic()
+    {
+        Map<Date, Map<String, Integer>> dayStatistic = new TreeMap<>(Collections.reverseOrder());
+        Date date;
+        Integer time;
+        String name;
+        Map<String, Integer> cookTimes;
+        for (EventDataRow event_ : statisticStorage.getEvents(EventType.COOKED_ORDER))
+        {
+            CookedOrderEventDataRow event = (CookedOrderEventDataRow) event_;
+
+            date = getMidnight(event.getDate());
+            name = event.getCookName();
+            time = event.getTime();
+
+            if (dayStatistic.containsKey(date))
+            {
+                cookTimes = dayStatistic.get(date);
+                if (cookTimes.containsKey(name)) cookTimes.put(name, cookTimes.get(name) + time);
+                else cookTimes.put(name, time);
+            } else
+            {
+                cookTimes = new TreeMap<>();
+                cookTimes.put(name, time);
+                dayStatistic.put(date, cookTimes);
+            }
+        }
+
+        return dayStatistic;
+    }
+
+    private Date getMidnight(Date date)
+    {
+        // today
+        Calendar date_ = new GregorianCalendar();
+        date_.setTime(date);
+        // reset hour, minutes, seconds and millis
+        date_.set(Calendar.HOUR_OF_DAY, 0);
+        date_.set(Calendar.MINUTE, 0);
+        date_.set(Calendar.SECOND, 0);
+        date_.set(Calendar.MILLISECOND, 0);
+        return date_.getTime();
+    }
 
     private static class StatisticStorage
     {
