@@ -57,7 +57,7 @@ public class AdvertisementManager
                     public int compare(Advertisement o1, Advertisement o2)
                     {
                         int result = Long.compare(o2.getAmountPerOneDisplaying(), o1.getAmountPerOneDisplaying());
-                        result = result == 0 ? Long.compare(o1.getAmountPerOneDisplaying() / o1.getDuration(), o2.getAmountPerOneDisplaying() / o2.getDuration()) : result;
+                        result = result == 0 ? Long.compare(o1.getAmountPerOneDisplaying()* 1000 / o1.getDuration(), o2.getAmountPerOneDisplaying()* 1000 / o2.getDuration()) : result;
                         return result;
                     }
                 });

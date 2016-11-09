@@ -14,10 +14,10 @@ class AdvertisementStorage
     private AdvertisementStorage()
     {
         Object someContent = new Object();
-        videos.add(new Advertisement(someContent, "First Video", 200, 1, 4 * 60)); // 3 min
+        videos.add(new Advertisement(someContent, "First Video", 200, 1, 10 * 60)); // 3 min
         videos.add(new Advertisement(someContent, "Second Video", 400, 1, 13 * 60)); //15 min
         videos.add(new Advertisement(someContent, "Third Video", 200, 1, 10 * 60));  //10 min
-        videos.add(new Advertisement(someContent, "Video #4", 200, 1, 10 * 60));  //11 min
+        videos.add(new Advertisement(someContent, "Video #4", 200, 1, 4 * 60));  //11 min
     }
 
     public List<Advertisement> list()
