@@ -86,10 +86,9 @@ public class StatisticManager
 
     private Date getMidnight(Date date)
     {
-        // today
+
         Calendar date_ = new GregorianCalendar();
         date_.setTime(date);
-        // reset hour, minutes, seconds and millis
         date_.set(Calendar.HOUR_OF_DAY, 0);
         date_.set(Calendar.MINUTE, 0);
         date_.set(Calendar.SECOND, 0);
