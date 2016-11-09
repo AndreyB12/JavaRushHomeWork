@@ -24,7 +24,7 @@ public class DirectorTablet
             ConsoleHelper.writeMessage(String.format(Locale.ENGLISH, "%s - %.2f", day, entry.getValue()));
         }
         ConsoleHelper.writeMessage(String.format(Locale.ENGLISH, "Total - %.2f", summ));
-        ConsoleHelper.writeMessage("");
+     //   ConsoleHelper.writeMessage("");
 
     }
 
