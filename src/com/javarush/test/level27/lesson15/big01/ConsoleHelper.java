@@ -23,6 +23,8 @@ public class ConsoleHelper
     public static String readString() throws IOException
     {
         return reader.readLine();
+       /* if (i++ % 2 == 0) return "Fish";
+        else return "exit";*/
     }
 
     public static List<Dish> getAllDishesForOrder() throws IOException

@@ -17,7 +17,6 @@ public class StatisticManager
     private final StatisticStorage statisticStorage = new StatisticStorage();
     private final Set<Cook> cooks = new HashSet<>();
 
-    private StatisticManager()
     {
     }
 
@@ -45,7 +44,7 @@ public class StatisticManager
         {
             VideoSelectedEventDataRow event = (VideoSelectedEventDataRow) event_;
             date = getMidnight(event.getDate());
-            amount = ((double) event.getAmount()) / 100;
+            amount = 0.01d * event.getAmount();
             if (dayStatistic.containsKey(date)) dayStatistic.put(date, dayStatistic.get(date) + amount);
             else dayStatistic.put(date, amount);
         }
@@ -107,11 +106,6 @@ public class StatisticManager
             {
                 storage.put(EventType.values()[i], new ArrayList<EventDataRow>());
             }
-        }
-
-        public Map<EventType, List<EventDataRow>> getStorage()
-        {
-            return storage;
         }
 
         private void put(EventDataRow data)
