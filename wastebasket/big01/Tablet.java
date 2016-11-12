@@ -31,12 +31,16 @@ public class Tablet extends Observable
             order = new Order(this);
             if (order.isEmpty()) return;
             ConsoleHelper.writeMessage(order.toString());
-            new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
         }
         catch (IOException e)
         {
             logger.log(Level.SEVERE, "Console is unavailable.");
             return;
+        }
+
+        try
+        {
+          new AdvertisementManager(order.getTotalCookingTime() * 60).processVideos();
         }
         catch (NoVideoAvailableException e)
         {
@@ -44,7 +48,6 @@ public class Tablet extends Observable
         }
         setChanged();
         notifyObservers(order);
-
     }
 
     @Override

@@ -25,12 +25,10 @@ public class Order
         }
     }
 
-
     public int getTotalCookingTime()
     {
         return totalCookingTime;
     }
-
 
     public boolean isEmpty()
     {

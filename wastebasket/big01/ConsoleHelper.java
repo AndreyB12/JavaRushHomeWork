@@ -28,7 +28,7 @@ public class ConsoleHelper
     public static List<Dish> getAllDishesForOrder() throws IOException
     {
         List<Dish> list = new ArrayList<>();
-       String inputLine;
+        String inputLine;
         if (Dish.values().length == 0) return list;
         writeMessage(Dish.allDishesToString());
         while (!(inputLine = readString()).equalsIgnoreCase("exit"))

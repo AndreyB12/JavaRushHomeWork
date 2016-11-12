@@ -1,12 +1,13 @@
 package com.javarush.test.level27.lesson15.big01.ad;
 
 import com.javarush.test.level27.lesson15.big01.ConsoleHelper;
+import com.javarush.test.level27.lesson15.big01.statistic.StatisticManager;
+import com.javarush.test.level27.lesson15.big01.statistic.event.VideoSelectedEventDataRow;
 
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-
 
 /**
  * Created by butkoav on 05.11.2016.
@@ -56,15 +57,14 @@ public class AdvertisementManager
                     public int compare(Advertisement o1, Advertisement o2)
                     {
                         int result = Long.compare(o2.getAmountPerOneDisplaying(), o1.getAmountPerOneDisplaying());
-                        result = result == 0 ? Long.compare(o1.getAmountPerOneDisplaying() * 1000 / o1.getDuration(), o2.getAmountPerOneDisplaying() * 1000 / o2.getDuration()) : result;
+                        result = result == 0 ? Long.compare(o1.getAmountPerOneDisplaying()* 1000 / o1.getDuration(), o2.getAmountPerOneDisplaying()* 1000 / o2.getDuration()) : result;
                         return result;
                     }
                 });
             }
         }
 
-        List<List<Advertisement>> solutions = new ArrayList<>();
-
+        List<VideoSet> videoSets = new ArrayList<>();
 
         for (Advertisement adv : storage.list())
         {
@@ -73,24 +73,14 @@ public class AdvertisementManager
             {
                 List<Advertisement> list = new ArrayList<>();
                 list.add(adv);
-                getSolutions(list, timeSeconds - adv.getDuration(), solutions);
+                videoSets.add(new VideoSet(getList(list, timeSeconds-adv.getDuration())));
             }
         }
-        List<VideoSet> videoSets = new ArrayList<>();
-        for (List<Advertisement> solution : solutions)
-        {
-            videoSets.add(new VideoSet(solution));
-        }
-
-
-        if (videoSets.isEmpty())
-        {
-            throw new NoVideoAvailableException();
-        }
+        if (videoSets.isEmpty()) throw new NoVideoAvailableException();
         Collections.sort(videoSets);
         videoSets.get(0).sortVideos();
 
-        //       StatisticManager.getInstance().register(new VideoSelectedEventDataRow(videoSets.get(0).videos,videoSets.get(0).price,videoSets.get(0).duration));
+        StatisticManager.getInstance().register(new VideoSelectedEventDataRow(videoSets.get(0).videos,videoSets.get(0).price,videoSets.get(0).duration));
 
 
         for (Advertisement video : videoSets.get(0).videos)
@@ -99,14 +89,20 @@ public class AdvertisementManager
                     , video.getName()
                     , video.getAmountPerOneDisplaying()
                     , video.getAmountPerOneDisplaying() * 1000 / video.getDuration()));
-
-            video.revalidate();
-
+            try
+            {
+                video.revalidate();
+            }
+            catch (UnsupportedOperationException e)
+            {
+            }
         }
     }
 
-    private void getSolutions(List<Advertisement> added, int duration, List<List<Advertisement>> videoSets)
+    private List<Advertisement> getList(List<Advertisement> added, int duration)
     {
+        if (duration == 0) return added;
+
         for (Advertisement video : storage.list())
         {
             if (video.getHits() > 0
@@ -114,11 +110,11 @@ public class AdvertisementManager
                     && !added.contains(video))
             {
                 added.add(video);
-                getSolutions(added, duration - video.getDuration(), videoSets);
-                added.remove(added.size() - 1);
+                getList(added, duration - video.getDuration());
+                break;
             }
         }
-        videoSets.add(new ArrayList(added));
+        return added;
     }
 
 }
