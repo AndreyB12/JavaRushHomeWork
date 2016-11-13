@@ -13,7 +13,7 @@ public class DirectorTablet
 {
     public void printAdvertisementProfit()
     {
-      /*  SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-yyyy");
         String day;
         double summ = 0;
         for (Map.Entry<Date, Double> entry : StatisticManager.getInstance().getAdvertisementStatistic().entrySet())
@@ -23,13 +23,13 @@ public class DirectorTablet
             ConsoleHelper.writeMessage(String.format("%s - %.2f", day, entry.getValue()));
         }
         ConsoleHelper.writeMessage(String.format("Total - %.2f",  summ));
-        ConsoleHelper.writeMessage("");*/
+        ConsoleHelper.writeMessage("");
 
     }
 
     public void printCookWorkloading()
     {
-      /*  SimpleDateFormat format = new SimpleDateFormat("dd-MMM-YYYY");
+        SimpleDateFormat format = new SimpleDateFormat("dd-MMM-YYYY");
         String day;
         int time;
         for (Map.Entry<Date, Map<String, Integer>> entry : StatisticManager.getInstance().getCookStatistic().entrySet())
@@ -43,7 +43,7 @@ public class DirectorTablet
                 ConsoleHelper.writeMessage(String.format("%s - %d min", cook.getKey(), time));
             }
             ConsoleHelper.writeMessage("");
-        }*/
+        }
     }
 
     public void printActiveVideoSet()

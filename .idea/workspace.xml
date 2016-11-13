@@ -9,14 +9,8 @@
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Restaurant.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Restaurant.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementManager.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Cook.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Cook.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,16 +87,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="EventDataRow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="CookedOrderEventDataRow.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wastebasket/big01/statistic/event/CookedOrderEventDataRow.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -129,15 +113,29 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Advertisement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="409">
+              <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="StatisticManager.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+            <state relative-caret-position="459">
+              <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#804#805#0" expanded="true" />
-                <element signature="e#846#847#0" expanded="true" />
+                <element signature="e#984#985#0" expanded="true" />
+                <element signature="e#1026#1027#0" expanded="true" />
+                <element signature="e#3540#3541#0" expanded="true" />
+                <element signature="e#3601#3602#0" expanded="true" />
+                <element signature="e#3672#3673#0" expanded="true" />
+                <element signature="e#3718#3719#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -185,21 +183,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DirectorTablet.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="DirectorTablet.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="697">
-              <caret line="45" column="11" selection-start-line="31" selection-start-column="6" selection-end-line="45" selection-end-column="11" />
+            <state relative-caret-position="476">
+              <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="153">
-              <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+              <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -279,17 +277,17 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Order.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Tablet.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementStorage.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/kitchen/Cook.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/AdvertisementManager.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/EventDataRow.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/NoAvailableVideoEventDataRow.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Restaurant.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Условие задачи.txt" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java" />
       </list>
     </option>
   </component>
@@ -749,6 +747,40 @@
               <option name="myItemId" value="level27" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="big01" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="ad" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JavaRushHomeWork" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="com" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="level27" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
@@ -1178,13 +1210,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00266" summary="Update tasks">
-      <created>1477841520776</created>
-      <option name="number" value="00266" />
-      <option name="presentableId" value="LOCAL-00266" />
-      <option name="project" value="LOCAL" />
-      <updated>1477841520776</updated>
-    </task>
     <task id="LOCAL-00267" summary="Update tasks">
       <created>1477846089323</created>
       <option name="number" value="00267" />
@@ -1521,7 +1546,14 @@
       <option name="project" value="LOCAL" />
       <updated>1478991774462</updated>
     </task>
-    <option name="localTasksCounter" value="315" />
+    <task id="LOCAL-00315" summary="Update&#10;">
+      <created>1479058303393</created>
+      <option name="number" value="00315" />
+      <option name="presentableId" value="LOCAL-00315" />
+      <option name="project" value="LOCAL" />
+      <updated>1479058303393</updated>
+    </task>
+    <option name="localTasksCounter" value="316" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2480,14 +2512,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wastebasket/big01/statistic/event/EventType.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -2605,61 +2629,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1479057071017" expanded="false" signature="925:940" ph=" { " />
-            <marker date="1479057071017" expanded="false" signature="959:965" ph=" }" />
-            <marker date="1479057071017" expanded="false" signature="1006:1021" ph=" { " />
-            <marker date="1479057071017" expanded="false" signature="1047:1053" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="307">
-          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding>
-            <marker date="1479057071017" expanded="false" signature="847:862" ph=" { " />
-            <marker date="1479057071017" expanded="false" signature="881:887" ph=" }" />
-            <marker date="1479057071017" expanded="false" signature="928:943" ph=" { " />
-            <marker date="1479057071017" expanded="false" signature="964:970" ph=" }" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="697">
-          <caret line="45" column="11" selection-start-line="31" selection-start-column="6" selection-end-line="45" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wastebasket/big01/statistic/StatisticManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="17" column="4" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#804#805#0" expanded="true" />
-            <element signature="e#846#847#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/NoAvailableVideoEventDataRow.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -2691,10 +2660,83 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/CookedOrderEventDataRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1479057071017" expanded="false" signature="925:940" ph=" { " />
+            <marker date="1479057071017" expanded="false" signature="959:965" ph=" }" />
+            <marker date="1479057071017" expanded="false" signature="1006:1021" ph=" { " />
+            <marker date="1479057071017" expanded="false" signature="1047:1053" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/event/VideoSelectedEventDataRow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <marker date="1479057071017" expanded="false" signature="847:862" ph=" { " />
+            <marker date="1479057071017" expanded="false" signature="881:887" ph=" }" />
+            <marker date="1479057071017" expanded="false" signature="928:943" ph=" { " />
+            <marker date="1479057071017" expanded="false" signature="964:970" ph=" }" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/Условие задачи.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="58" column="80" selection-start-line="58" selection-start-column="80" selection-end-line="58" selection-end-column="80" />
+          <caret line="18" column="18" selection-start-line="18" selection-start-column="18" selection-end-line="18" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/ad/Advertisement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="48" column="6" selection-start-line="48" selection-start-column="6" selection-end-line="48" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wastebasket/big01/statistic/StatisticManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="115" column="0" selection-start-line="115" selection-start-column="0" selection-end-line="118" selection-end-column="9" />
+          <folding>
+            <element signature="method#getAdvertisementStatistic#0;class#StatisticManager#0" expanded="false" />
+            <element signature="method#getCookStatistic#0;class#StatisticManager#0" expanded="false" />
+            <element signature="method#getMidnight#0;class#StatisticManager#0" expanded="false" />
+            <element signature="e#3694#3695#0" expanded="true" />
+            <element signature="e#3740#3741#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/statistic/StatisticManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="33" column="5" selection-start-line="33" selection-start-column="5" selection-end-line="33" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#984#985#0" expanded="true" />
+            <element signature="e#1026#1027#0" expanded="true" />
+            <element signature="e#3540#3541#0" expanded="true" />
+            <element signature="e#3601#3602#0" expanded="true" />
+            <element signature="e#3672#3673#0" expanded="true" />
+            <element signature="e#3718#3719#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level27/lesson15/big01/DirectorTablet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="50" column="5" selection-start-line="50" selection-start-column="5" selection-end-line="50" selection-end-column="5" />
           <folding />
         </state>
       </provider>
