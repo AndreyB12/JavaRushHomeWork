@@ -3,7 +3,7 @@ package com.javarush.test.level27.lesson15.big01;
 
 import com.javarush.test.level27.lesson15.big01.kitchen.Cook;
 import com.javarush.test.level27.lesson15.big01.kitchen.Waitor;
-import com.javarush.test.level27.lesson15.big01.statistic.StatisticManager;
+import com.javarush.test.level27.lesson15.big01.statistic.StatisticEventManager;
 
 import java.util.Locale;
 
@@ -24,7 +24,7 @@ public class Restaurant
         tblt5.addObserver(cookAndry);
         tblt5.createOrder();
 
-        StatisticManager.getInstance().register(cookAndry);
+        StatisticEventManager.getInstance().register(cookAndry);
         DirectorTablet directorTablet = new DirectorTablet();
         directorTablet.printAdvertisementProfit();
         directorTablet.printCookWorkloading();

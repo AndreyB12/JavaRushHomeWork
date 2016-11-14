@@ -12,15 +12,19 @@ import java.util.*;
 /**
  * Created by butkoav on 08.11.2016.
  */
-public class StatisticManager
+public class StatisticEventManager
 {
-    private final static StatisticManager statisticManager = new StatisticManager();
+    private final static StatisticEventManager statisticEventManager = new StatisticEventManager();
     private final StatisticStorage statisticStorage = new StatisticStorage();
     private Set<Cook> cooks = new HashSet<>();
 
-    public static StatisticManager getInstance()
+    private StatisticEventManager()
     {
-        return statisticManager;
+    }
+
+    public static StatisticEventManager getInstance()
+    {
+        return statisticEventManager;
     }
 
     public void register(Cook cook)
