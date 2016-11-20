@@ -7,6 +7,7 @@ import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import java.io.IOException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +28,7 @@ public class HHStrategy implements Strategy
         {
             while (true)
             {
-                document = getDocument("Киев", p++);
+                document = getDocument(searchString, p++);
                 Elements elements = document.getElementsByAttributeValue("data-qa", "vacancy-serp__vacancy");
                 if (elements.size() == 0) break;
                 for (Element element : elements)
@@ -48,27 +49,25 @@ public class HHStrategy implements Strategy
 
                     //get salary
                     Element salary = element.select("[data-qa=vacancy-serp__vacancy-compensation]").first();
-                    if (salary != null) vacancy.setSalary(salary.attr("content"));
+                    if (salary != null) vacancy.setSalary(salary.text());
                     else vacancy.setSalary("");
                     //get site
-                    vacancy.setSiteName("http://hh.ua/");
+                    vacancy.setSiteName("http://hh.ua");
                     vacancies.add(vacancy);
                 }
             }
         }
         catch (IOException e)
         {
-            e.printStackTrace();
         }
         return vacancies;
     }
 
     protected Document getDocument(String searchString, int page) throws IOException
     {
-        String url = String.format(URL_FORMAT, searchString, page);
-      //  url = "http://javarush.ru/testdata/big28data.html";
+        String url = String.format(URL_FORMAT, URLEncoder.encode(searchString,"UTF-8"), page);
         String userAgent = "Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/54.0.2840.99 Safari/537.36";
-        String referrer = "";
+        String referrer = "none";
         Document document = Jsoup.connect(url).userAgent(userAgent).referrer(referrer).get();
         return document;
     }

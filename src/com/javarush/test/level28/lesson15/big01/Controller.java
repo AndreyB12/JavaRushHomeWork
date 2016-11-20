@@ -32,16 +32,15 @@ public class Controller
     public void scan()
     {
         List<Vacancy> vacancies = new ArrayList<>();
-        try
+        for (Provider provider : providers)
         {
-            for (Provider provider : providers)
+            try
             {
-                vacancies.addAll(provider.getJavaVacancies("Киев 3"));
+                vacancies.addAll(provider.getJavaVacancies("киев"));
             }
-        }
-        catch (NullPointerException e)
-        {
-
+            catch (NullPointerException e)
+            {
+            }
         }
         System.out.println(vacancies.size());
     }
