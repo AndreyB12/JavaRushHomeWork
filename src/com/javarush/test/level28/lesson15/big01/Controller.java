@@ -1,47 +1,23 @@
 package com.javarush.test.level28.lesson15.big01;
 
-import com.javarush.test.level28.lesson15.big01.model.Provider;
-import com.javarush.test.level28.lesson15.big01.vo.Vacancy;
+import com.javarush.test.level28.lesson15.big01.model.Model;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
 
 /**
  * Created by butkoav on 19.11.2016.
  */
 public class Controller
 {
+    private Model model;
 
-    private Provider[] providers;
-
-    public Controller(Provider... providers)
+    public Controller(Model model)
     {
-        if (providers == null || providers.length == 0) throw new IllegalArgumentException();
-        this.providers = providers;
+        if (model == null) throw new IllegalArgumentException();
+        this.model = model;
     }
 
-    @Override
-    public String toString()
+    public void onCitySelect(String cityName)
     {
-        return "Controller{" +
-                "providers=" + Arrays.toString(providers) +
-                '}';
-    }
-
-    public void scan()
-    {
-        List<Vacancy> vacancies = new ArrayList<>();
-        for (Provider provider : providers)
-        {
-            try
-            {
-                vacancies.addAll(provider.getJavaVacancies("киев"));
-            }
-            catch (NullPointerException e)
-            {
-            }
-        }
-        System.out.println(vacancies.size());
+        model.selectCity(cityName);
     }
 }
