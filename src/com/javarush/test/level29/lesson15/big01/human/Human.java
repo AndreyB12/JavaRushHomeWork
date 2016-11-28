@@ -1,73 +1,102 @@
 package com.javarush.test.level29.lesson15.big01.human;
 
-public class Human {
-    public static int nextId = 0;
-    private int id;
-    protected int age;
-    protected String name;
-    protected int course;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
-    protected int[] size;
+public class Human implements Alive
+{
+    private List<Human> children = new ArrayList<>();
+    private static int nextId = 0;
+    private final int id;
+    private int age;
+    private String name;
 
-    protected boolean isSoldier;
+
+    protected Size size = new Size();
+
 
     public static final int FIRST = 1;
     public static final int SECOND = 2;
     public static final int THIRD = 3;
     public static final int FOURTH = 4;
-    private int bloodGroup;
+    private BloodGroup bloodGroup;
 
-    public void setBloodGroup(int code) {
-        bloodGroup = code;
+    public void setBloodGroup(BloodGroup bloodGroup)
+    {
+        this.bloodGroup = bloodGroup;
     }
-    public int getBloodGroup() {
+
+    public BloodGroup getBloodGroup()
+    {
         return bloodGroup;
     }
 
-    public Human(boolean isSoldier)
+    public Human(String name, int age)
     {
-        this.isSoldier = isSoldier;
         this.id = nextId;
         nextId++;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
+        this.name = name;
         this.age = age;
     }
 
-    public String getName() {
+    public int getAge()
+    {
+        return age;
+    }
+
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    @Override
+    public void live()
+    {
+
     }
 
-    public int getCourse() {
-        return course;
-    }
-
-    public void live() {
-        if (isSoldier)
-            fight();
-    }
-
-    public void fight() {
-    }
-
-    public int getId() {
+    public int getId()
+    {
         return id;
     }
 
-    public void setId(int id) {
-        this.id = id;
+
+    public void printSize()
+    {
+        System.out.println("Рост: " + size.height + " Вес: " + size.weight);
     }
 
-    public void printSize() {
-        System.out.println("Рост: " + size[0] + " Вес: " + size[1]);
+    public List<Human> getChildren()
+    {
+
+        return Collections.unmodifiableList(children);
     }
+
+    public void removeChild(Human child)
+    {
+        this.children.remove(child);
+    }
+
+    public void addChild(Human child)
+    {
+        this.children.add(child);
+    }
+
+    public String getPosition()
+    {
+        return "Человек";
+    }
+
+    public void printData()
+    {
+        System.out.println(getPosition() + ": " + name);
+    }
+
+    public class Size
+    {
+        public int height;
+        public int weight;
+    }
+
 }

@@ -1,71 +1,101 @@
 package com.javarush.test.level29.lesson15.big01.user;
 
-public class User {
+public class User
+{
+
     private String name;
     private String surname;
     private int age;
+    private boolean man;
 
-    private String country;
-    private String city;
-    private House house;
+    private Address address;
+
+    public boolean isMan()
+    {
+        return man;
+    }
+
+    public void setMan(boolean man)
+    {
+        this.man = man;
+    }
 
     private Work work;
 
-    public User(String name, String surname, int age) {
+    public User(String name, String surname, int age)
+    {
         this.name = name;
         this.surname = surname;
         this.age = age;
     }
 
-    public String getName() {
+    public String getName()
+    {
         return name;
     }
 
-    public void setName(String name) {
+    public void setName(String name)
+    {
         this.name = name;
     }
 
-    public String getSurname() {
+    public String getSurname()
+    {
         return surname;
     }
 
-    public void setSurname(String surname) {
+    public void setSurname(String surname)
+    {
         this.surname = surname;
     }
 
-    public int getAge() {
+    public int getAge()
+    {
         return age;
     }
 
-    public void setAge(int age) {
+    public void setAge(int age)
+    {
         this.age = age;
     }
 
-    public String getCountry() {
-        return country;
+    public Address getAddress()
+    {
+        return address;
     }
 
-    public void setCountry(String country) {
-        this.country = country;
+    public void setAddress(Address address)
+    {
+        this.address = address;
     }
 
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getAddress() {
-        return country + " " + city + " " + house.house;
-    }
-
-    public Work getWork() {
+    public Work getWork()
+    {
         return work;
     }
 
-    public void setWork(Work work) {
+    public void setWork(Work work)
+    {
         this.work = work;
+    }
+
+    public void printInfo()
+    {
+        System.out.println("Имя: " + getName());
+        System.out.println("Фамилия: " + getSurname());
+    }
+
+    public void printAdditionalInfo()
+    {
+        if (getAge() < 16)
+            System.out.println("Пользователь моложе 16 лет");
+        else
+            System.out.println("Пользователь старше 16 лет");
+    }
+
+    public String getBoss()
+    {
+        if (work != null) return work.getBoss();
+        return null;
     }
 }
