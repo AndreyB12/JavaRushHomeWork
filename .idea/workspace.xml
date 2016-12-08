@@ -8,6 +8,7 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home02/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home02/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -87,10 +88,12 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home02/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="480">
+              <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#864#865#0" expanded="true" />
+                <element signature="e#910#911#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -135,7 +138,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/model/Provider.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/vo/Vacancy.java" />
         <option value="$PROJECT_DIR$/level28lesson15big01.html" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/view/View.java" />
@@ -186,6 +188,7 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson06/home01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson06/bonus01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home01/Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home02/Solution.java" />
       </list>
     </option>
   </component>
@@ -945,20 +948,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00316" summary="Update&#10;">
-      <created>1479059504698</created>
-      <option name="number" value="00316" />
-      <option name="presentableId" value="LOCAL-00316" />
-      <option name="project" value="LOCAL" />
-      <updated>1479059504698</updated>
-    </task>
-    <task id="LOCAL-00317" summary="Update&#10;">
-      <created>1479131739449</created>
-      <option name="number" value="00317" />
-      <option name="presentableId" value="LOCAL-00317" />
-      <option name="project" value="LOCAL" />
-      <updated>1479131739450</updated>
-    </task>
     <task id="LOCAL-00318" summary="Update&#10;">
       <created>1479245852188</created>
       <option name="number" value="00318" />
@@ -1288,7 +1277,21 @@
       <option name="project" value="LOCAL" />
       <updated>1481224799058</updated>
     </task>
-    <option name="localTasksCounter" value="365" />
+    <task id="LOCAL-00365" summary="Update&#10;&#10;">
+      <created>1481224829905</created>
+      <option name="number" value="00365" />
+      <option name="presentableId" value="LOCAL-00365" />
+      <option name="project" value="LOCAL" />
+      <updated>1481224829905</updated>
+    </task>
+    <task id="LOCAL-00366" summary="Update&#10;&#10;">
+      <created>1481224835195</created>
+      <option name="number" value="00366" />
+      <option name="presentableId" value="LOCAL-00366" />
+      <option name="project" value="LOCAL" />
+      <updated>1481224835195</updated>
+    </task>
+    <option name="localTasksCounter" value="367" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -2448,10 +2451,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson08/home02/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="480">
+          <caret line="24" column="0" lean-forward="true" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#864#865#0" expanded="true" />
+            <element signature="e#910#911#0" expanded="true" />
           </folding>
         </state>
       </provider>
