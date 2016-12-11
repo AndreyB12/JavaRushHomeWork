@@ -1,5 +1,7 @@
 package com.javarush.test.level31.lesson15.big01;
 
+import com.javarush.test.level31.lesson15.big01.command.ExitCommand;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.nio.file.Paths;
@@ -33,7 +35,7 @@ public class Archiver
             String archivedFilePath = reader.readLine();
             zipFileManager.createZip(Paths.get(archivedFilePath));
 
-
+            new ExitCommand().execute();
         }
         catch (Exception e)
         {
