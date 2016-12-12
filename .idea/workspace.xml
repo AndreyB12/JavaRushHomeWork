@@ -7,11 +7,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ExitCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipAddCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipContentCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCreateCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipExtractCommand.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipRemoveCommand.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Archiver.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Archiver.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/Command.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/Command.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Условие задачи.txt" afterPath="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Условие задачи.txt" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -88,11 +90,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Условие задачи.txt" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Условие задачи.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="280">
-              <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
+            <state relative-caret-position="240">
+              <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipRemoveCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipRemoveCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipAddCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipAddCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipExtractCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipExtractCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipContentCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipContentCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipCreateCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCreateCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ZipCommand.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCommand.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="200">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -111,47 +173,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Command.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Command.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/Command.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="100">
               <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConsoleHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/ConsoleHelper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="53" lean-forward="true" selection-start-line="9" selection-start-column="53" selection-end-line="9" selection-end-column="53" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#364#365#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Operation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Operation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZipFileManager.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/ZipFileManager.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="36" column="0" lean-forward="true" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -207,12 +234,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/view/HtmlView.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/model/Model.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/Aggregator.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/model/MoikrugStrategy.java" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level28/lesson15/big01/view/vacancies.html" />
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/human/Professor.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/human/Soldier.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/human/Alive.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/human/UniversityPerson.java" />
@@ -258,6 +279,12 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/Command.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ExitCommand.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Archiver.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCreateCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipContentCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipExtractCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipAddCommand.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipRemoveCommand.java" />
       </list>
     </option>
   </component>
@@ -276,10 +303,10 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1865" />
-    <option name="height" value="1096" />
+    <option name="x" value="1912" />
+    <option name="y" value="-180" />
+    <option name="width" value="1936" />
+    <option name="height" value="1186" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -1008,13 +1035,6 @@
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
     </task>
-    <task id="LOCAL-00325" summary="Update&#10;">
-      <created>1479325759647</created>
-      <option name="number" value="00325" />
-      <option name="presentableId" value="LOCAL-00325" />
-      <option name="project" value="LOCAL" />
-      <updated>1479325759647</updated>
-    </task>
     <task id="LOCAL-00326" summary="Update&#10;">
       <created>1479325955398</created>
       <option name="number" value="00326" />
@@ -1351,7 +1371,14 @@
       <option name="project" value="LOCAL" />
       <updated>1481479742819</updated>
     </task>
-    <option name="localTasksCounter" value="374" />
+    <task id="LOCAL-00374" summary="Update&#10;&#10;">
+      <created>1481490641378</created>
+      <option name="number" value="00374" />
+      <option name="presentableId" value="LOCAL-00374" />
+      <option name="project" value="LOCAL" />
+      <updated>1481490641378</updated>
+    </task>
+    <option name="localTasksCounter" value="375" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1367,7 +1394,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1865" height="1096" extended-state="6" />
+    <frame x="1912" y="-180" width="1936" height="1186" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1380,12 +1407,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2781457" sideWeight="0.22271223" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987687" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32977587" sideWeight="0.49806094" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24759872" sideWeight="0.64884233" order="2" side_tool="false" content_ui="tabs" x="514" y="640" width="938" height="351" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22590068" sideWeight="0.64884233" order="2" side_tool="false" content_ui="tabs" x="514" y="640" width="938" height="351" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3276414" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16398892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15778251" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24951394" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24951394" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -2148,42 +2175,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/car/Car.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-285">
-          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/car/Truck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="39" lean-forward="true" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/car/Sedan.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="33" lean-forward="false" selection-start-line="15" selection-start-column="33" selection-end-line="15" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/car/Cabriolet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/user/House.java" />
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/Условие задачи.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="38" lean-forward="true" selection-start-line="15" selection-start-column="38" selection-end-line="15" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level29/lesson15/big01/user/Address.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -2511,14 +2502,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Условие задачи.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="280">
-          <caret line="35" column="45" lean-forward="true" selection-start-line="35" selection-start-column="45" selection-end-line="35" selection-end-column="45" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ExitCommand.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -2534,6 +2517,62 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="100">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipCreateCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipContentCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipExtractCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipAddCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ZipRemoveCommand.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Условие задачи.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="12" column="37" lean-forward="false" selection-start-line="12" selection-start-column="37" selection-end-line="12" selection-end-column="37" />
           <folding />
         </state>
       </provider>
