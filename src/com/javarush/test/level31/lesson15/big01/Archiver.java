@@ -1,45 +1,37 @@
 package com.javarush.test.level31.lesson15.big01;
 
-import com.javarush.test.level31.lesson15.big01.command.ExitCommand;
+import com.javarush.test.level31.lesson15.big01.exception.WrongZipFileException;
 
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.nio.file.Paths;
+import java.io.IOException;
 
-/**
- * Created by butkoav on 11.12.2016.
- * * Задание 1.
- * 5.	Создай класс Archiver и добавь в него метод main.
- * 6.	В методе main:
- * 6.1 Запроси пользователя ввести полный путь архива с клавиатуры. Не забудь, что имя тоже
- * входит в состав полного пути.
- * 6.2 Создай объект класса ZipFileManager, передав в него имя файла архива. Разберись, как из
- * String получить Path. Подсказка: изучи метод get() класса Paths.
- * 6.3 Запроси пользователя ввести путь к файлу, который будем архивировать. Не путай это с
- * файлом архива, который мы уже ввели. На этот раз нам нужен файл, который мы будем
- * сжимать, а не в котором хранить сжатые данные.
- * 6.4 Вызови метод createZip у объекта ZipFileManager, передав в него путь для архивации.
- */
-public class Archiver
-{
-    public static void main(String... args)
-    {
+public class Archiver {
+    public static void main(String[] args) throws IOException {
 
-        try (BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));)
-        {
-            System.out.println("Absolute path to archive:");
-            String archivePath = reader.readLine();
-            ZipFileManager zipFileManager = new ZipFileManager(Paths.get(archivePath));
+        Operation operation = null;
+        do {
+            try {
+                operation = askOperation();
+                CommandExecutor.execute(operation);
+            } catch (WrongZipFileException e) {
+                ConsoleHelper.writeMessage("Вы не выбрали файл архива или выбрали неверный файл.");
+            } catch (Exception e) {
+                ConsoleHelper.writeMessage("Произошла ошибка. Проверьте введенные данные.");
+            }
 
-            System.out.println("Absolute path to file to be archived:");
-            String archivedFilePath = reader.readLine();
-            zipFileManager.createZip(Paths.get(archivedFilePath));
+        } while (operation != Operation.EXIT);
+    }
 
-            new ExitCommand().execute();
-        }
-        catch (Exception e)
-        {
-            e.printStackTrace();
-        }
+
+    public static Operation askOperation() throws IOException {
+        ConsoleHelper.writeMessage("");
+        ConsoleHelper.writeMessage("Выберите операцию:");
+        ConsoleHelper.writeMessage(String.format("\t %d - упаковать файлы в архив", Operation.CREATE.ordinal()));
+        ConsoleHelper.writeMessage(String.format("\t %d - добавить файл в архив", Operation.ADD.ordinal()));
+        ConsoleHelper.writeMessage(String.format("\t %d - удалить файл из архива", Operation.REMOVE.ordinal()));
+        ConsoleHelper.writeMessage(String.format("\t %d - распаковать архив", Operation.EXTRACT.ordinal()));
+        ConsoleHelper.writeMessage(String.format("\t %d - просмотреть содержимое архива", Operation.CONTENT.ordinal()));
+        ConsoleHelper.writeMessage(String.format("\t %d - выход", Operation.EXIT.ordinal()));
+
+        return Operation.values()[ConsoleHelper.readInt()];
     }
 }
