@@ -2,6 +2,7 @@ package com.javarush.test.level32.lesson15.big01;
 
 import com.javarush.test.level32.lesson15.big01.listeners.FrameListener;
 import com.javarush.test.level32.lesson15.big01.listeners.TabbedPaneChangeListener;
+import com.javarush.test.level32.lesson15.big01.listeners.ToolBarListener;
 import com.javarush.test.level32.lesson15.big01.listeners.UndoListener;
 
 import javax.swing.*;
@@ -75,7 +76,6 @@ public class View extends JFrame implements ActionListener
     }
 
 
-
     public Controller getController()
     {
         return controller;
@@ -97,11 +97,27 @@ public class View extends JFrame implements ActionListener
     public void initGui()
     {
         initMenuBar();
+        initToolBar();
         initEditor();
         pack();
     }
-    public void initButtonPanel()
-    {}
+
+    public void initToolBar()
+    {
+        JToolBar jToolBar = new JToolBar();
+        ToolBarListener toolBarListener = new ToolBarListener(this);
+        ToolBarHelper.addButton(jToolBar, "btnNew", "Новый", "new-file.png", toolBarListener);
+        ToolBarHelper.addButton(jToolBar, "btnOpen", "Открыть", "open-file.png", toolBarListener);
+        ToolBarHelper.addButton(jToolBar, "btnSave", "Сохранить", "save.png", toolBarListener);
+        ToolBarHelper.addButton(jToolBar, "btnSaveAs", "Сохранить как...", "save_as.png", toolBarListener);
+        jToolBar.addSeparator();
+
+        jToolBar.addSeparator();
+        ToolBarHelper.addButton(jToolBar, "btnAddImage", "Добавить картинку", "picture.png", toolBarListener);
+
+        getContentPane().add(jToolBar, BorderLayout.NORTH);
+    }
+
     public void initMenuBar()
     {
         JMenuBar jMenuBar = new JMenuBar();
@@ -113,8 +129,8 @@ public class View extends JFrame implements ActionListener
         MenuHelper.initFontMenu(this, jMenuBar);
         MenuHelper.initHelpMenu(this, jMenuBar);
 
-        getContentPane().add(jMenuBar, BorderLayout.NORTH);
-
+        //     getContentPane().add(jMenuBar, BorderLayout.NORTH);
+        setJMenuBar(jMenuBar);
     }
 
     public void initEditor()
@@ -216,4 +232,12 @@ public class View extends JFrame implements ActionListener
     {
         JOptionPane.showMessageDialog(getContentPane(), "HTML Editor. ButkoAV.", "HTML Editor.", JOptionPane.INFORMATION_MESSAGE);
     }
+
+    public void addImage()
+    {
+
+        htmlTextPane.insertComponent( new ImageIcon("E:/Projects/JavaRushHomeWork/src/com/javarush/test/level32/lesson15/big01/icons/picture.png"));
+
+    }
+
 }
