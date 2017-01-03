@@ -1,5 +1,8 @@
 package com.javarush.test.level33.lesson05.home01;
 
+import com.fasterxml.jackson.annotation.JsonAutoDetect;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -12,14 +15,16 @@ import java.util.ArrayList;
 2) Расставьте правильно Json аннотации у классов.
 Все данные должны сериализоваться.
 */
-public class Solution {
-    public static void main(String[] args) throws IOException {
-        Cat cat = new Cat ();
+public class Solution
+{
+    public static void main(String[] args) throws IOException
+    {
+        Cat cat = new Cat();
         cat.name = "Murka";
         cat.age = 5;
         cat.weight = 3;
 
-        Dog dog = new Dog ();
+        Dog dog = new Dog();
         dog.name = "Killer";
         dog.age = 8;
         dog.owner = "Bill Jeferson";
@@ -34,25 +39,29 @@ public class Solution {
         //[{"name":"Murka","age":5,"weight":3},{"name":"Killer","age":8,"owner":"Bill Jeferson"}]
     }
 
-    public static void convertToJSON(StringWriter writer, Object object) throws IOException {
+    public static void convertToJSON(StringWriter writer, Object object) throws IOException
+    {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(writer, object);
     }
 
+    @JsonAutoDetect
     public static class Pet
     {
-        String name;
+        public String name;
     }
 
+    @JsonAutoDetect
     public static class Cat extends Pet
     {
-        int age;
-        int weight;
+        public int age;
+        public int weight;
     }
 
+    @JsonAutoDetect
     public static class Dog extends Pet
     {
-        int age;
-        String owner;
+        public int age;
+        public String owner;
     }
 }
