@@ -1,7 +1,6 @@
 package com.javarush.test.level32.lesson15.big01;
 
 import javax.swing.*;
-import javax.tools.Tool;
 import java.awt.*;
 import java.awt.event.ActionListener;
 import java.net.URL;

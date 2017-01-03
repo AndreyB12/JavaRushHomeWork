@@ -6,6 +6,11 @@ import com.javarush.test.level32.lesson15.big01.listeners.ToolBarListener;
 import com.javarush.test.level32.lesson15.big01.listeners.UndoListener;
 
 import javax.swing.*;
+import javax.swing.text.AttributeSet;
+import javax.swing.text.BadLocationException;
+import javax.swing.text.html.HTML;
+import javax.swing.text.html.HTMLDocument;
+import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.undo.UndoManager;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -235,8 +240,17 @@ public class View extends JFrame implements ActionListener
 
     public void addImage()
     {
-
-        htmlTextPane.insertComponent( new ImageIcon("E:/Projects/JavaRushHomeWork/src/com/javarush/test/level32/lesson15/big01/icons/picture.png"));
+        int currentPosition = htmlTextPane.getCaretPosition();
+        HTMLEditorKit editorKit = new HTMLEditorKit();
+       // AttributeSet a= htmlTextPane.getCharacterAttributes();
+        try
+        {
+            editorKit.insertHTML(controller.getDocument(),currentPosition,"<img src=\"file:\\e:\\temp\\foto.png\" width=\"200\" height=\"200\">",0,0, HTML.Tag.IMG);
+        }
+        catch (Exception e)
+        {
+            ExceptionHandler.log(e);
+        }
 
     }
 
