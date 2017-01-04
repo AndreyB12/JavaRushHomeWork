@@ -8,7 +8,6 @@
   <component name="ChangeListManager">
     <list default="true" id="49e868cb-6c28-469e-9a04-9674b5bddb2b" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home03/Solution.java" afterPath="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home03/Solution.java" />
     </list>
     <ignored path="JavaRushHomeWork.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -91,7 +90,7 @@
       <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home02/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
+            <state relative-caret-position="860">
               <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -100,11 +99,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home03/Solution.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="460">
               <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Solution.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home04/Solution.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="280">
+              <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -151,7 +162,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/Operation.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/ConsoleHelper.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/Command.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level31/lesson15/big01/command/ExitCommand.java" />
@@ -202,6 +212,7 @@
         <option value="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home01/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home02/Solution.java" />
         <option value="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home03/Solution.java" />
+        <option value="$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home04/Solution.java" />
       </list>
     </option>
   </component>
@@ -416,27 +427,7 @@
       <recent name="E:\Private\Documents\Learn\Java\JavaRushHomeWork\src\Res" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Solution (2)">
-    <configuration default="false" name="Solution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.javarush.test.level32.lesson10.home01.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level32.lesson10.home01.Solution" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JavaRushHomeWork" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.Solution (3)">
     <configuration default="false" name="Controller" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -505,6 +496,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="com.javarush.test.level33.lesson05.home02.Solution" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JavaRushHomeWork" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Solution (3)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.javarush.test.level33.lesson05.home04.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.javarush.test.level33.lesson05.home04.Solution" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -726,19 +737,19 @@
       <method />
     </configuration>
     <list size="5">
-      <item index="0" class="java.lang.String" itemvalue="Application.Solution" />
-      <item index="1" class="java.lang.String" itemvalue="Application.Controller" />
-      <item index="2" class="java.lang.String" itemvalue="Application.Test17" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Solution (1)" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Solution (2)" />
+      <item index="0" class="java.lang.String" itemvalue="Application.Controller" />
+      <item index="1" class="java.lang.String" itemvalue="Application.Test17" />
+      <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
+      <item index="3" class="java.lang.String" itemvalue="Application.Solution (2)" />
+      <item index="4" class="java.lang.String" itemvalue="Application.Solution (3)" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Solution (2)" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Solution (1)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Controller" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test17" />
-        <item index="4" class="java.lang.String" itemvalue="Application.Solution" />
+        <item index="0" class="java.lang.String" itemvalue="Application.Solution (3)" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Solution (2)" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Solution (1)" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Controller" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test17" />
       </list>
     </recent_temporary>
     <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
@@ -787,13 +798,6 @@
       <option name="presentableId" value="Default" />
       <updated>1355835879150</updated>
       <workItem from="1438690815853" duration="27000" />
-    </task>
-    <task id="LOCAL-00347" summary="Update&#10;&#10;">
-      <created>1480362841756</created>
-      <option name="number" value="00347" />
-      <option name="presentableId" value="LOCAL-00347" />
-      <option name="project" value="LOCAL" />
-      <updated>1480362841757</updated>
     </task>
     <task id="LOCAL-00348" summary="Update&#10;&#10;">
       <created>1480536776048</created>
@@ -1131,7 +1135,14 @@
       <option name="project" value="LOCAL" />
       <updated>1483544705688</updated>
     </task>
-    <option name="localTasksCounter" value="396" />
+    <task id="LOCAL-00396" summary="Update&#10;&#10;">
+      <created>1483550513433</created>
+      <option name="number" value="00396" />
+      <option name="presentableId" value="LOCAL-00396" />
+      <option name="project" value="LOCAL" />
+      <updated>1483550513433</updated>
+    </task>
+    <option name="localTasksCounter" value="397" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -1171,7 +1182,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32987687" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2926045" sideWeight="0.7772878" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29242262" sideWeight="0.7772878" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1922,6 +1933,12 @@
           <properties />
           <option name="timeStamp" value="484" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home04/Solution.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="486" />
+        </line-breakpoint>
         <line-breakpoint enabled="true" type="java-field">
           <url>file://$PROJECT_DIR$/src/com/javarush/test/level13/lesson11/home05/Solution.java</url>
           <line>19</line>
@@ -1956,7 +1973,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="485" />
+      <option name="time" value="487" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="Application">
@@ -1971,27 +1988,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level32/lesson02/task01/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level32/lesson04/task01/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level32/lesson04/home01/Solution.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level32/lesson06/task01/Solution.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="413">
@@ -2329,12 +2325,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home02/Solution.java">
+    <entry file="jar://$PROJECT_DIR$/../jackson/jackson-databind-2.8.5.jar!/com/fasterxml/jackson/databind/type/SimpleType.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+        <state relative-caret-position="520">
+          <caret line="38" column="0" lean-forward="false" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../jackson/jackson-databind-2.8.5.jar!/com/fasterxml/jackson/databind/ObjectMapper.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="1636" column="0" lean-forward="false" selection-start-line="1636" selection-start-column="0" selection-end-line="1636" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="e#13948#13949#0" expanded="true" />
+            <element signature="e#14020#14021#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -2343,6 +2348,26 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="460">
           <caret line="23" column="21" lean-forward="false" selection-start-line="23" selection-start-column="21" selection-end-line="23" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home02/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="860">
+          <caret line="43" column="23" lean-forward="true" selection-start-line="43" selection-start-column="23" selection-end-line="43" selection-end-column="23" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/javarush/test/level33/lesson05/home04/Solution.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="280">
+          <caret line="34" column="7" lean-forward="false" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
