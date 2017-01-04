@@ -14,8 +14,10 @@ import java.io.StringWriter;
 Расставьте Json аннотации так, чтобы результат работы метода main был следующим
 {"wildAnimal":"Murka","over":3}
 */
-public class Solution {
-    public static void main(String[] args) throws IOException {
+public class Solution
+{
+    public static void main(String[] args) throws IOException
+    {
         Cat cat = new Cat();
         cat.name = "Murka";
         cat.age = 5;
@@ -26,20 +28,26 @@ public class Solution {
         System.out.println(writer.toString());
     }
 
-    public static void convertToJSON(StringWriter writer, Object object) throws IOException {
+    public static void convertToJSON(StringWriter writer, Object object) throws IOException
+    {
         ObjectMapper mapper = new ObjectMapper();
         mapper.writeValue(writer, object);
     }
 
     @JsonAutoDetect
-    public static class Cat {
+    public static class Cat
+    {
+        @JsonProperty("wildAnimal")
         public String name;
 
+        @JsonIgnore
         public int age;
 
+        @JsonProperty("over")
         public int weight;
 
-        Cat() {
+        Cat()
+        {
         }
     }
 }
