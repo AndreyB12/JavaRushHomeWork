@@ -56,12 +56,16 @@ public class Solution {
         public String name;
     }
 
+    @XmlRootElement
+    @XmlType(name="cat")
     public static class Cat extends Pet
     {
         public int age;
         public int weight;
     }
 
+    @XmlRootElement
+    @XmlType(name="dog")
     public static class Dog extends Pet
     {
         public int age;
