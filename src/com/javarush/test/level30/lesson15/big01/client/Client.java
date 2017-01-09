@@ -68,7 +68,7 @@ public class Client
 
     protected String getUserName()
     {
-        ConsoleHelper.writeMessage("Enter your Name:");
+        ConsoleHelper.writeMessage("Enter your name:");
         return ConsoleHelper.readString();
     }
 

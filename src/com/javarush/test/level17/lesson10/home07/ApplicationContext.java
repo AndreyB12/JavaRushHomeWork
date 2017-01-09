@@ -11,7 +11,7 @@ ApplicationContext будет доступен множеству нитей.
 public abstract class ApplicationContext<GenericsBean extends Bean>
 {
     private Map<String, GenericsBean> container = new HashMap<String, GenericsBean>();
-    //Map<Name, some class implemented Bean interface>
+    //Map<name, some class implemented Bean interface>
 
 
     protected ApplicationContext()

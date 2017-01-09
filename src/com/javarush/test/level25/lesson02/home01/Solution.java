@@ -12,10 +12,10 @@ public class Solution {
      * <p/>
      * Available Amount
      * Account Number
-     * Bank Name
+     * Bank name
      * --------------------
      * Available Amount
-     * Bank Name
+     * Bank name
      */
     public static void main(String[] args) {
 

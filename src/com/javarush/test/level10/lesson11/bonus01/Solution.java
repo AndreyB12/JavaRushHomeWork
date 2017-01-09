@@ -33,7 +33,7 @@ public class Solution {
         for (Map.Entry<Integer, String> pair : solution.map.entrySet()) {
             int index = pair.getKey();
             String name = pair.getValue();
-            System.out.println("Id=" + index + " Name=" + name);
+            System.out.println("Id=" + index + " name=" + name);
         }
     }
 }

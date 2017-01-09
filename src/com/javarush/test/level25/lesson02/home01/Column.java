@@ -6,7 +6,7 @@ import java.util.List;
 public enum Column implements Columnable
 {
     Customer("Customer"),
-    BankName("Bank Name"),
+    BankName("Bank name"),
     AccountNumber("Account Number"),
     Amount("Available Amount");
 

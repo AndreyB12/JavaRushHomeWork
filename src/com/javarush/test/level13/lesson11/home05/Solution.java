@@ -36,7 +36,7 @@ public class Solution
 
         public DBObject initializeIdAndName(long id, String name)
         {
-            System.out.println(this + "ID and Name initialized.");
+            System.out.println(this + "ID and name initialized.");
             this.id = id;
             this.name = name;
             return this;
