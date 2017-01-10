@@ -1,5 +1,6 @@
 package com.javarush.test.level34.lesson06.task01;
 
+import java.lang.ref.WeakReference;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,6 +31,7 @@ public class Solution {
 
         helper.callGC();
 
+        WeakReference<Monkey> reference = new WeakReference<Monkey>(monkey);
         monkey = null;
 
         helper.callGC();
