@@ -1,10 +1,8 @@
 package com.javarush.test.level34.lesson02.home01;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.text.DecimalFormat;
-import java.util.HashMap;
-import java.util.Map;
+import java.text.DecimalFormatSymbols;
+import java.util.Locale;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -24,14 +22,10 @@ sin(2*(-5+1.5*4)+28)
 */
 public class Solution
 {
-    private Map<String, BigDecimal> exprsValues = new HashMap<>();
-
     public static void main(String[] args)
     {
         Solution solution = new Solution();
-
         String s = "sin(2*(-5+1.5*4)+28)";
-
         System.out.print(s + " expected output 0.5 6 actually ");
         solution.recursion(s, 0);
 
@@ -83,7 +77,7 @@ public class Solution
         System.out.print(s + " expected output -3 16 actually ");
         solution.recursion(s, 0);
 
-        s = "cos(3 + 19*3)";
+        s = "cos(3+19*3)";
         System.out.print(s + " expected output 0.5 3 actually ");
         solution.recursion(s, 0);
 
@@ -105,184 +99,165 @@ public class Solution
     }
 
 
-    private BigDecimal getBDValue(String text)
+    private double getDblValue(String text)
     {
-        if (text.matches("a\\d++")) return exprsValues.get(text);
-
-        BigDecimal bd = new BigDecimal(text);
-        bd.setScale(10,BigDecimal.ROUND_HALF_UP);
-        return bd;
-    }
-
-    private double getDoubleValue(String text)
-    {
-        if (text.matches("a\\d++")) return exprsValues.get(text).doubleValue();
-        return Double.valueOf(text);
+        return text == null ? 0 : Double.valueOf(text.replace("(", "").replace(")", ""));
     }
 
     public void recursion(final String expression, int countOperation)
     {
-       // System.out.println(expression);
-       // System.out.println(exprsValues);
+        String express = expression.replace(" ","");
+        //    System.out.println(express);
+
+        DecimalFormatSymbols dfs = new DecimalFormatSymbols(Locale.ENGLISH);
+        dfs.setDecimalSeparator('.');
+        dfs.setGroupingSeparator(' ');
+        DecimalFormat df = new DecimalFormat();
+        df.setDecimalFormatSymbols(dfs);
+        df.setMaximumFractionDigits(5);
+        df.setMinimumFractionDigits(0);
+        df.setGroupingSize(0);
 
         //вывод результата
-        Pattern pattern = Pattern.compile("a\\d+|\\d+(\\.\\d+)?");
-        Matcher matcher = pattern.matcher(expression);
+        Pattern pattern = Pattern.compile("\\-?\\d+(\\.\\d+)?");
+        Matcher matcher = pattern.matcher(express);
 
         if (matcher.matches())
         {
-
-            DecimalFormat df = new DecimalFormat();
+            double result = Double.valueOf(express);
             df.setMaximumFractionDigits(2);
-            df.setMinimumFractionDigits(0);
-            df.setGroupingSize(0);
-            BigDecimal result = getBDValue(expression);
-            result.setScale(2, BigDecimal.ROUND_HALF_UP);
-            System.out.println(df.format(result.doubleValue()).replace(",", ".") + " " + countOperation);
-            exprsValues.clear();
+            System.out.println(df.format(result) + " " + countOperation);
+            return;
         }
 
-        //Ищем операции изменения знака
-        pattern = Pattern.compile("(^|.*?\\()-(\\d+(\\.\\d+)?|((a\\d+)))(.?).*?");
-        matcher = pattern.matcher(expression);
-        while (matcher.find())
+        //считаем операции
+        if (countOperation == 0)
         {
-            String alias = "a" + (exprsValues.size() + 1);
-            String nextOperand = matcher.group(6);
-            if (!nextOperand.matches("[\\*\\/\\^]"))
-            {
-                String operand1 = matcher.group(2);
-                BigDecimal o1 = getBDValue(operand1);
-                exprsValues.put(alias, o1.negate());
-                recursion(expression.substring(0, matcher.start(2) - 1) + alias + expression.substring(matcher.end(2)), ++countOperation); // .replaceFirst(Pattern.quote("-" + operand1), alias), ++countOperation);
-                return;
-            }
+            pattern = Pattern.compile("([\\+\\-\\*\\/\\^]|sin|cos|tan)");
+            matcher = pattern.matcher(express);
+            while (matcher.find()) countOperation++;
         }
+
+
         // sinus
-        pattern = Pattern.compile(".*?sin\\((\\d+(\\.\\d+)?|a\\d+)\\).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?(sin\\((\\-?\\d+(\\.\\d+)?)\\)).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
-            double x = getDoubleValue(matcher.group(1));
-            exprsValues.put(alias, new BigDecimal(Math.sin(Math.toRadians(x))));
-            recursion(expression.replaceFirst(Pattern.quote("sin(" + matcher.group(1) + ")"), alias), ++countOperation);
+            double x = getDblValue(matcher.group(2));
+            double rs = Math.sin(Math.toRadians(x));
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
         // cosinus
-        pattern = Pattern.compile(".*?cos\\((\\d+(\\.\\d+)?|a\\d+)\\).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?(cos\\((\\-?\\d+(\\.\\d+)?)\\)).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
-            double x = getDoubleValue(matcher.group(1));
-            exprsValues.put(alias, new BigDecimal(Math.cos(Math.toRadians(x))));
-            recursion(expression.replaceFirst(Pattern.quote("cos(" + matcher.group(1) + ")"), alias), ++countOperation);
+            double x = getDblValue(matcher.group(2));
+            double rs = Math.cos(Math.toRadians(x));
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
         // tangens
-        pattern = Pattern.compile(".*?tan\\((\\d+(\\.\\d+)?|a\\d+)\\).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?(tan\\((\\-?\\d+(\\.\\d+)?)\\)).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
-            double x = getDoubleValue(matcher.group(1));
-            exprsValues.put(alias, new BigDecimal(Math.tan(Math.toRadians(x))));
-            recursion(expression.replaceFirst(Pattern.quote("tan(" + matcher.group(1) + ")"), alias), ++countOperation);
+            double x = getDblValue(matcher.group(2));
+            double rs = Math.tan(Math.toRadians(x));
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
 
-        //убираем скобки
-        pattern = Pattern.compile(".*?\\((\\d+(\\.\\d+)?|a\\d+)\\).*?");
-        matcher = pattern.matcher(expression);
-        while (matcher.find())
-        {
-            String operand1 = matcher.group(1);
-            recursion(expression.substring(0, matcher.start(1) - 1) + operand1 + expression.substring(matcher.end(1) + 1), countOperation);
-            return;
-        }
 
         //Ищем операции умножения
-        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|(a\\d+))\\*(\\d+(\\.\\d+)?|(a\\d+))).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?)\\*(\\-?\\d+(\\.\\d+)?)).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
             String operand1 = matcher.group(2);
-            String operand2 = matcher.group(5);
-            BigDecimal o1 = getBDValue(operand1);
-            BigDecimal o2 = getBDValue(operand2);
-            exprsValues.put(alias, o1.multiply(o2));
-            recursion(expression.replaceFirst(Pattern.quote(matcher.group(1)), alias), ++countOperation);
+            String operand2 = matcher.group(4);
+            double o1 = getDblValue(operand1);
+            double o2 = getDblValue(operand2);
+            double rs = o1 * o2;
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
 
         //Ищем операции деления
-        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|(a\\d+))/(\\d+(\\.\\d+)?|(a\\d+))).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?)\\/(\\-?\\d+(\\.\\d+)?)).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
             String operand1 = matcher.group(2);
-            String operand2 = matcher.group(5);
-            BigDecimal o1 = getBDValue(operand1);
-            BigDecimal o2 = getBDValue(operand2);
-            exprsValues.put(alias, o1.divide(o2, 10, RoundingMode.HALF_UP));
-            recursion(expression.replaceFirst(Pattern.quote(matcher.group(1)), alias), ++countOperation);
+            String operand2 = matcher.group(4);
+            double o1 = getDblValue(operand1);
+            double o2 = getDblValue(operand2);
+            double rs = o1 / o2;
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
         //Ищем операции возведения в степень
-        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|(a\\d+))\\^(\\d+(\\.\\d+)?|(a\\d+))).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|\\(\\-?\\d+(\\.\\d+)?\\))\\^(\\-?\\d+(\\.\\d+)?|\\(\\-?\\d+(\\.\\d+)?\\))).*?");
+        matcher = pattern.matcher(express);
         if (matcher.matches())
         {
-            String alias = "a" + (exprsValues.size() + 1);
             String operand1 = matcher.group(2);
             String operand2 = matcher.group(5);
-            double o1 = getDoubleValue(operand1);
-            double o2 = getDoubleValue(operand2);
-            exprsValues.put(alias, new BigDecimal(Math.pow(o1, o2)));
-            recursion(expression.replaceFirst(Pattern.quote(matcher.group(1)), alias), ++countOperation);
+            double o1 = getDblValue(operand1);
+            double o2 = getDblValue(operand2);
+            double rs = Math.pow(o1, o2);
+            recursion(express.replaceFirst(Pattern.quote(matcher.group(1)), df.format(rs)), countOperation);
             return;
         }
         //Ищем операции вычитания
-        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|(a\\d+))\\-(\\d+(\\.\\d+)?|(a\\d+)))(.?).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?((\\-?\\d+(\\.\\d+)?|\\(\\-?\\d+(\\.\\d+)?\\))\\-(\\-?\\d+(\\.\\d+)?|\\(\\-?\\d+(\\.\\d+)?\\)))(.?).*?");
+        matcher = pattern.matcher(express);
         while (matcher.find())
         {
-            String alias = "a" + (exprsValues.size() + 1);
             String operand1 = matcher.group(2);
             String operand2 = matcher.group(5);
             String nextAction = matcher.group(8);
             if (nextAction.matches("[\\+\\-\\)]?"))
             {
-                BigDecimal o1 = getBDValue(operand1);
-                BigDecimal o2 = getBDValue(operand2);
-                exprsValues.put(alias, o1.add(o2.negate()));
-                recursion(expression.substring(0, matcher.start(1)) + alias +
-                        expression.substring(matcher.end(1)), ++countOperation);
-                // expression.replaceFirst(Pattern.quote(matcher.group(1)), alias), ++countOperation);
+                double o1 = getDblValue(operand1);
+                double o2 = getDblValue(operand2);
+                double rs = o1 - o2;
+                recursion(express.substring(0, matcher.start(1)) + df.format(rs) +
+                        express.substring(matcher.end(1)), countOperation);
                 return;
             }
         }
+        //убираем скобки
+        pattern = Pattern.compile(".*?((\\-?)\\((\\-?\\d+(\\.\\d+)?)\\)).*?");
+        matcher = pattern.matcher(express);
+        if (matcher.find())
+        {
+            String operand1 = matcher.group(3);
+            String min = matcher.group(2);
+            double m = min.matches("-") ? -1 : 1;
+            double rs = getDblValue(operand1) * m;
+
+            recursion(express.substring(0, matcher.start(1)) + df.format(rs) + express.substring(matcher.end(1)), countOperation);
+            return;
+        }
 
         //Ищем операции сложения
-        pattern = Pattern.compile(".*?((\\d+(\\.\\d+)?|(a\\d+))\\+(\\d+(\\.\\d+)?|(a\\d+)))(.?).*?");
-        matcher = pattern.matcher(expression);
+        pattern = Pattern.compile(".*?((\\-?\\d+(\\.\\d+)?)\\+(\\-?\\d+(\\.\\d+)?))(.?).*?");
+        matcher = pattern.matcher(express);
         while (matcher.find())
         {
-            String alias = "a" + (exprsValues.size() + 1);
             String operand1 = matcher.group(2);
-            String operand2 = matcher.group(5);
-            String nextAction = matcher.group(8);
+            String operand2 = matcher.group(4);
+            String nextAction = matcher.group(6);
             if (nextAction.matches("[\\+\\-\\)]?"))
             {
-                BigDecimal o1 = getBDValue(operand1);
-                BigDecimal o2 = getBDValue(operand2);
-                exprsValues.put(alias, o1.add(o2));
-                recursion(expression.substring(0, matcher.start(1)) + alias +
-                        expression.substring(matcher.end(1)), ++countOperation);
-                // expression.replaceFirst(Pattern.quote(matcher.group(1)), alias), ++countOperation);
+                double o1 = getDblValue(operand1);
+                double o2 = getDblValue(operand2);
+                double rs = o1 + o2;
+                recursion(express.substring(0, matcher.start(1)) + df.format(rs) +
+                        express.substring(matcher.end(1)), countOperation);
                 return;
             }
         }
