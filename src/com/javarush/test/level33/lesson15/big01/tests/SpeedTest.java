@@ -16,7 +16,7 @@ import java.util.Set;
  */
 public class SpeedTest
 {
-    long getTimeForGettingIds(Shortener shortener, Set<String>
+   public long getTimeForGettingIds(Shortener shortener, Set<String>
             strings, Set<Long> ids)
     {
         long st = new Date().getTime();
@@ -28,7 +28,7 @@ public class SpeedTest
         return new Date().getTime() - st;
     }
 
-    long getTimeForGettingStrings(Shortener shortener,
+   public long getTimeForGettingStrings(Shortener shortener,
                                   Set<Long> ids, Set<String> strings)
     {
         long st = new Date().getTime();
