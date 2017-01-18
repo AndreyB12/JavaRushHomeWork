@@ -1,3 +1,4 @@
+/*
 package Test;
 
 import javafx.application.Application;
@@ -5,17 +6,19 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
-import javafx.scene.control.Dialog;
+//import javafx.scene.control.ButtonType;
+//import javafx.scene.control.Dialog;
 import javafx.scene.layout.StackPane;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 
 
+*/
 /**
  * Created by butkoav on 11.05.2016.
- */
+ *//*
+
 public class GUIApp extends Application implements EventHandler<ActionEvent>
 {
     public static void main(String[] args)
@@ -92,3 +95,4 @@ public class GUIApp extends Application implements EventHandler<ActionEvent>
         System.exit(0);
     }
 }
+*/
