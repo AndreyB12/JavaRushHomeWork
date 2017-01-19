@@ -7,13 +7,16 @@ import java.awt.*;
  */
 public abstract class GameObject
 {
-    private int x, y, whith, height;
+    private int x;
+    private int  y;
+    private int width;
+    private int height;
 
-    public GameObject(int x, int y, int whith, int height)
+    public GameObject(int x, int y, int width, int height)
     {
         this.x = x;
         this.y = y;
-        this.whith = whith;
+        this.width = width;
         this.height = height;
     }
 
@@ -21,11 +24,11 @@ public abstract class GameObject
     {
         this.x = x;
         this.y = y;
-        this.whith = Model.FIELD_SELL_SIZE;
+        this.width = Model.FIELD_SELL_SIZE;
         this.height = Model.FIELD_SELL_SIZE;
     }
 
-    abstract void draw(Graphics graphics);
+    public abstract void draw(Graphics graphics);
 
     public int getX()
     {
@@ -47,14 +50,14 @@ public abstract class GameObject
         this.y = y;
     }
 
-    public int getWhith()
+    public int getWidth()
     {
-        return whith;
+        return width;
     }
 
-    public void setWhith(int whith)
+    public void setWidth(int width)
     {
-        this.whith = whith;
+        this.width = width;
     }
 
     public int getHeight()

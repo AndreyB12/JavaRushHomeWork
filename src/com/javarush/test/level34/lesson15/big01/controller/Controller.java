@@ -1,12 +1,13 @@
 package com.javarush.test.level34.lesson15.big01.controller;
 
+import com.javarush.test.level34.lesson15.big01.model.Direction;
 import com.javarush.test.level34.lesson15.big01.model.Model;
 import com.javarush.test.level34.lesson15.big01.view.View;
 
 /**
  * Created by butkoav on 19.01.2017.
  */
-public class Controller
+public class Controller implements EventListener
 {
     private View view;
     private Model model;
@@ -15,5 +16,36 @@ public class Controller
     {
         view = new View(this);
         model = new Model();
+        view.init();
+
+    }
+
+    public static void main(String...args)
+    {
+        Controller controller = new Controller();
+    }
+
+    @Override
+    public void move(Direction direction)
+    {
+
+    }
+
+    @Override
+    public void restart()
+    {
+
+    }
+
+    @Override
+    public void startNextLevel()
+    {
+
+    }
+
+    @Override
+    public void levelCompleted(int level)
+    {
+
     }
 }
