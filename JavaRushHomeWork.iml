@@ -18,5 +18,24 @@
     <orderEntry type="library" name="guava-18.0-sources" level="project" />
     <orderEntry type="library" name="commons-collections4-4.1-javadoc" level="project" />
     <orderEntry type="library" name="hamcrest-core-1.3-javadoc" level="project" />
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/Distribs/Java/slf4j-log4j13/slf4j-log4j13-1.0.1.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library">
+      <library>
+        <CLASSES>
+          <root url="jar://E:/Distribs/Java/slf4j-log4j13/slf4j-log4j13-1.0.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="library" name="slf4j-log4j12" level="project" />
   </component>
 </module>
