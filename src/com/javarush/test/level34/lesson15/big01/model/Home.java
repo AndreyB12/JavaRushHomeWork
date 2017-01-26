@@ -9,14 +9,14 @@ public class Home extends GameObject
 {
     public Home(int x, int y)
     {
-        super(x, y, 2, 2);
+        super(x, y, 4, 4);
     }
 
     @Override
     public void draw(Graphics g)
     {
-        int tx = (getX() + Model.FIELD_SELL_SIZE) / 2;
-        int ty = (getY() + Model.FIELD_SELL_SIZE) / 2;
+        int tx = getX() - getWidth() / 2;
+        int ty = getY() - getHeight() / 2;
         g.setColor(Color.RED);
         g.fillOval(tx, ty,getWidth(), getHeight());
     }
