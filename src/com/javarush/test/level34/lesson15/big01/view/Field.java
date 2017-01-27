@@ -40,10 +40,19 @@ public class Field extends JPanel
 
         GameObjects gos = view.getGameObjects();
         if (gos == null) return;
-        for (GameObject go : gos.getAll())
+        for (GameObject go : gos.getWalls())
         {
             go.draw(g);
         }
+        for (GameObject go : gos.getBoxes())
+        {
+            go.draw(g);
+        }
+        for (GameObject go : gos.getHomes())
+        {
+            go.draw(g);
+        }
+        gos.getPlayer().draw(g);
     }
 
     public class KeyHandler extends KeyAdapter
@@ -67,6 +76,9 @@ public class Field extends JPanel
                     break;
                 case KeyEvent.VK_R:
                     eventListener.restart();
+                    break;
+                case KeyEvent.VK_N:
+                    eventListener.startNextLevel();
                     break;
             }
         }

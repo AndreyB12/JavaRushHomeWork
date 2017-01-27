@@ -24,7 +24,7 @@ public class Player extends CollisionObject implements Movable
     {
         int tx = getX() - Model.FIELD_SELL_SIZE / 2;
         int ty = getY() - Model.FIELD_SELL_SIZE / 2;
-        g.setColor(Color.YELLOW);
+        g.setColor(new Color(130,0,180));
         g.fillOval(tx, ty, Model.FIELD_SELL_SIZE, Model.FIELD_SELL_SIZE);
     }
 }

@@ -24,7 +24,7 @@ public class View extends JFrame
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setSize(500, 500);
         setLocationRelativeTo(null);
-        setTitle("Сокобан");
+        setTitle(String.format("Socoban. Level %s",controller.getCurrentLevel()));
         setVisible(true);
     }
 
@@ -37,6 +37,7 @@ public class View extends JFrame
     public void update()
     {
         field.repaint();
+        setTitle(String.format("Socoban. Level %s",controller.getCurrentLevel()));
     }
 
     public GameObjects getGameObjects()

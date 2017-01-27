@@ -118,4 +118,9 @@ public class Model
 
         eventListener.levelCompleted(currentLevel);
     }
+
+    public int getCurrentLevel()
+    {
+        return currentLevel;
+    }
 }

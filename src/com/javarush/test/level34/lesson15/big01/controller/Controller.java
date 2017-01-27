@@ -60,4 +60,9 @@ public class Controller implements EventListener
     {
         return model.getGameObjects();
     }
+
+    public int getCurrentLevel()
+    {
+        return model.getCurrentLevel();
+    }
 }
